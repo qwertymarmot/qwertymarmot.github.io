@@ -1,6 +1,6 @@
 ---
-title : Test
-notetype : feed
+title: Test
+notetype : unfeed
 date : 04-14-2022
 ---
 
