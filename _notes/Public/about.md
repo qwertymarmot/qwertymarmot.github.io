@@ -1,7 +1,7 @@
 ---
-title: about
+title: About
 layout: Post
-notetype: feed
+notetype: unfeed
 ---
 
 # Hi, I am Brandon

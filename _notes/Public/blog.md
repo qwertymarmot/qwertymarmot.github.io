@@ -1,5 +1,5 @@
 ---
-title: blog
+title: Blog
 layout: blog
-notetype: feed
+notetype: unfeed
 ---
