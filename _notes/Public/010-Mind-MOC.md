@@ -1,5 +1,5 @@
 ---
-title: Test
+title: 010 Mind MOC
 notetype : feed
 date : 14-04-2022
 ---
