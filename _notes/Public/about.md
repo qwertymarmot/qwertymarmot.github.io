@@ -6,4 +6,4 @@ notetype: unfeed
 
 <h1 class="gradient-text">Hi, I Am Brandon Cole</h1>
 
-<img src="../assets/img/avataars.png" width="100%">
+<img src="../assets/img/avataaars.png" width="100%">
