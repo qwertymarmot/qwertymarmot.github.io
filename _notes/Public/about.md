@@ -4,10 +4,11 @@ layout: Post
 notetype: unfeed
 ---
 <div class="top">
-<h1 style="float:left" class="gradient-text2">Hi, I Am</h1><br>
-<h1 style="float:left" class="gradient-text2">Brandon Cole</h1>
-<img alt="" src="../assets/img/avataaars.png" width="25%">
-</div>
+<img style="float:right" alt="" src="../assets/img/avataaars.png" width="25%">
+<h1 class="gradient-text2">Hi, I Am</h1><br>
+<h1 class="gradient-text2">Brandon Cole</h1><br><br>
+
+
 
 I am driven by the constant pursuit of personal optimization. This pursuit leads me to read books and articles in an attempt understand various concepts related to physical and mental health,parenting, emotional intelligence, communication, leadership, technology, data analysis, and many others.
 
