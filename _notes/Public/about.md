@@ -4,8 +4,8 @@ layout: Post
 notetype: unfeed
 ---
 <div class="top">
-<h1 style="float:left" class="gradient-text2">Hi, I Am</h1>
-<h1 style="float:left" class="gradient-text2">Brandon Cole</h1>
+<h1 style="float:left" font-size="2.5rem" class="gradient-text2">Hi, I Am</h1><br>
+<h1 style="float:left" font-size="2.5rem" class="gradient-text2">Brandon Cole</h1>
 <img style="float:right;" alt="" src="../assets/img/avataaars.png" width="25%">
 </div>
 
