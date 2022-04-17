@@ -24,6 +24,25 @@ layout: Stylesheet
   -moz-text-fill-color: transparent;
 }
 
+
+.gradient-text2 {
+  /* Fallback: Set a background color. */
+  background-color: red;
+
+  /* Create the gradient. */
+  background-image: linear-gradient(45deg, #f3ec78, #af4261);
+
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
 html, html[data-theme="light"] {
     --bg-main: #FFFFFF;
     --bg-sub: #FAFAFC;
