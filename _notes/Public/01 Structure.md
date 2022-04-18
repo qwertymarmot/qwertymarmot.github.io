@@ -1,4 +1,8 @@
-
+---
+title: 01 Structure
+notetype : feed
+date : 18-04-2022
+---
 - 10 Personal
 	- 11 Collect
 	- 12 Active Thoughts
