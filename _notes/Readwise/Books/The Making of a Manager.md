@@ -1,3 +1,8 @@
+---
+title: The Making of a Manager
+notetype : unfeed
+date : 21-04-2022
+---
 # The Making of a Manager
 
 ![rw-book-cover](https://images-na.ssl-images-amazon.com/images/I/41SKhBKxy9L._SL200_.jpg)

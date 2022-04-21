@@ -1,3 +1,8 @@
+---
+title: Think Again
+notetype : unfeed
+date : 21-04-2022
+---
 # Think Again
 
 ![rw-book-cover](https://m.media-amazon.com/images/I/71hwbmwBHnL._SY160.jpg)

@@ -1,3 +1,8 @@
+---
+title: Talking to Strangers
+notetype : unfeed
+date : 21-04-2022
+---
 # Talking to Strangers
 
 ![rw-book-cover](https://images-na.ssl-images-amazon.com/images/I/41rDqwHLy%2BL._SL200_.jpg)

@@ -1,3 +1,8 @@
+---
+title: Project Management
+notetype : unfeed
+date : 21-04-2022
+---
 # Project Management
 
 ![rw-book-cover](https://m.media-amazon.com/images/I/91MfZHAv-3L._SY160.jpg)

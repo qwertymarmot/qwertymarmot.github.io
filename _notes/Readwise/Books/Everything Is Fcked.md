@@ -1,5 +1,5 @@
 ---
-title: Everything is Fcked
+title: Everything Is Fcked
 notetype : unfeed
 date : 21-04-2022
 ---

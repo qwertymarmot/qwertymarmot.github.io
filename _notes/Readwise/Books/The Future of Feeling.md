@@ -1,3 +1,8 @@
+---
+title: The Future of Feeling
+notetype : unfeed
+date : 21-04-2022
+---
 # The Future of Feeling
 
 ![rw-book-cover](https://images-na.ssl-images-amazon.com/images/I/41Rt3bnIEnL._SL200_.jpg)

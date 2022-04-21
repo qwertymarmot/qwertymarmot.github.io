@@ -1,5 +1,5 @@
 ---
-title: Leader Eat Last Deluxe
+title: Leaders Eat Last Deluxe
 notetype : unfeed
 date : 21-04-2022
 ---

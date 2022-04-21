@@ -1,3 +1,8 @@
+---
+title: Think and Grow Rich
+notetype : unfeed
+date : 21-04-2022
+---
 # Think and Grow Rich
 
 ![rw-book-cover](https://m.media-amazon.com/images/I/711RcAn0EiL._SY160.jpg)

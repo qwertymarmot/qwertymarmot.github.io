@@ -1,3 +1,8 @@
+---
+title: The New Father
+notetype : unfeed
+date : 21-04-2022
+---
 # The New Father
 
 ![rw-book-cover](https://m.media-amazon.com/images/I/71dlAhf-xnL._SY160.jpg)

@@ -1,3 +1,8 @@
+---
+title: Think Like a Monk
+notetype : unfeed
+date : 21-04-2022
+---
 # Think Like a Monk
 
 ![rw-book-cover](https://m.media-amazon.com/images/I/71JkFqnvPSL._SY160.jpg)

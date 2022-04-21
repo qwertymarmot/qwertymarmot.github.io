@@ -1,3 +1,8 @@
+---
+title: Thinking, Fast and Slow
+notetype : unfeed
+date : 21-04-2022
+---
 # Thinking, Fast and Slow
 
 ![rw-book-cover](https://images-na.ssl-images-amazon.com/images/I/41shZGS-G%2BL._SL200_.jpg)
