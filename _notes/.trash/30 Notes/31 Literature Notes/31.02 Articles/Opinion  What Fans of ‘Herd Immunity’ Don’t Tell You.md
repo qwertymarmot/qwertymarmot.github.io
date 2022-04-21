@@ -1,0 +1,22 @@
+# Opinion | What Fans of ‘Herd Immunity’ Don’t Tell You
+
+![rw-book-cover](https://readwise-assets.s3.amazonaws.com/static/images/article3.5c705a01b476.png)
+
+## Metadata
+- Author: [[nytimes.com]]
+- Full Title: Opinion | What Fans of ‘Herd Immunity’ Don’t Tell You
+- Category: #articles
+- URL: https://www.nytimes.com/2020/10/19/opinion/coronavirus-herd-immunity.html
+
+## Highlights
+- No matter their politics, people nearly always listen to those who say what they want to hear. ([View Highlight](https://instapaper.com/read/1354278738/14357620))
+- The signers of the declaration do have a point. Restrictions designed to limit deaths cause real harm, including, but by no means limited to, stress on the economy, increases in domestic violence and drug abuse, declines in tests that screen for cancer and on and on. ([View Highlight](https://instapaper.com/read/1354278738/14357633))
+- First, it makes no mention of harm to infected people in low-risk groups, yet many people recover very slowly. More serious, a significant number, including those with no symptoms, suffer damage to their heart and lungs. One recent study of 100 recovered adults found that 78 of them showed signs of heart damage. We have no idea whether this damage will cut years from their lives or affect their quality of life. ([View Highlight](https://instapaper.com/read/1354278738/14357637))
+- Second, it says little about how to protect the vulnerable. One can keep a child from visiting a grandparent in another city easily enough, but what happens when the child and grandparent live in the same household? And how do you protect a 25-year-old diabetic, or cancer survivor, or obese person, or anyone else with a comorbidity who needs to go to work every day? Upon closer examination, the “focused protection” that the declaration urges devolves into a kind of three-card monte; one can’t pin it down. ([View Highlight](https://instapaper.com/read/1354278738/14357641))
+- Third, the declaration omits mention of how many people the policy would kill. It’s a lot. ([View Highlight](https://instapaper.com/read/1354278738/14357643))
+- The Institute for Health Metrics and Evaluation at the University of Washington, whose modeling of the pandemic the White House has used, predicts up to about 415,000 deaths by Feb. 1, even with current restrictions continuing. If these restrictions are simply eased — as opposed to eliminating them entirely, which would occur if herd immunity were pursued — deaths could rise to as many as 571,527. That’s just by Feb. 1. The model predicts daily deaths will still be increasing then. ([View Highlight](https://instapaper.com/read/1354278738/14357644))
+- By Feb. 1, even with eased mandates, only 25 percent of the population will have been infected, by my calculations. The most optimistic model suggests herd immunity might occur when 43 percent of the population has been infected, but many estimate 60 percent to 70 percent before transmission trends definitively down. ([View Highlight](https://instapaper.com/read/1354278738/14357653))
+- Those are models. Actual data from prison populations and from Latin America suggest transmission does not slow down until 60 percent of the population is infected. (At present, only about 10 percent of the population has been infected, according to the C.D.C.) ([View Highlight](https://instapaper.com/read/1354278738/14357661))
+- The real death toll needed to reach herd immunity could far exceed one million. ([View Highlight](https://instapaper.com/read/1354278738/14357664))
+- Proponents of herd immunity point to Sweden. Swedish officials deny having actively pursued that strategy, but they never shut down their economy or closed most schools, and they still haven’t recommended masks. Its neighbors Denmark and Norway did. Sweden’s death rate per 100,000 people is five times Denmark’s and 11 times Norway’s. Did the deaths buy economic prosperity? No. Sweden’s G.D.P. fell 8.3 percent in the second quarter, compared with Denmark’s 6.8 percent and Norway’s 5.1 percent. ([View Highlight](https://instapaper.com/read/1354278738/14357675))
+- As a result, the United States is not in a good place, and achieving near containment of the virus — as South Korea (441 deaths), Australia (904 deaths), Japan (1,657 deaths) and several other countries have done — is impossible. We can, however, still aim for results akin to those of Canada, where there were 23 deaths on Friday, and Germany, which suffered 24 deaths on Friday. ([View Highlight](https://instapaper.com/read/1354278738/14357688))

@@ -1,0 +1,53 @@
+# Everything Is F*cked
+
+![rw-book-cover](https://images-na.ssl-images-amazon.com/images/I/416T7uchqcL._SL200_.jpg)
+
+## Metadata
+- Author: [[Mark Manson]]
+- Full Title: Everything Is F*cked
+- Category: #books
+
+## Highlights
+- No, being heroic is the ability to conjure hope where there is none. To strike a match to light up the void. To show us a possibility for a better world—not a better world we want to exist, but a better world we didn’t know could exist. To take a situation where everything seems to be absolutely fucked and still somehow make it good. ([Location 102](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=102))
+- We are a culture and a people in need of hope. ([Location 110](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=110))
+- To build and maintain hope, we need three things: a sense of control, a belief in the value of something, and a community. ([Location 262](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=262))
+- Chapter 2 Self-Control Is an Illusion ([Location 273](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=273))
+- To generate hope in our lives, we must first feel as though we have control over our lives. ([Location 360](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=360))
+- It’s incredibly easy to let your Thinking Brain fall into the trap of merely drawing the maps the Feeling Brain wants to follow. This is called the “self-serving bias,” and it’s the basis for pretty much everything awful about humanity. ([Location 504](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=504))
+- Chapter 3 Newton’s Laws of Emotion ([Location 664](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=664))
+- NEWTON’S FIRST LAW OF EMOTION For Every Action, There Is an Equal and Opposite Emotional Reaction ([Location 718](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=718))
+- NEWTON’S SECOND LAW OF EMOTION Our Self-Worth Equals the Sum of Our Emotions Over Time ([Location 809](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=809))
+- NEWTON’S THIRD LAW OF EMOTION Your Identity Will Stay Your Identity Until a New Experience Acts Against It ([Location 880](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=880))
+- Chapter 4 How to Make All Your Dreams Come True ([Location 1047](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1047))
+- HOW TO START YOUR OWN RELIGION An Introduction to a Proven System That Will Help You Achieve Everlasting Bliss and Eternal Salvation! (OR YOUR MONEY BACK) ([Location 1085](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1085))
+- HOW TO START YOUR OWN RELIGION Step One: Sell Hope to the Hopeless ([Location 1122](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1122))
+- Remember that in order to feel hope, we need to feel there’s a better future out there (values); we need to feel as though we are capable of getting to that better future (self-control); and we need to find other people who share our values and support our efforts (community). ([Location 1146](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1146))
+- values cannot be changed through reason, only through experience. ([Location 1172](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1172))
+- HOW TO START YOUR OWN RELIGION Step Two: Choose Your Faith ([Location 1196](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1196))
+- We all must have faith in something. Without faith, there is no hope. ([Location 1197](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1197))
+- Therefore, you can argue about facts until you’re blue in the face, but ultimately, it doesn’t matter—people interpret the significance of their experiences through their values. ([Location 1232](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1232))
+- If a meteorite hit a town and killed half the people, the über-traditional religious person would look at the event and say that it happened because the town was full of sinners. The atheist would look at it and say that it was proof there is no God (another faith-based belief, by the way), as how could a benevolent, all-powerful being let such an awful thing happen? A hedonist would look at it and decide that it was even more reason to party, since we could all die at any moment. And a capitalist would look at it and start thinking about how to invest in meteorite-defense technologies. ([Location 1233](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1233))
+- Spiritual Religions ([Location 1261](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1261))
+- Ideological Religions ([Location 1275](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1275))
+- Interpersonal Religions ([Location 1300](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1300))
+- Sports are a form of religion. They are arbitrary value systems designed to give people hope. ([Location 1304](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1304))
+- HOW TO START YOUR OWN RELIGION Step Three: Preemptively Invalidate All Criticism or Outside Questioning ([Location 1330](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1330))
+- HOW TO START YOUR OWN RELIGION Step Four: Ritual Sacrifice for Dummies—So Easy, Anyone Can Do It! ([Location 1360](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1360))
+- HOW TO START YOUR OWN RELIGION Step Five: Promise Heaven, Deliver Hell ([Location 1434](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1434))
+- HOW TO START YOUR OWN RELIGION Step Six: Prophet for Profit! ([Location 1475](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1475))
+- Chapter 5 Hope Is Fucked ([Location 1514](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1514))
+- A Brief History of the World, According to Nietzsche ([Location 1582](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1582))
+- Part II: Everything Is Fucked ([Location 1834](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1834))
+- Chapter 6 The Formula of Humanity ([Location 1836](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=1836))
+- Every human religion succumbs to this failure of moral frailty at some point. No matter how beautiful and pure its doctrines, it ultimately becomes a human institution, and all human institutions eventually become corrupted. ([Location 2055](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=2055))
+- A right-wing extremist will claim she desires “freedom” above all else and that she’s willing to make sacrifices for that freedom. But what she really means is that she wants freedom from having to deal with any values that do not map onto her own. She wants freedom from having to deal with change or the marginalization of other people. Therefore, she’s willing to limit and destroy the freedom of others in the name of her own freedom. ([Location 2174](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=2174))
+- Extremists on the left play the same game, the only thing that changes is the language. A leftie extremist will say that he wants “equality” for all, but what he really means is that he never wants anyone to feel pain, to feel harmed, or to feel inferior. He doesn’t want anyone to have to face moral gaps, ever. And he’s willing to cause pain and adversity to others in the name of eliminating those moral gaps. ([Location 2178](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=2178))
+- Chapter 7 Pain Is the Universal Constant ([Location 2189](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=2189))
+- This is the Blue Dot Effect. The better things get, the more we perceive threats where there are none, and the more upset we become. And it is at the heart of the paradox of progress. ([Location 2235](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=2235))
+- Trying to eliminate pain only increases your sensitivity to suffering, rather than alleviating your suffering. ([Location 2366](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=2366))
+- Chapter 8 The Feelings Economy ([Location 2611](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=2611))
+- The world runs on feelings. ([Location 2739](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=2739))
+- You can become freer right now simply by choosing the limitations you want to impose on yourself. You can choose to wake up earlier each morning, to block your email until midafternoon each day, to delete social media apps from your phone. These limitations will free you because they will liberate your time, attention, and power of choice. ([Location 2824](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=2824))
+- Ultimately, the most meaningful freedom in your life comes from your commitments, the things in life for which you have chosen to sacrifice. ([Location 2831](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=2831))
+- Democracy can exist only when you are willing to tolerate views that oppose your own, when you’re willing to give up some things you might want for the sake of a safe and healthy community, when you’re willing to compromise and accept that sometimes things don’t go your way. ([Location 2914](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=2914))
+- Chapter 9 The Final Religion ([Location 2941](https://readwise.io/to_kindle?action=open&asin=B07DTJ8YNJ&location=2941))
