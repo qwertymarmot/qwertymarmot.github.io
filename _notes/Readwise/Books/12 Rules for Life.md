@@ -1,3 +1,8 @@
+---
+title: 12 Rules for Life
+notetype : unfeed
+date : 21-04-2022
+---
 # 12 Rules for Life
 
 ![rw-book-cover](https://images-na.ssl-images-amazon.com/images/I/41xrGjLlM0L._SL200_.jpg)

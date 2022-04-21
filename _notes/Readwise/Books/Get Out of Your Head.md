@@ -1,3 +1,8 @@
+---
+title: Get Out of Your Head
+notetype : unfeed
+date : 21-04-2022
+---
 # Get Out of Your Head
 
 ![rw-book-cover](https://m.media-amazon.com/images/I/81Gw0dJYo2L._SY160.jpg)

@@ -1,3 +1,8 @@
+---
+title: Leader Eat Last Deluxe
+notetype : unfeed
+date : 21-04-2022
+---
 # Leaders Eat Last Deluxe
 
 ![rw-book-cover](https://images-na.ssl-images-amazon.com/images/I/512jn9yKg3L._SL200_.jpg)

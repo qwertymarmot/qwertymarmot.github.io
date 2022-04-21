@@ -1,3 +1,8 @@
+---
+title: Daring Greatly
+notetype : unfeed
+date : 21-04-2022
+---
 # Daring Greatly
 
 ![rw-book-cover](https://images-na.ssl-images-amazon.com/images/I/51z0yrcMLdL._SL200_.jpg)

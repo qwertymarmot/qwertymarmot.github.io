@@ -1,3 +1,8 @@
+---
+title: Everything is Fcked
+notetype : unfeed
+date : 21-04-2022
+---
 # Everything Is F*cked
 
 ![rw-book-cover](https://images-na.ssl-images-amazon.com/images/I/416T7uchqcL._SL200_.jpg)

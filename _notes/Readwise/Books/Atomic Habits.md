@@ -1,3 +1,8 @@
+---
+title: Atomic Habits
+notetype : unfeed
+date : 21-04-2022
+---
 # Atomic Habits
 
 ![rw-book-cover](https://images-na.ssl-images-amazon.com/images/I/51Eqf-URhoL._SL200_.jpg)

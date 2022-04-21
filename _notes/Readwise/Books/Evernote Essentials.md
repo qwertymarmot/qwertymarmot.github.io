@@ -1,3 +1,8 @@
+---
+title: Evernote Essentials
+notetype : unfeed
+date : 21-04-2022
+---
 # Evernote Essentials
 
 ![rw-book-cover](https://images-na.ssl-images-amazon.com/images/I/51dOQ2ytN-L._SL200_.jpg)

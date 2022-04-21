@@ -1,3 +1,8 @@
+---
+title: E-Squared
+notetype : unfeed
+date : 21-04-2022
+---
 # E-Squared
 
 ![rw-book-cover](https://images-na.ssl-images-amazon.com/images/I/41rf8QqdOiL._SL200_.jpg)
