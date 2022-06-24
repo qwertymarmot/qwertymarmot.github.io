@@ -3868,8 +3868,7 @@ a.navbar-item,
 .tags.are-medium.are-white .tag:not(body) {
   background: var(--bg-sub); }
 
-.section.is-note .column.is-primary-content,
-.note-page-section {
+.section.is-note .column.is-primary-content{
   background: var(--bg-main);
   border-radius: 8px;
   position: relative;
@@ -3877,6 +3876,14 @@ a.navbar-item,
   margin: 0 -0.75rem;
 }
 
+/*.note-page-section {
+  background: var(--bg-main);
+  border-radius: 8px;
+  position: relative;
+  padding: 0.75rem;
+  margin: 0 -0.75rem;
+}
+*/
 .section.is-note .box {
   background: var(--bg-sub); }
 
