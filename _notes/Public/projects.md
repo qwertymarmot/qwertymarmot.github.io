@@ -14,3 +14,4 @@ Currently I have built a utility that searches a db file containing loan rules f
 
 ![MarmotUtilities](/assets/img/loanrulemodeler.png "Loan Rule Modeler")
 
+[![[/assets/img/marmotutilities.png]]](<about>)
