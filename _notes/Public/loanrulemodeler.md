@@ -14,7 +14,7 @@ Currently I have built a utility that searches a db file containing loan rules f
 - CSS
 
 ## Screenshots
-<a href="/notes/loanrulemodeler"><img src="/assets/img/marmotutilities.png" alt="Loan Rule Modeler" style="border-radius: 25px; -webkit-box-shadow: 5px 5px 15px 5px #797979; box-shadow: 5px 5px 15px 5px #797979;"></a>
+<img src="/assets/img/marmotutilities.png" alt="Loan Rule Modeler" style="border-radius: 25px; -webkit-box-shadow: 5px 5px 15px 5px #797979; box-shadow: 5px 5px 15px 5px #797979;">
 
-<a href="/notes/loanrulemod"><img src="/assets/img/marmotutilities.png" alt="Loan Rule Modeler" style="border-radius: 25px; -webkit-box-shadow: 5px 5px 15px 5px #797979; 
-box-shadow: 5px 5px 15px 5px #797979;"></a>
+<img src="/assets/img/marmotutilities.png" alt="Loan Rule Modeler" style="border-radius: 25px; -webkit-box-shadow: 5px 5px 15px 5px #797979; 
+box-shadow: 5px 5px 15px 5px #797979;">
