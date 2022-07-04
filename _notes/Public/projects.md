@@ -10,7 +10,7 @@ These are the projects I am currently working on at work or personally. These in
 box-shadow: 5px 5px 15px 5px #797979;"></a>
 
 ## Discord/Strava Bot
-<a href="/notes/marmotutilities"><img src="/assets/img/discord_dev3.png" alt="Strava/Discord" style="border-radius: 25px; -webkit-box-shadow: 5px 5px 15px 5px #797979; 
+<a href="/notes/stravadiscordbot"><img src="/assets/img/discord_dev3.png" alt="Strava/Discord" style="border-radius: 25px; -webkit-box-shadow: 5px 5px 15px 5px #797979; 
 box-shadow: 5px 5px 15px 5px #797979;"></a>
 
 ## SendGrid Python automation
