@@ -10,6 +10,7 @@ Currently I have built a utility that searches a db file containing loan rules f
 ## Code Technologies Used
 - Python
 - Flask
+- SQL
 - HTML
 - CSS
 
