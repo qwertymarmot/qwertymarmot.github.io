@@ -14,10 +14,12 @@ date : 05-07-2022
 -   Cross platform since it runs in the browser
 -   Open source
 -   Great documentation [PHP Documenation](http://www.php.net/docs.php)
+
 ## Software used with PHP
 -   Apache - Web Server
 -   MYSQL database
 -   Text editor of your choice
+
 ## Types of Code Blocks
 -   Standard PHP script determiners
 -   The script element

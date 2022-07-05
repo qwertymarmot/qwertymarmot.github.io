@@ -21,13 +21,13 @@ date : 05-07-2022
 - phpinfo will allow you to see what features you have enabled
 ```php
 <?php
-         phpinfo();
+phpinfo();
 ?>
 ```
 - To turn on error reporting you can add the following to your script
  ```php
 <?php
-        error\_reporting(E\_ALL);
-       // The rest of your script goes here.
+error\_reporting(E\_ALL);
+// The rest of your script goes here.
 ?>
 ```
