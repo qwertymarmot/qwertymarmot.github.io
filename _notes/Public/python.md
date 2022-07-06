@@ -9,7 +9,7 @@ date : 05-07-2022
 - [[Python Modules]]
 
 ## Coding
-- [[python variables]]
+- [[Python Variables]]
 - [[Python Statements]]
 - [[Python Methods]]
 - [[Python Functions]]
