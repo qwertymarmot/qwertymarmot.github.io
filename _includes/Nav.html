@@ -68,17 +68,13 @@
           About
         </a>
       </div>
-      <div class="navbar-end is-hidden-mobile" onclick="modeSwitcher()" >
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-text">
-              <span class="icon is-small">
-                <img src="{{ '/assets/img/sun.svg' | relative_url }}" id="theme-toggle-img">
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
+      <div class="theme-switch-wrapper">
+       <label class="theme-switch" for="checkbox">
+    <input type="checkbox" id="checkbox" />
+    <div class="slider round"></div>
+  </label>
+    <em>Enable Dark Mode!</em>
+  </div>
     </div>
   </nav>
   <script src="/assets/js/Hamburger.js"></script>
