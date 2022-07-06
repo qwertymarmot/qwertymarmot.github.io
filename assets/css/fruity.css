@@ -5,7 +5,7 @@ Added variables to asssure all colors works with dark and light theme (partially
 Some color variables are from style.css
 */
 
-html {
+/*html {
     --highlight-color-orange: #fb660a;
     --highlight-color-green: #008800;
     --highlight-color-red: #ff0007;
@@ -14,7 +14,7 @@ html {
     --highlight-color-khaki: #817816;
     --highlight-color-comment-bg: #0f140f;
     --highlight-color-whitespace: #888888;
-}
+}*/
 
 .highlight pre { background-color: #272822; }
 .highlight .hll { background-color: #272822; }
