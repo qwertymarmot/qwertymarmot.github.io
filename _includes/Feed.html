@@ -36,8 +36,11 @@
     {%- if site.preferences.search.enabled -%}
         <!-- search bar -->
         <div class="block">
-            <input class="input is-medium" type="text" placeholder="Search notes.." id="search-input" autocomplete="off">
-            <div id="search-results" class="search-results"></div>
+          <form action="/search.html" method="get">
+            <label for="search-box">Search</label>
+            <input type="text" id="search-box" name="query">
+            <input type="submit" value="search">
+          </form>
         </div>
         <script type="text/javascript" src="{{ site.url }}/assets/js/vendor/lunr.min.js"></script>
         <script src="{{ site.url }}/assets/js/Search.js"></script>
