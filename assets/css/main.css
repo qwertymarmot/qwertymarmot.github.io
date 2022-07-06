@@ -1697,9 +1697,10 @@ a.tag:hover {
   overflow: hidden;
   padding: 0; }
   .highlight pre {
+    background-color: #444444;
     overflow: auto;
     max-width: 100%;
-    background-color: #B1B1B1;}
+    }
 
 .number {
   align-items: center;
