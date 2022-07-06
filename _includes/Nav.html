@@ -67,7 +67,18 @@
         <a href="../notes/about"  class="navbar-item">
           About
         </a>
-      </div>
-    </div>
-  </nav>
-  <script src="/assets/js/Hamburger.js"></script>
+       </div>
+       <div class="navbar-end is-hidden-mobile" onclick="modeSwitcher()" >
+         <div class="navbar-item">
+           <div class="buttons">
+             <a class="button is-text">
+               <span class="icon is-small">
+                 <img src="{{ '/assets/img/sun.svg' | relative_url }}" id="theme-toggle-img">
+               </span>
+             </a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </nav>
+   <script src="/assets/js/Hamburger.js"></script>

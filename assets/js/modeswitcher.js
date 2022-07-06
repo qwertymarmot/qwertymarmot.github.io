@@ -1,27 +1,71 @@
-if (window.CSS && CSS.supports("color", "var(--primary)")) {
-  var toggleColorMode = function toggleColorMode(e) {
-    // Switch to Light Mode
-    if (e.currentTarget.classList.contains("light--hidden")) {
-      // Sets the custom html attribute
-      document.documentElement.setAttribute("color-mode", "light"); // Sets the user's preference in local storage
+---
+---
 
-      localStorage.setItem("color-mode", "light");
-      return;
-    }
-    /* Switch to Dark Mode
-    Sets the custom html attribute */
-    document.documentElement.setAttribute("color-mode", "dark"); // Sets the user's preference in local storage
+/*
+Copied from https://github.com/derekkedziora/jekyll-demo/blob/master/scripts/mode-switcher.js
+https://github.com/derekkedziora/jekyll-demo
+Creative Commons Attribution 4.0 International License
+*/
 
-    localStorage.setItem("color-mode", "dark");
-  }; // Get the buttons in the DOM
+let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)");
+let theme = sessionStorage.getItem('theme');
 
-  var toggleColorButtons = document.querySelectorAll(".color-mode__btn"); // Set up event listeners
+const iconSun = "{{ site.baseurl }}/assets/img/sun.svg";
+const iconMoon = "{{ site.baseurl }}/assets/img/moon.svg";
 
-  toggleColorButtons.forEach(function(btn) {
-    btn.addEventListener("click", toggleColorMode);
-  });
+
+function changeIconImgSrc(src) {
+	document.getElementById("theme-toggle-img").src = src;
+	document.getElementById("theme-toggle-img--mobile").src = src;
+}
+
+if (systemInitiatedDark.matches) {
+	changeIconImgSrc(iconMoon);
 } else {
-  // If the feature isn't supported, then we hide the toggle buttons
-  var btnContainer = document.querySelector(".color-mode__header");
-  btnContainer.style.display = "none";
+	changeIconImgSrc(iconSun);
+}
+
+function prefersColorTest(systemInitiatedDark) {
+  if (systemInitiatedDark.matches) {
+  	document.documentElement.setAttribute('data-theme', 'dark');
+   	changeIconImgSrc(iconMoon);
+   	sessionStorage.setItem('theme', '');
+  } else {
+  	document.documentElement.setAttribute('data-theme', 'light');
+    changeIconImgSrc(iconSun);
+    sessionStorage.setItem('theme', '');
+  }
+}
+systemInitiatedDark.addListener(prefersColorTest);
+
+
+function modeSwitcher() {
+	let theme = sessionStorage.getItem('theme');
+	if (theme === "dark") {
+		document.documentElement.setAttribute('data-theme', 'light');
+		sessionStorage.setItem('theme', 'light');
+		changeIconImgSrc(iconSun);
+	}	else if (theme === "light") {
+		document.documentElement.setAttribute('data-theme', 'dark');
+		sessionStorage.setItem('theme', 'dark');
+		changeIconImgSrc(iconMoon);
+	} else if (systemInitiatedDark.matches) {
+		document.documentElement.setAttribute('data-theme', 'light');
+		sessionStorage.setItem('theme', 'light');
+		changeIconImgSrc(iconSun);
+	} else {
+		document.documentElement.setAttribute('data-theme', 'dark');
+		sessionStorage.setItem('theme', 'dark');
+		changeIconImgSrc(iconMoon);
+	}
+}
+
+if (theme === "dark") {
+	document.documentElement.setAttribute('data-theme', 'dark');
+	sessionStorage.setItem('theme', 'dark');
+	changeIconImgSrc(iconMoon);
+} else if (theme === "light") {
+	document.documentElement.setAttribute('data-theme', 'light');
+	sessionStorage.setItem('theme', 'light');
+	changeIconImgSrc(iconSun);
 }
