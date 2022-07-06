@@ -17,11 +17,3 @@ $a = (string) $b; //changing to a string
 $a = (float) $b; //changing to a real number
 ?>
 ```
-
-{% highlight php %}  
-document.write("<?php
-$a = (int) $b; //changing to a integer  
-$a = (string) $b; //changing to a string  
-$a = (float) $b; //changing to a real number
-?>");  
-{% endhighlight %}
