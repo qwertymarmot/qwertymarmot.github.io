@@ -81,7 +81,7 @@ html[data-theme="light"] {
     --padding-thin: 0.8rem;
 }
 
-[data-theme="dark"] {
+html[data-theme="dark"] {
     --color-bg-main: #262626;
     --color-bg-sub: #18181C;
     --color-text-main: #FAFAFC;
