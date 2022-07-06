@@ -11,7 +11,9 @@ date : 05-07-2022
 -   Type casting is also an option
 -   [[PHP Arrays]]
 ```php
+<?php
 $a = (int) $b; //changing to a integer  
 $a = (string) $b; //changing to a string  
 $a = (float) $b; //changing to a real number
+?>
 ```
