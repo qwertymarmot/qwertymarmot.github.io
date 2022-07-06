@@ -6,15 +6,6 @@ Copied from https://github.com/derekkedziora/jekyll-demo/blob/master/scripts/mod
 https://github.com/derekkedziora/jekyll-demo
 Creative Commons Attribution 4.0 International License
 */
-if (theme === "dark") {
-	document.documentElement.setAttribute('data-theme', 'dark');
-	sessionStorage.setItem('theme', 'dark');
-	changeIconImgSrc(iconMoon);
-} else if (theme === "light") {
-	document.documentElement.setAttribute('data-theme', 'light');
-	sessionStorage.setItem('theme', 'light');
-	changeIconImgSrc(iconSun);
-}
 
 let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)");
 let theme = sessionStorage.getItem('theme');
