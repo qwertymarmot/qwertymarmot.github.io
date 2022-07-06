@@ -175,7 +175,7 @@ iframe,
 hr,
 {
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
 ul {
@@ -1698,7 +1698,8 @@ a.tag:hover {
   padding: 0; }
   .highlight pre {
     overflow: auto;
-    max-width: 100%; }
+    max-width: 100%;
+    background-color: #B1B1B1}
 
 .number {
   align-items: center;
@@ -3894,7 +3895,7 @@ a.navbar-item,
 @media screen and (min-width: 769px), print {
   .section.is-note .column.is-primary-content,
     .note-page-section {
-      padding: 3rem 8rem; } 
+      padding: 3rem 8rem; }
   .note-cards .content {
     width: 88%; }
     }
