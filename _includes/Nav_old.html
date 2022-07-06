@@ -21,7 +21,7 @@
 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 * SOFTWARE.
 *
-* File: Nav.html
+* File: Header.html
 * Author Raghuveer S, Hiran Venugopalan
 *
 * This file contains the markup for the context menu thingy you see when you right
@@ -31,14 +31,14 @@
 
 <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" style="padding-left: 0;"; href="{{ site.baseurl }}/index.html">
-          <h6> {{site.heading}}</h6></a>
-          <script src="{{ site.baseurl }}/assets/js/modeswitcher.js"></script>
+      <a class="navbar-item" href="../index.html">
+        <h1 class="gradient-text">Brandon Cole</h1>
+      </a>
       <div class="navbar-item navbar-dark-mode__mobile is-hidden-tablet" onclick="modeSwitcher()">
         <div class="buttons">
           <a class="button is-text">
             <span class="icon is-small">
-              <img src="{{ '/assets/img/sun.svg' | relative_url }}" id="theme-toggle-img--mobile">
+              <img src="../assets/img/sun.svg" id="theme-toggle-img--mobile">
             </span>
           </a>
         </div>
@@ -52,11 +52,11 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <a href="{{'/notes' | relative_url}}" class="navbar-item">
-          Notes Feed
+        <a href="https://github.com/qwertymarmot"  class="navbar-item">
+          GitHub
         </a>
-        <a href="https://github.com/qwertymarmot" target="_blank" class="navbar-item">
-          Github
+        <a href="../notes"  class="navbar-item">
+          Notes Feed
         </a>
         <a href="../notes/blog"  class="navbar-item">
           Blog
@@ -73,7 +73,7 @@
           <div class="buttons">
             <a class="button is-text">
               <span class="icon is-small">
-                <img src="{{ '/assets/img/sun.svg' | relative_url }}" id="theme-toggle-img">
+                <img src="../assets/img/sun.svg" id="theme-toggle-img">
               </span>
             </a>
           </div>
@@ -81,3 +81,4 @@
       </div>
     </div>
   </nav>
+  <script src="/assets/js/Hamburger.js"></script>
