@@ -44,42 +44,6 @@ layout: Stylesheet
   -moz-text-fill-color: transparent;
 }
 
-
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@qwertymarmot
-Jekyll-Garden /
-jekyll-garden.github.io
-Public template
-
-Code
-Issues 5
-Pull requests
-Actions
-Projects
-Wiki
-Security
-
-    Insights
-
-jekyll-garden.github.io/assets/css/style.css
-@hfactor
-hfactor All features copied
-Latest commit 17aad87 on May 22
-History
-2 contributors
-@hfactor
-@asimkt
-1598 lines (1326 sloc) 29.1 KB
----
-layout: Stylesheet
----
-@import "fruity.css";
-
-
 html,
 html[data-theme="light"] {
     --color-bg-main: #FFFFFF;
