@@ -2,7 +2,7 @@
 layout: Stylesheet
 ---
 
-@import "/assets/css/highlight.css";
+@import "fruity.css";
 /* Containers: Body, Container, Box, Main, Header, Content */
 
 .gradient-text {
