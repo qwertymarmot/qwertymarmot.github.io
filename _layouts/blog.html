@@ -9,7 +9,7 @@ layout: Post
         <a href="{{ site.url }}{{ post.url }}">
           <h6>{{ post.title }}</h6>
             <p class="excerpt">
-              {{ post.excerpt }}
+              {{ post.excerpt | strip_html | strip | remove: "[[" | remove: "]]" | remove: "-" | escape | truncate: 200 }}
             </p>
         </a>
     </div>
