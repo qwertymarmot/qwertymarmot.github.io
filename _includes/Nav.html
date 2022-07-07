@@ -33,16 +33,10 @@
     <div class="navbar-brand">
       <a class="navbar-item" style="padding-left: 0;"; href="{{ site.baseurl }}/index.html">
           <h1 class = "gradient-text">{{site.heading}}</h1></a>
+          <span id="toggle-dark-light" href="">
+	        <img src="/assets/img/moon.svg" alt="light-mode" height="20" width="20">
+          </span>
           <script src="{{ site.baseurl }}/assets/js/modeswitcher.js"></script>
-      <div class="navbar-item navbar-dark-mode__mobile is-hidden-tablet" onclick="modeSwitcher()">
-        <div class="buttons">
-          <a class="button is-text">
-            <span class="icon is-small">
-              <img src="{{ '/assets/img/sun.svg' | relative_url }}" id="theme-toggle-img--mobile">
-            </span>
-          </a>
-        </div>
-      </div>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
