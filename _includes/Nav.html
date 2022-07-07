@@ -33,7 +33,6 @@
     <div class="navbar-brand">
       <a class="navbar-item" style="padding-left: 0;"; href="{{ site.baseurl }}/index.html">
           <h1 class = "gradient-text">{{site.heading}}</h1></a>
-          <script src="{{ site.baseurl }}/assets/js/modeswitcher.js"></script>
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -59,17 +58,8 @@
           Github
         </a>
        </div>
-       <div class="navbar-end is-hidden-mobile" onclick="modeSwitcher()" >
-         <div class="navbar-item">
-           <div class="buttons">
-             <a class="button is-text">
-               <span id="theme-toggle-img" href="">
-     	        <img src="/assets/img/moon.svg" alt="light-mode" height="20" width="20">
-               </span>
-             </a>
-           </div>
-         </div>
-       </div>
+       <a href="{{page.url}}" id="theme-toggle" onclick="modeSwitcher()" style="cursor: pointer;"></a>
      </div>
    </nav>
    <script src="/assets/js/Hamburger.js"></script>
+   <script src="/assets/js/modeswitcher.js"></script>
