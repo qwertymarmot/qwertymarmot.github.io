@@ -1,9 +1,8 @@
 ---
 layout: Post
 ---
-
-<h1>Latest Posts</h1>
-
+<div class="jumbo">Latest Posts</div>
+<div class="related-wrapper">
   {% for post in site.posts %}
     <div class="notelist-feed">
         <a href="{{ site.url }}{{ post.url }}">
@@ -14,3 +13,4 @@ layout: Post
         </a>
     </div>
   {% endfor %}
+</div>
