@@ -28,7 +28,7 @@ url: "https://qwertymarmot.github.io/" # the base hostname & protocol for your s
 # your social media links etc
 #######################################################################
 
-heading: Brandon Cole # Change this 
+heading: Brandon Cole # Change this
 copyright:
   year: 2022
   msg: Brandon Cole # This is a mandatory attribute for copyright to be displayed ; If deleting this, edit at footer layout.
@@ -129,7 +129,9 @@ defaults:
       layout: Post
       content-type: notes
 
-
+feed:
+  categories:
+    - now
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
