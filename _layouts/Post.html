@@ -91,6 +91,7 @@
             </div>
             {%- endif -%}
 
+
             <!--- Notes Feed Layout-->
             {%- if page.permalink == "/notes" -%}
             <div class="column is-6-widescreen  is-8-desktop is-8-tablet is-12-mobile">
@@ -162,6 +163,9 @@
                              </a>
                          </div>
                      <h1>{{page.title}}</h1>
+                     <h1>{%- if page.nowPage -%}
+                       {{ site.categories.now[0].title }}
+                       {%- else -%}{{ page.title }}{%- endif -%}</h1>
                      {%- include Content.html -%}
                      {%- include Backlinks.html -%}
                      </div>
