@@ -1,6 +1,8 @@
 ---
 title: Now
 layout: Post
+nowPage: true
+permalink: /now
 notetype: unfeed
 ---
 
