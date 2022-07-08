@@ -1,4 +1,5 @@
 ---
+layout: Post
 title: Now
 nowPage: true
 permalink: /now
