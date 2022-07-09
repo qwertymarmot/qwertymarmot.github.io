@@ -122,7 +122,9 @@
                         h3 {padding-top: 1rem; padding-bottom: 0rem;}
                     </style>
                     {%- endif -%}
-                    <h1>{{page.title}}</h1>
+                    <h1>{%- if page.nowPage -%}
+                       {{ site.categories.now[0].title }}
+                       {%- else -%}{{ page.title }}{%- endif -%} </h1>
                     {%- include Content.html -%}
                     {%- include Backlinks.html -%}
                     </div>
@@ -162,7 +164,7 @@
                                      <h5 class="meta-title">← BACK</h5>
                              </a>
                          </div>
-                     <h1>{%- if notes.nowPage -%}
+                     <h1>{%- if page.nowPage -%}
                        {{ site.categories.now[0].title }}
                        {%- else -%}{{ page.title }}{%- endif -%}</h1>
                      {%- include Content.html -%}
