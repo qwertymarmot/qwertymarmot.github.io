@@ -11,7 +11,7 @@ The database, by default, is set to only store a few months’ worths of circula
 <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"/>
 <figcaption>Photo by <a href="https://unsplash.com/@benjaminlehman?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">benjamin lehman</a> on <a href="https://unsplash.com/s/photos/database?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 </figcaption>
-<figure>
+</figure>
 
 The next step was creating an export of data using Tableau at the beginning of each year. These exports were stored locally on my computer (I know, not the best approach). This again became cumbersome, as I could not automate the connections of reports sitting on our Tableau server to these exported files. 
 
