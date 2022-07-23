@@ -12,4 +12,4 @@ I am looking forward to reading further into this book and the potential of shak
 <img src="https://images.unsplash.com/photo-1621948415096-db7be1f040bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
 <figcaption>Photo by <a href="https://unsplash.com/@sworupimages?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Saurav Thapa Shrestha</a> on <a href="https://unsplash.com/s/photos/deep-work?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 </figcaption>
-<figure>
+</figure>
