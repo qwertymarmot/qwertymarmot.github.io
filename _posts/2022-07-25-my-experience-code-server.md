@@ -17,6 +17,8 @@ Visual Studio Code (VS Code) itself is an open source code editor for many diffe
 Prior to discovering Code Server I had various projects and code snippets sitting in various locations. I work remotely so I had code sitting on my home computer, my work computer, Google Drive, etc. My goal with Code Server was to collect all that code into one location so that I could access it all from one location. Now I have been learning how to use GitHub a bit more and have started posting more code on there. But I wanted a local repository for code I wasn't ready/or never want to share on GitHub.
 Another reason I was attracted to Code Server was the options it opened up to programming on my iPad. Since my daughter has been born I tend to spend less time in my office after the work day is completed. I do however want to be able to write blog posts to my Jekyll website or update my digital garden. My Jekyll site is hosted on GitHub and with Code Server I was able to clone the repo to so that I can edit it from my iPad. Since Code Server has most of the functionality as VS Code I can also perform Git commands to keep my website repo up to date.
 
+## How I am running Code Server
+
 ## The Process of Collecting Code
 
 ## Lessons learned and the future
