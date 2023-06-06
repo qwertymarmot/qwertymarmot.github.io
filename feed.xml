@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome to my site - Articles</title>
-    <description>&amp;quotSharing knowledge is the most fundamental act of friendship. Because it is a way you can give something without loosing something&amp;quot by Richard Stallman</description>
+    <title>Welcome to my Site - Articles</title>
+    <description>Sharing knowledge is the most fundamental act of friendship. Because it is a way you can give something without loosing something by Richard Stallman</description>
     <link>
     /</link>
     
@@ -17,8 +17,8 @@
         
         <pubDate>Fri, 05 May 2023 00:00:00 -0600</pubDate>
         <link>
-        //now/2023/05/05/now-20230505.html</link>
-        <guid isPermaLink="true">//now/2023/05/05/now-20230505.html</guid>
+        //now-20230505</link>
+        <guid isPermaLink="true">//now-20230505</guid>
       </item>
       
     
@@ -33,8 +33,8 @@
         
         <pubDate>Sun, 05 Mar 2023 00:00:00 -0700</pubDate>
         <link>
-        //now/2023/03/05/now-20230305.html</link>
-        <guid isPermaLink="true">//now/2023/03/05/now-20230305.html</guid>
+        //now-20230305</link>
+        <guid isPermaLink="true">//now-20230305</guid>
       </item>
       
     
@@ -50,8 +50,8 @@ I ‘ve started doing my own reading immediate after reading to her before bed. 
         
         <pubDate>Fri, 23 Sep 2022 00:00:00 -0600</pubDate>
         <link>
-        //now/2022/09/23/now-20220923.html</link>
-        <guid isPermaLink="true">//now/2022/09/23/now-20220923.html</guid>
+        //now-20220923</link>
+        <guid isPermaLink="true">//now-20220923</guid>
       </item>
       
     
@@ -66,8 +66,8 @@ I ‘ve started doing my own reading immediate after reading to her before bed. 
         
         <pubDate>Fri, 08 Jul 2022 04:18:00 -0600</pubDate>
         <link>
-        //projects/2022/07/08/stravadiscordbot.html</link>
-        <guid isPermaLink="true">//projects/2022/07/08/stravadiscordbot.html</guid>
+        //stravadiscordbot</link>
+        <guid isPermaLink="true">//stravadiscordbot</guid>
       </item>
       
     
@@ -83,8 +83,8 @@ Currently I have built a utility that searches a db file containing loan rules f
         
         <pubDate>Fri, 08 Jul 2022 04:18:00 -0600</pubDate>
         <link>
-        //projects/2022/07/08/marmotutilities.html</link>
-        <guid isPermaLink="true">//projects/2022/07/08/marmotutilities.html</guid>
+        //marmotutilities</link>
+        <guid isPermaLink="true">//marmotutilities</guid>
       </item>
       
     
@@ -100,8 +100,8 @@ I have had to figure out how to reschedule some of my activities, such as readin
         
         <pubDate>Fri, 08 Jul 2022 00:00:00 -0600</pubDate>
         <link>
-        //now/2022/07/08/now-20220708.html</link>
-        <guid isPermaLink="true">//now/2022/07/08/now-20220708.html</guid>
+        //now-20220708</link>
+        <guid isPermaLink="true">//now-20220708</guid>
       </item>
       
     

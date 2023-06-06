@@ -3,20 +3,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
    
-      <title></title>
+      <title>qwertymarmot.github.io</title>
    
    <link>/</link>
-   <description>&quotSharing knowledge is the most fundamental act of friendship. Because it is a way you can give something without loosing something&quot by Richard Stallman</description>
+   <description>Sharing knowledge is the most fundamental act of friendship. Because it is a way you can give something without loosing something by Richard Stallman</description>
    <language>en-uk</language>
    <managingEditor> </managingEditor>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
 	  <title>1.0.4</title>
-	  <link>//now/2023/05/05/now-20230505.html</link>
+	  <link>//now-20230505</link>
 	  <author></author>
 	  <pubDate>2023-05-05T00:00:00-06:00</pubDate>
-	  <guid>//now/2023/05/05/now-20230505.html</guid>
+	  <guid>//now-20230505</guid>
 	  <description><![CDATA[
 	     <h3 id="training-a-new-hire">Training a new hire</h3>
 <p>If you have been keeping up with these now posts you will know that in March I was in the middle of a hiring process for a new employee for my department. We completed that process and my new hire started on April 26, 2023. The last week and a half I have been working on getting them up to speed on how we operate. So far I think my training process has been very successful. Training someone while working remotely is quite a bit different than what I am used to doing. I am being mindeful of providing them with with opportunities for hands on work with real tasks while I monitor them. I am also being mindful of giving them time between tasks to process their notes into documentation that we can utlize in the future.</p>
@@ -38,10 +38,10 @@
 
 	<item>
 	  <title>1.0.3</title>
-	  <link>//now/2023/03/05/now-20230305.html</link>
+	  <link>//now-20230305</link>
 	  <author></author>
 	  <pubDate>2023-03-05T00:00:00-07:00</pubDate>
-	  <guid>//now/2023/03/05/now-20230305.html</guid>
+	  <guid>//now-20230305</guid>
 	  <description><![CDATA[
 	     <h3 id="hiring-a-new-employee-to-my-department">Hiring a new employee to my department</h3>
 <p>With the addition of the Flatiron Library consortium to Marmot we decided that it was time to get another ILS administration on the team. Since I am the only current ILS administrator as well as manager of the department I have been finding myself a bit overwhelmed. Hiring the new person is going to be a great addition to the team. I am very excited about the candidates that applied. After completing the hire I will spend the next several months getting them up to speed on our systems.</p>
@@ -60,10 +60,10 @@
 
 	<item>
 	  <title>1.0.2</title>
-	  <link>//now/2022/09/23/now-20220923.html</link>
+	  <link>//now-20220923</link>
 	  <author></author>
 	  <pubDate>2022-09-23T00:00:00-06:00</pubDate>
-	  <guid>//now/2022/09/23/now-20220923.html</guid>
+	  <guid>//now-20220923</guid>
 	  <description><![CDATA[
 	     <h3 id="being-a-dad-to-a-7-month-old">Being a dad to a 7-month-old</h3>
 <p>Currently, this is undoubtedly a substantial part of my time. When I am not working, I spend time playing or bouncing my daughter to sleep. My wife and I have a schedule where we flip-flop the person on bath duty. It is incredible to watch my daughter’s development. She is very close to four point crawling. She has been army crawling for about a month now. I try to read to her every night. Currently, we are reading [[Harry Potter and the Half Blood Prince]].
@@ -84,10 +84,10 @@ I have set up a new local digital garden in Obsidian. This Obsidian vault is str
 
 	<item>
 	  <title>1.0.1</title>
-	  <link>//now/2022/07/08/now-20220708.html</link>
+	  <link>//now-20220708</link>
 	  <author></author>
 	  <pubDate>2022-07-08T00:00:00-06:00</pubDate>
-	  <guid>//now/2022/07/08/now-20220708.html</guid>
+	  <guid>//now-20220708</guid>
 	  <description><![CDATA[
 	     <h3 id="being-a-dad-to-a-5-month-old">Being a dad to a 5-month-old</h3>
 <p>Currently, this is undoubtedly a substantial part of my time. When I am not working, I spend time playing or bouncing my daughter to sleep. My wife and I have a schedule where we flip-flop the person on bath duty. It is incredible to watch my daughter’s development. I try to read to her every night. Currently, we are reading [[Harry Potter and the Goblet of Fire]].
