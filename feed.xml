@@ -105,20 +105,5 @@ I have had to figure out how to reschedule some of my activities, such as readin
       </item>
       
     
-      
-      <item>
-        <title>A Full and Comprehensive Style Test</title>
-        
-          <description>&lt;p&gt;This is just an &lt;em&gt;ipsis verbis&lt;/em&gt; copy of the first example running on the &lt;a href=&quot;http://demo.ghost.io&quot;&gt;Ghost Demo&lt;/a&gt;. This shows how you can use html styling to achieve your hopes.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Sat, 27 Sep 2014 04:18:00 -0600</pubDate>
-        <link>
-        //brandon/2014/09/27/a-full-and-comprehensive-style-test.html</link>
-        <guid isPermaLink="true">//brandon/2014/09/27/a-full-and-comprehensive-style-test.html</guid>
-      </item>
-      
-    
   </channel>
 </rss>
