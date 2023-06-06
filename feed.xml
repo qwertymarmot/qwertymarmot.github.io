@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Welcome to my site - Articles</title>
+    <description>&amp;quotSharing knowledge is the most fundamental act of friendship. Because it is a way you can give something without loosing something&amp;quot by Richard Stallman</description>
+    <link>
+    /</link>
+    
+      
+      <item>
+        <title>1.0.4</title>
+        
+          <description>&lt;h3 id=&quot;training-a-new-hire&quot;&gt;Training a new hire&lt;/h3&gt;
+&lt;p&gt;If you have been keeping up with these now posts you will know that in March I was in the middle of a hiring process for a new employee for my department. We completed that process and my new hire started on April 26, 2023. The last week and a half I have been working on getting them up to speed on how we operate. So far I think my training process has been very successful. Training someone while working remotely is quite a bit different than what I am used to doing. I am being mindeful of providing them with with opportunities for hands on work with real tasks while I monitor them. I am also being mindful of giving them time between tasks to process their notes into documentation that we can utlize in the future.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 05 May 2023 00:00:00 -0600</pubDate>
+        <link>
+        //now/2023/05/05/now-20230505.html</link>
+        <guid isPermaLink="true">//now/2023/05/05/now-20230505.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>1.0.3</title>
+        
+          <description>&lt;h3 id=&quot;hiring-a-new-employee-to-my-department&quot;&gt;Hiring a new employee to my department&lt;/h3&gt;
+&lt;p&gt;With the addition of the Flatiron Library consortium to Marmot we decided that it was time to get another ILS administration on the team. Since I am the only current ILS administrator as well as manager of the department I have been finding myself a bit overwhelmed. Hiring the new person is going to be a great addition to the team. I am very excited about the candidates that applied. After completing the hire I will spend the next several months getting them up to speed on our systems.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 05 Mar 2023 00:00:00 -0700</pubDate>
+        <link>
+        //now/2023/03/05/now-20230305.html</link>
+        <guid isPermaLink="true">//now/2023/03/05/now-20230305.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>1.0.2</title>
+        
+          <description>&lt;h3 id=&quot;being-a-dad-to-a-7-month-old&quot;&gt;Being a dad to a 7-month-old&lt;/h3&gt;
+&lt;p&gt;Currently, this is undoubtedly a substantial part of my time. When I am not working, I spend time playing or bouncing my daughter to sleep. My wife and I have a schedule where we flip-flop the person on bath duty. It is incredible to watch my daughter’s development. She is very close to four point crawling. She has been army crawling for about a month now. I try to read to her every night. Currently, we are reading [[Harry Potter and the Half Blood Prince]].
+I ‘ve started doing my own reading immediate after reading to her before bed. For my exercise I have started waking up a little bit early to workout in our garage gym.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 23 Sep 2022 00:00:00 -0600</pubDate>
+        <link>
+        //now/2022/09/23/now-20220923.html</link>
+        <guid isPermaLink="true">//now/2022/09/23/now-20220923.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Discord/Strava bot</title>
+        
+          <description>&lt;h2 id=&quot;description&quot;&gt;Description&lt;/h2&gt;
+&lt;p&gt;This is the project I completed for my senior seminar class for my Bachelor’s degree. It utilizes Strava’s API to allow Discord users to pull relevant stats for their activities they have completed in Strava. In the first iteration of this project I just programmed commands relevant for cycling activities completed in Strava.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 08 Jul 2022 04:18:00 -0600</pubDate>
+        <link>
+        //projects/2022/07/08/stravadiscordbot.html</link>
+        <guid isPermaLink="true">//projects/2022/07/08/stravadiscordbot.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Marmot Utilities</title>
+        
+          <description>&lt;h2 id=&quot;description&quot;&gt;Description&lt;/h2&gt;
+&lt;p&gt;This application uses python and flask. The purpose of the app is to create a easy way for users to interact with SQL and db files in a way that saves them from needing to have experience with SQL queries.
+Currently I have built a utility that searches a db file containing loan rules from the library circulation system, Sierra. This search allows a user to quickly find the loan rule that would apply for a specific patron and item combination at their library. This utility was inspired by the work of Jeremy Goldstein at the Minuteman Library Network.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 08 Jul 2022 04:18:00 -0600</pubDate>
+        <link>
+        //projects/2022/07/08/marmotutilities.html</link>
+        <guid isPermaLink="true">//projects/2022/07/08/marmotutilities.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>1.0.1</title>
+        
+          <description>&lt;h3 id=&quot;being-a-dad-to-a-5-month-old&quot;&gt;Being a dad to a 5-month-old&lt;/h3&gt;
+&lt;p&gt;Currently, this is undoubtedly a substantial part of my time. When I am not working, I spend time playing or bouncing my daughter to sleep. My wife and I have a schedule where we flip-flop the person on bath duty. It is incredible to watch my daughter’s development. I try to read to her every night. Currently, we are reading [[Harry Potter and the Goblet of Fire]].
+I have had to figure out how to reschedule some of my activities, such as reading and exercising. Before my daughter, I had a lot more flexibility and control over when I did activities. I took that flexibility for granted and now have short windows where I can still get them in. When I’m not too exhausted, I try to fit them in. Let me tell you, though, that babies work.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 08 Jul 2022 00:00:00 -0600</pubDate>
+        <link>
+        //now/2022/07/08/now-20220708.html</link>
+        <guid isPermaLink="true">//now/2022/07/08/now-20220708.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>A Full and Comprehensive Style Test</title>
+        
+          <description>&lt;p&gt;This is just an &lt;em&gt;ipsis verbis&lt;/em&gt; copy of the first example running on the &lt;a href=&quot;http://demo.ghost.io&quot;&gt;Ghost Demo&lt;/a&gt;. This shows how you can use html styling to achieve your hopes.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 27 Sep 2014 04:18:00 -0600</pubDate>
+        <link>
+        //brandon/2014/09/27/a-full-and-comprehensive-style-test.html</link>
+        <guid isPermaLink="true">//brandon/2014/09/27/a-full-and-comprehensive-style-test.html</guid>
+      </item>
+      
+    
+  </channel>
+</rss>
