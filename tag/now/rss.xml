@@ -12,6 +12,32 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
+	  <title>1.0.5</title>
+	  <link>//now-20230921</link>
+	  <author></author>
+	  <pubDate>2023-09-21T00:00:00-06:00</pubDate>
+	  <guid>//now-20230921</guid>
+	  <description><![CDATA[
+	     <h3 id="doing-a-photo-a-day-challenge">Doing a photo a day challenge</h3>
+<p>In order to get back into photography and pushing myself as a photographer I have decided to do create a goal to take a photo everyday and post it to a photography community or social media. I am currently on day 12 and have been having a lot of fun trying to find a creative composition each day.
+Something I have had to tell myself is that each days’ photo does not have to be a banger. I have given myself permission to take photos that are less than stellar. It is all part of the learning process.</p>
+
+<h3 id="starting-to-expand-my-exercise-routines">Starting to expand my exercise routines</h3>
+<p>I have still been doing indoor cycling on Zwift three days a week. However I have started to feel like I need some weight training to help build my body back up in areas where cycling is not helping. I actually got a three month Apple Fitness + membership included with my recent iPhone purchase so I have been using the guided workouts. I have mainly been focusing on the strength workouts. I did do one 20 minute HIIT session and it kicked my ass. I want to build up so to be able to do HIIT sessions without dying.</p>
+
+<h3 id="using-a-coder-server-for-all-my-code-work">Using a Coder server for all my code work</h3>
+<p>I came across Coder V2 a couple of weeks ago. If you are not familiar it is a self hosted application that allows you to deploy virtual development environments. I love this concept because I want to have access to the Python and SQL code I have written regardless of which computer I am working on. I set up my own instance of Coder V2 to start using for this purpose. I am still in the early days but I really like how it is working.</p>
+
+<h3 id="writing-articles-on-medium-and-blog">Writing articles on medium and blog</h3>
+<p>There was a long period of time where I was only writing blog articles when I felt like I had a really good idea that fell outside of my work life. I read an article on Medium about the concept of pulling ideas and content from your work because it is a gold mine of ideas. I have started to write more and have a ton of on deck ideas. These are all things that don’t really give away any industry secrets or impact the organization I work for in any way.</p>
+
+<h3 id="thinking-about-using-more-text-based-applications">Thinking about using more text based applications</h3>
+<p>Again I got inspired by some Medium articles by Ellane W. Ellane talks about their journey in trying to move over to more text based applications where the content is not tied to a specific application but can move freely between applications because all of the content is stored in plain text. This is really intriguing to me because I do tend to move between applications and it would be nice if my core notes and projects planning documents could be more fluid between those applications.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
 	  <title>1.0.4</title>
 	  <link>//now-20230505</link>
 	  <author></author>
