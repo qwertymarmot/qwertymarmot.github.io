@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>qwertymarmot.github.io</title>
+   
+   <link>/</link>
+   <description>Sharing knowledge is the most fundamental act of friendship. Because it is a way you can give something without loosing something by Richard Stallman</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>The levels of reading</title>
+	  <link>//2208191554</link>
+	  <author></author>
+	  <pubDate>2023-10-23T04:18:00-06:00</pubDate>
+	  <guid>//2208191554</guid>
+	  <description><![CDATA[
+	     <p><br /></p>
+
+<h3 id="notes">Notes:</h3>
+<p>There are four levels of reading that we have access to. ==Elementary reading== allows us to recognize words and their meaning. This type of reading is helpful when reading fiction material. 
+==Inspectional reading== entails skimming a material for general understanding of what the material is about. This type of reading is helpful when inspecting a material for the first time to understand what you might get from this material and if it is worth your time to read further.
+==Analytical Reading== entails reading through the content of a material to get a better understanding of the arguments that are being made. With Analytical reading we can classify the subject mater of the material. We can also create outlines of topics and problems that the material is addressing.
+==Syntopical Reading== entails taking the information gained from one material and developing it further using other materials to better understand multiple points of view.</p>
+
+<hr />
+<h3 id="source">Source:</h3>
+<p>How to Read a Book: The Ultimate Guide by Mortimer Adler. (n.d.). Farnam Street. Retrieved November 18, 2021, from https://fs.blog/how-to-read-a-book/</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>
