@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>qwertymarmot.github.io</title>
+   
+   <link>/</link>
+   <description>Sharing knowledge is the most fundamental act of friendship. Because it is a way you can give something without loosing something by Richard Stallman</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Problem solving can contribute to happiness</title>
+	  <link>//2208221704</link>
+	  <author></author>
+	  <pubDate>2023-10-25T04:18:00-06:00</pubDate>
+	  <guid>//2208221704</guid>
+	  <description><![CDATA[
+	     <p><br /></p>
+
+<h3 id="notes">Notes</h3>
+<p>When we are able to work toward solving problems in areas that we actually enjoy then we are in alignment with the activities that bring us joy. As we solve these problems we receive burst of happiness that contribute to our overall well being. We need to accept that problem solving is not the only contributor to happiness just one potential.</p>
+
+<hr />
+<h3 id="source">Source</h3>
+<p>Manson, M. (2016). The subtle art of not giving a fuck: A counterintuitive approach to living a good life.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Pursuits cannot make us happy</title>
+	  <link>//2208221657</link>
+	  <author></author>
+	  <pubDate>2023-10-25T04:18:00-06:00</pubDate>
+	  <guid>//2208221657</guid>
+	  <description><![CDATA[
+	     <p><br /></p>
+
+<h3 id="notes">Notes:</h3>
+<p>The pursuit of things that help us achieve our goals should not be pursued in the attempt of making us happy. Similar to trying to find happiness in objects, pursuits provide fleeting emotional waves of happiness that are not long term. Pursuits take our attention away from the experiences or problems that enable us to be who we are and enjoy the life we have while we still have it.</p>
+
+<hr />
+<h3 id="source">Source:</h3>
+<p>Manson, M. (2016). The subtle art of not giving a fuck: A counterintuitive approach to living a good life.</p>
+
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>
