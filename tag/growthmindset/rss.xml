@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>qwertymarmot.github.io</title>
+   
+   <link>/</link>
+   <description>Sharing knowledge is the most fundamental act of friendship. Because it is a way you can give something without loosing something by Richard Stallman</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>The structure of innovation</title>
+	  <link>//2208231614</link>
+	  <author></author>
+	  <pubDate>2023-10-25T04:18:00-06:00</pubDate>
+	  <guid>//2208231614</guid>
+	  <description><![CDATA[
+	     <p><br /></p>
+
+<h3 id="notes">Notes:</h3>
+<p>Because technology and medicine are in a constant state of flux and innovation we have to be open to changing our minds and beliefs in order to be innovative ourselves.
+Innovation cannot be achieved though normal <mark>algorithmic work</mark>, where work is routine and repeated. Algorithmic work can be replaced by outsourcing, automation, or AI. <mark>Heuristic work</mark> is where you are experimenting and creating something new. This is where innovation can be found.</p>
+
+<hr />
+<h3 id="source">Source:</h3>
+<ul>
+  <li>Pink, D. H. (2011). <em>Drive: The Surprising Truth About What Motivates Us</em>. Riverhead Books.</li>
+  <li>Grant, A. M. (2021). Think again: The power of knowing what you don’t know.</li>
+</ul>
+
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

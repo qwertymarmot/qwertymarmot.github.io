@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>qwertymarmot.github.io</title>
+   
+   <link>/</link>
+   <description>Sharing knowledge is the most fundamental act of friendship. Because it is a way you can give something without loosing something by Richard Stallman</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Caffeines role in blocking sleep</title>
+	  <link>//2208241653</link>
+	  <author></author>
+	  <pubDate>2023-10-25T04:18:00-06:00</pubDate>
+	  <guid>//2208241653</guid>
+	  <description><![CDATA[
+	     <p><br /></p>
+
+<h3 id="notes">Notes:</h3>
+<p>Caffeine acts to block the adenosine receptors that contribute to the build up of sleep pressure. Caffeine also has a half life of 5 to 7 hours. This means that as we continue to drink caffeine throughout the day we have to wait a certain amount of time for the adenosine receptors to be empty of caffeine.</p>
+
+<hr />
+<h3 id="source">Source:</h3>
+<p>PhD, M. W. (2017). Why We Sleep: Unlocking the Power of Sleep and Dreams (Illustrated edition). Scribner.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

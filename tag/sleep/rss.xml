@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>qwertymarmot.github.io</title>
+   
+   <link>/</link>
+   <description>Sharing knowledge is the most fundamental act of friendship. Because it is a way you can give something without loosing something by Richard Stallman</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Caffeines role in blocking sleep</title>
+	  <link>//2208241653</link>
+	  <author></author>
+	  <pubDate>2023-10-25T04:18:00-06:00</pubDate>
+	  <guid>//2208241653</guid>
+	  <description><![CDATA[
+	     <p><br /></p>
+
+<h3 id="notes">Notes:</h3>
+<p>Caffeine acts to block the adenosine receptors that contribute to the build up of sleep pressure. Caffeine also has a half life of 5 to 7 hours. This means that as we continue to drink caffeine throughout the day we have to wait a certain amount of time for the adenosine receptors to be empty of caffeine.</p>
+
+<hr />
+<h3 id="source">Source:</h3>
+<p>PhD, M. W. (2017). Why We Sleep: Unlocking the Power of Sleep and Dreams (Illustrated edition). Scribner.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>How sleep pressure occurs</title>
+	  <link>//2208241648</link>
+	  <author></author>
+	  <pubDate>2023-10-25T04:18:00-06:00</pubDate>
+	  <guid>//2208241648</guid>
+	  <description><![CDATA[
+	     <p><br /></p>
+
+<h3 id="notes">Notes:</h3>
+<p>Sleep pressure or the feeling of being sleepy occurs due to build up of adenosine in receptors within our body.</p>
+
+<hr />
+<h3 id="source">Source:</h3>
+<p>PhD, M. W. (2017). <em>Why We Sleep: Unlocking the Power of Sleep and Dreams</em> (Illustrated edition). Scribner.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Our brains operate like computer RAM</title>
+	  <link>//2208241638</link>
+	  <author></author>
+	  <pubDate>2023-10-25T04:18:00-06:00</pubDate>
+	  <guid>//2208241638</guid>
+	  <description><![CDATA[
+	     <p><br /></p>
+
+<h3 id="notes">Notes:</h3>
+<p>Throughout the day our brain stores our experiences in a temporary storage in the hypothalamus. That temporary storage can fill up. When that happens we retain less information. The hypothalamus does not process information to the neocortex until we sleep. It takes a full 7-8 hours for us to have enough sleep cycles to complete this information migration process.</p>
+
+<hr />
+<h3 id="source">Source:</h3>
+<p>PhD, M. W. (2017). <em>Why We Sleep: Unlocking the Power of Sleep and Dreams</em> (Illustrated edition). Scribner.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>
