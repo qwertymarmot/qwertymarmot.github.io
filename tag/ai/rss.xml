@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>qwertymarmot.github.io</title>
+   
+   <link>/</link>
+   <description>Sharing knowledge is the most fundamental act of friendship. Because it is a way you can give something without loosing something by Richard Stallman</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>What determines a machines ability to think</title>
+	  <link>//2209070912</link>
+	  <author></author>
+	  <pubDate>2023-11-09T03:18:00-07:00</pubDate>
+	  <guid>//2209070912</guid>
+	  <description><![CDATA[
+	     <p><br /></p>
+
+<h3 id="notes">Notes:</h3>
+<p>According to the <strong>Turing Test</strong>, if a human is convinced that a machine is human through conversation and inquiry, then by all accounts that machine is capable of thought.</p>
+
+<hr />
+<h3 id="source">Source:</h3>
+<p>Owl, S. (2022, August 12). Split Brain Psychology [Substack newsletter]. <em>Superb Owl</em>. <a href="https://superbowl.substack.com/p/split-brain-psychology">https://superbowl.substack.com/p/split-brain-psychology</a></p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>qwertymarmot.github.io</title>
+   
+   <link>/</link>
+   <description>Sharing knowledge is the most fundamental act of friendship. Because it is a way you can give something without loosing something by Richard Stallman</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Lingering attention</title>
+	  <link>//2209301527</link>
+	  <author></author>
+	  <pubDate>2023-11-09T03:18:00-07:00</pubDate>
+	  <guid>//2209301527</guid>
+	  <description><![CDATA[
+	     <p><br /></p>
+
+<h3 id="notes">Notes:</h3>
+<p>As we move from one task to the next part of our brain power remains on the previous task.</p>
+
+<hr />
+<h3 id="source">Source:</h3>
+<p>Newport, C. (2016). <em>Deep work: Rules for focused success in a distracted world</em>.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

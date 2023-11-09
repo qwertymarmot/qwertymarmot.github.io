@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>qwertymarmot.github.io</title>
+   
+   <link>/</link>
+   <description>Sharing knowledge is the most fundamental act of friendship. Because it is a way you can give something without loosing something by Richard Stallman</description>
+   <language>en-uk</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Our decisions impact what is important to us</title>
+	  <link>//2209070901</link>
+	  <author></author>
+	  <pubDate>2023-11-09T03:18:00-07:00</pubDate>
+	  <guid>//2209070901</guid>
+	  <description><![CDATA[
+	     <p><br /></p>
+
+<h3 id="notes">Notes:</h3>
+<p>There is never enough time for us to pursue every opportunity available to us. We are forced to make decisions. Each time we make a decision to do something we are casting our vote on what we most value. We must make sure that these decisions are in line with what is most important to us so that we live in our values. Otherwise we are just putting up a front.</p>
+
+<hr />
+<h3 id="source">Source:</h3>
+<p>Farnam Street Brain Food Newsletter</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>
