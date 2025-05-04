@@ -199,20 +199,7 @@ Check out this book: [[Book: How to Take Smart Notes]].
   </div>
 </article>
 
-<script>
-  // Process wikilinks in the note content
-  document.addEventListener('DOMContentLoaded', function() {
-    const noteContent = document.querySelector('.note-content');
-    if (noteContent) {
-      const wikilinksRegex = /\[\[(.*?)\]\]/g;
-      noteContent.innerHTML = noteContent.innerHTML.replace(wikilinksRegex, function(match, p1) {
-        const linkText = p1.trim();
-        const url = linkText.toLowerCase().replace(/\s+/g, '-');
-        return `<a href="/notes/${url}" class="wikilink">${linkText}</a>`;
-      });
-    }
-  });
-</script>
+<!-- Wikilinks are processed by assets/js/wikilinks.js -->
 
       </div>
     </main>

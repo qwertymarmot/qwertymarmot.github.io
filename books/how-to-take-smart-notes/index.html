@@ -259,20 +259,7 @@
   </div>
 </article>
 
-<script>
-  // Process wikilinks in the book content
-  document.addEventListener('DOMContentLoaded', function() {
-    const bookContent = document.querySelector('.book-notes');
-    if (bookContent) {
-      const wikilinksRegex = /\[\[(.*?)\]\]/g;
-      bookContent.innerHTML = bookContent.innerHTML.replace(wikilinksRegex, function(match, p1) {
-        const linkText = p1.trim();
-        const url = linkText.toLowerCase().replace(/\s+/g, '-');
-        return `<a href="/notes/${url}" class="wikilink">${linkText}</a>`;
-      });
-    }
-  });
-</script>
+<!-- Wikilinks are processed by assets/js/wikilinks.js -->
 
       </div>
     </main>
