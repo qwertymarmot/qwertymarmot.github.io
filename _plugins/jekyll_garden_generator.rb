@@ -96,16 +96,17 @@ module JekyllGarden
         wikilinks.each do |link|
           link_text = link[0].strip
           
-          # Determine target collection
+          # Determine target collection and prepare display text
           target_collection = 'notes'
+          display_text = link_text
           
           # Check if link starts with Book: prefix
           if link_text.start_with?('Book:')
             target_collection = 'books'
             if link_text.start_with?('Book: ')
-              link_text = link_text[6..-1].strip  # Remove "Book: " with space
+              display_text = link_text[6..-1].strip  # Remove "Book: " with space
             else
-              link_text = link_text[5..-1].strip  # Remove "Book:" without space
+              display_text = link_text[5..-1].strip  # Remove "Book:" without space
             end
           else
             # Check if a book with this name exists
@@ -124,8 +125,8 @@ module JekyllGarden
             end
           end
           
-          # Create slug
-          slug = link_text.downcase
+          # Create slug from the display text (without the Book: prefix if it's a book)
+          slug = display_text.downcase
             .gsub(/\s+/, '-')
             .gsub(/[^\w\-]/, '')
             .gsub(/-{2,}/, '-')
