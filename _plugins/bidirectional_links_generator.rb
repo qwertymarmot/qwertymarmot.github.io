@@ -149,14 +149,29 @@ class BidirectionalLinksGenerator < Jekyll::Generator
       end
     end
 
-    # Write to both locations for compatibility
-    File.write('_includes/notes_graph.json', JSON.dump({
+    # Write to multiple locations for compatibility
+    
+    # 1. _includes/notes_graph.json for direct inclusion in templates
+    includes_dir = File.join(site.source, '_includes')
+    Dir.mkdir(includes_dir) unless Dir.exist?(includes_dir)
+    
+    File.write(File.join(includes_dir, 'notes_graph.json'), JSON.dump({
       edges: graph_edges,
       nodes: graph_nodes,
     }))
     
-    # Also write to the root for the JavaScript to fetch
-    File.write('notes_graph.json', JSON.dump({
+    # 2. Root notes_graph.json for JavaScript to fetch
+    File.write(File.join(site.source, 'notes_graph.json'), JSON.dump({
+      edges: graph_edges,
+      nodes: graph_nodes,
+    }))
+    
+    # 3. assets/js/notes_graph.json as a fallback location
+    assets_js_dir = File.join(site.source, 'assets', 'js')
+    Dir.mkdir(File.join(site.source, 'assets')) unless Dir.exist?(File.join(site.source, 'assets'))
+    Dir.mkdir(assets_js_dir) unless Dir.exist?(assets_js_dir)
+    
+    File.write(File.join(assets_js_dir, 'notes_graph.json'), JSON.dump({
       edges: graph_edges,
       nodes: graph_nodes,
     }))

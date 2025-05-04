@@ -14,8 +14,10 @@
   const FONT_BASELINE = 40;
   const MAX_LABEL_LENGTH = 50;
 
-  // Load graph data from the JSON file
+  // Load graph data from the JSON file, trying multiple locations
   fetch('/notes_graph.json')
+    .catch(() => fetch('/assets/js/notes_graph.json'))
+    .catch(() => fetch('/_includes/notes_graph.json'))
     .then(response => response.json())
     .then(data => {
       const nodesData = data.nodes;
