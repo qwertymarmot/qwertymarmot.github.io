@@ -183,9 +183,24 @@ If you encounter issues with GitHub Pages deployment, check the following:
    - Install dependencies with proper caching
    - Build and deploy the site to the gh-pages branch
 
-5. **Common Errors**:
+5. **Permission Issues**: If you see errors like "Permission denied to github-actions[bot]", you need to set up a deploy key:
+
+   ```bash
+   # Run the deploy key setup script
+   ./setup-deploy-key.sh
+   ```
+
+   This script will:
+   - Generate an SSH key pair
+   - Show you how to add the public key as a deploy key in your GitHub repository
+   - Show you how to add the private key as a secret named DEPLOY_KEY in your GitHub repository
+
+   After adding both keys to your GitHub repository, the GitHub Actions workflow will be able to deploy your site.
+
+6. **Common Errors**:
    - If you see errors about RubyGems version incompatibility, check that the workflow is updating RubyGems properly.
    - For native extension build failures, make sure the workflow has the necessary build tools installed.
+   - For permission errors (403), make sure you've set up the deploy key correctly.
 
 ### Cloudflare Pages
 
