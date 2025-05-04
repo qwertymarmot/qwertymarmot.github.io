@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (linkText.startsWith('Book:')) {
           collection = 'books';
           linkText = linkText.substring(5).trim(); // Remove the "Book:" prefix
+        } else if (linkText.startsWith('Book: ')) {
+          collection = 'books';
+          linkText = linkText.substring(6).trim(); // Remove the "Book: " prefix with space
         }
         
         // Create the link
