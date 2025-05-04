@@ -30,10 +30,15 @@ document.addEventListener('DOMContentLoaded', function() {
   // Load the graph data
   const loadGraphData = async () => {
     try {
-      // Use relative URL to ensure it works with base URL configurations
-      const response = await fetch(new URL('graph-data.json', window.location.origin).pathname);
+      // Use site root-relative path to ensure it works with base URL configurations
+      const siteRoot = document.querySelector('meta[name="site-root"]')?.getAttribute('content') || '';
+      const graphDataPath = `${siteRoot}/graph-data.json`;
+      
+      console.log('Fetching graph data from:', graphDataPath);
+      const response = await fetch(graphDataPath);
+      
       if (!response.ok) {
-        throw new Error('Failed to load graph data');
+        throw new Error(`Failed to load graph data: ${response.status} ${response.statusText}`);
       }
       return await response.json();
     } catch (error) {
