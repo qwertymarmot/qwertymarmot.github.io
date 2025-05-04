@@ -13,8 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (!contentAreas.length) return;
     
+    // Get the baseurl from the meta tag
+    const baseurl = document.querySelector('meta[name="baseurl"]')?.getAttribute('content') || '';
+    
     // Get all book slugs for reference
-    const bookLinks = document.querySelectorAll('a[href^="/books/"]');
+    const bookLinks = document.querySelectorAll(`a[href^="${baseurl}/books/"]`);
     const bookSlugs = new Set();
     bookLinks.forEach(link => {
       const href = link.getAttribute('href');
@@ -77,8 +80,11 @@ document.addEventListener('DOMContentLoaded', function() {
           .replace(/^-+/, '')             // Trim hyphens from start
           .replace(/-+$/, '');            // Trim hyphens from end
         
-        // Create the link
-        return `<a href="/${collection}/${slug}" class="wikilink" data-link-type="${collection}">${displayText}</a>`;
+        // Get the baseurl from the meta tag
+        const baseurl = document.querySelector('meta[name="baseurl"]')?.getAttribute('content') || '';
+        
+        // Create the link with baseurl
+        return `<a href="${baseurl}/${collection}/${slug}" class="wikilink" data-link-type="${collection}">${displayText}</a>`;
       });
       
       // Finally, restore code blocks
