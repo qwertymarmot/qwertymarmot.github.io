@@ -8,6 +8,7 @@
   <title>{% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta name="site-root" content="{{ site.baseurl }}">
+  <meta name="baseurl" content="{{ site.baseurl }}">
   
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">

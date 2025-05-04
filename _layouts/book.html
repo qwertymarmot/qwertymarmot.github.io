@@ -69,10 +69,9 @@ layout: default
   <div class="book-footer">
     <div class="related-notes">
       <h2 class="related-notes-title">Related Notes</h2>
-      {% assign notes = site.notes | where_exp: "item", "item.content contains page.title" %}
-      {% if notes.size > 0 %}
+      {% if page.backlinks.size > 0 %}
       <ul class="related-notes-list">
-        {% for note in notes %}
+        {% for note in page.backlinks %}
         <li class="related-note">
           <a href="{{ note.url | relative_url }}" class="related-note-link">{{ note.title }}</a>
           <div class="related-note-excerpt">

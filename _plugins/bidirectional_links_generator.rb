@@ -205,6 +205,33 @@ class BidirectionalLinksGenerator < Jekyll::Generator
       edges: graph_edges,
       nodes: graph_nodes,
     }))
+    
+    # 4. Also write to the _site directory for GitHub Pages
+    site_dir = File.join(site.dest)
+    site_includes_dir = File.join(site_dir, '_includes')
+    site_assets_js_dir = File.join(site_dir, 'assets', 'js')
+    
+    # Create directories if they don't exist
+    Dir.mkdir(site_dir) unless Dir.exist?(site_dir)
+    Dir.mkdir(site_includes_dir) unless Dir.exist?(site_includes_dir)
+    Dir.mkdir(File.join(site_dir, 'assets')) unless Dir.exist?(File.join(site_dir, 'assets'))
+    Dir.mkdir(site_assets_js_dir) unless Dir.exist?(site_assets_js_dir)
+    
+    # Write to _site directory
+    File.write(File.join(site_dir, 'notes_graph.json'), JSON.dump({
+      edges: graph_edges,
+      nodes: graph_nodes,
+    }))
+    
+    File.write(File.join(site_includes_dir, 'notes_graph.json'), JSON.dump({
+      edges: graph_edges,
+      nodes: graph_nodes,
+    }))
+    
+    File.write(File.join(site_assets_js_dir, 'notes_graph.json'), JSON.dump({
+      edges: graph_edges,
+      nodes: graph_nodes,
+    }))
   end
 
   def note_id_from_note(note)
