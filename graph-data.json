@@ -78,6 +78,26 @@
       "source": "how-to-use-wikilinks",
       "target": "how-to-take-smart-notes",
       "type": "books"
+    },
+    {
+      "source": "how-to-take-smart-notes",
+      "target": "zettelkasten-method",
+      "type": "notes"
+    },
+    {
+      "source": "how-to-take-smart-notes",
+      "target": "networked-thought",
+      "type": "notes"
+    },
+    {
+      "source": "how-to-take-smart-notes",
+      "target": "digital-garden-philosophy",
+      "type": "notes"
+    },
+    {
+      "source": "how-to-take-smart-notes",
+      "target": "how-to-use-wikilinks",
+      "type": "notes"
     }
   ]
 }
