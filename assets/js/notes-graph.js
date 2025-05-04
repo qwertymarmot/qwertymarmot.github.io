@@ -21,12 +21,9 @@
   };
 
   // Load graph data from the JSON file, trying multiple locations
-  // Get the baseurl from the meta tag
-  const baseurl = document.querySelector('meta[name="baseurl"]')?.getAttribute('content') || '';
-  
-  fetch(baseurl + '/notes_graph.json')
-    .catch(() => fetch(baseurl + '/assets/js/notes_graph.json'))
-    .catch(() => fetch(baseurl + '/_includes/notes_graph.json'))
+  fetch('/notes_graph.json')
+    .catch(() => fetch('/assets/js/notes_graph.json'))
+    .catch(() => fetch('/_includes/notes_graph.json'))
     .catch(() => {
       console.warn("Could not load graph data from any location, using empty graph");
       return new Response(JSON.stringify(defaultGraphData));

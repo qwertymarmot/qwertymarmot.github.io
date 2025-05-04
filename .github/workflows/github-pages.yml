@@ -33,21 +33,6 @@ jobs:
       # Build the site
       - name: Build the site
         run: bundle exec jekyll build
-        
-      # Ensure notes_graph.json is in the _site directory
-      - name: Copy notes_graph.json to _site
-        run: |
-          if [ -f "notes_graph.json" ]; then
-            cp notes_graph.json _site/
-          fi
-          if [ -f "_includes/notes_graph.json" ]; then
-            mkdir -p _site/_includes
-            cp _includes/notes_graph.json _site/_includes/
-          fi
-          if [ -f "assets/js/notes_graph.json" ]; then
-            mkdir -p _site/assets/js
-            cp assets/js/notes_graph.json _site/assets/js/
-          fi
       
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages

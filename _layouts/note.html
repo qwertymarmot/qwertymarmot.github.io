@@ -28,9 +28,11 @@ layout: default
     <div class="backlinks-container">
       <h2 class="backlinks-title">Backlinks</h2>
       <div class="backlinks">
-        {% if page.backlinks.size > 0 %}
+        {% assign notes = site.notes | where_exp: "item", "item.url != page.url" %}
+        {% assign backlinks = notes | where_exp: "item", "item.content contains page.title" %}
+        {% if backlinks.size > 0 %}
         <ul class="backlinks-list">
-          {% for backlink in page.backlinks %}
+          {% for backlink in backlinks %}
           <li class="backlink">
             <a href="{{ backlink.url | relative_url }}" class="backlink-link">{{ backlink.title }}</a>
             <div class="backlink-excerpt">

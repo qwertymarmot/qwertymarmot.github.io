@@ -1,0 +1,24 @@
+source "https://rubygems.org"
+
+# Use Jekyll with a specific version
+gem "jekyll", "~> 3.9.3"
+
+# Exclude eventmachine and use a pure Ruby server instead
+gem "webrick", "~> 1.7"
+
+# Essential plugins
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.15.1"
+  gem "jekyll-seo-tag", "~> 2.8.0"
+  gem "jekyll-sitemap", "~> 1.4.0"
+  gem "jekyll-relative-links", "~> 0.6.1"
+end
+
+# For markdown processing
+gem "kramdown-parser-gfm", "~> 1.1.0"
+
+# Explicitly specify ffi version to avoid compatibility issues
+gem "ffi", "~> 1.15.5"
+
+# Exclude em-websocket to avoid eventmachine dependency
+gem "em-websocket", "~> 0.5.3", require: false
