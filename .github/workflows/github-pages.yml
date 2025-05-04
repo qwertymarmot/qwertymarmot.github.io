@@ -9,18 +9,35 @@ jobs:
   github-pages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       
-      # Use GitHub Actions' cache to cache dependencies on servers
-      - uses: actions/cache@v3
+      # Set up Ruby
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
+          ruby-version: '3.0'
+          bundler-cache: true # runs bundle install and caches installed gems automatically
       
-      # Use GitHub Deploy Action to build and deploy to GitHub Pages
-      - uses: helaili/jekyll-action@v2
+      # Install specific RubyGems version to avoid compatibility issues
+      - name: Update RubyGems
+        run: |
+          gem update --system 3.3.22
+          gem --version
+      
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
+      
+      # Build the site
+      - name: Build the site
+        run: bundle exec jekyll build
+      
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          target_branch: gh-pages  # The branch the action should deploy to
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages

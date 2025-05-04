@@ -10,6 +10,26 @@ if ! command -v git &> /dev/null; then
     exit 1
 fi
 
+# Check if bundle is installed
+if ! command -v bundle &> /dev/null; then
+    echo "Error: bundler is not installed. Please install bundler first with: gem install bundler"
+    exit 1
+fi
+
+# Generate Gemfile.lock if it doesn't exist
+if [ ! -f Gemfile.lock ]; then
+    echo "Generating Gemfile.lock..."
+    bundle lock --update
+    if [ $? -ne 0 ]; then
+        echo "Warning: Failed to generate Gemfile.lock. This may cause deployment issues."
+        echo "You can try running 'bundle lock --update' manually."
+    else
+        echo "Gemfile.lock generated successfully."
+    fi
+else
+    echo "Gemfile.lock already exists."
+fi
+
 # Initialize git repository if not already done
 if [ ! -d .git ]; then
     echo "Initializing git repository..."

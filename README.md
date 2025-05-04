@@ -20,8 +20,8 @@ A beautiful, responsive Jekyll theme for creating a digital garden inspired by M
 
 ### Prerequisites
 
-- Ruby version 2.5.0 or higher
-- RubyGems
+- Ruby version 3.0.0 or higher (recommended)
+- RubyGems 3.3.22 or higher
 - GCC and Make
 
 ### Installation
@@ -129,7 +129,7 @@ Your page content here...
 
 ### GitHub Pages
 
-This repository is already configured for deployment to GitHub Pages using GitHub Actions.
+This repository is configured for deployment to GitHub Pages using GitHub Actions.
 
 1. Make sure your repository is named `yourusername.github.io` or update the `baseurl` in `_config.yml` accordingly.
 
@@ -146,7 +146,7 @@ git add .
 git commit -m "Initial commit"
 
 # Add your GitHub repository as remote
-git remote add origin https://github.com/qwertymarmot/qwertymarmot.github.io.git
+git remote add origin https://github.com/yourusername/yourusername.github.io.git
 
 # Push to GitHub
 git push -u origin main
@@ -154,9 +154,38 @@ git push -u origin main
 
 3. GitHub Actions will automatically build and deploy your site to GitHub Pages.
 
-4. Your site will be available at `https://qwertymarmot.github.io/`
+4. Your site will be available at `https://yourusername.github.io/`
 
 5. You can check the status of the deployment in the "Actions" tab of your GitHub repository.
+
+### Troubleshooting GitHub Pages Deployment
+
+If you encounter issues with GitHub Pages deployment, check the following:
+
+1. **Ruby Version**: The workflow is configured to use Ruby 3.0. This is specified in both the GitHub workflow file and the `.ruby-version` file.
+
+2. **Gemfile.lock**: Make sure you have a `Gemfile.lock` file in your repository. If not, generate one locally with:
+
+   ```bash
+   bundle lock --update
+   ```
+
+3. **Gem Compatibility**: The Gemfile specifies compatible versions of gems to avoid dependency issues. If you're experiencing problems, try updating the Gemfile with specific versions:
+
+   ```ruby
+   gem "github-pages", "~> 228"
+   gem "jekyll", "~> 3.9.3"
+   ```
+
+4. **GitHub Workflow**: The `.github/workflows/github-pages.yml` file is configured to:
+   - Use Ruby 3.0
+   - Update RubyGems to version 3.3.22
+   - Install dependencies with proper caching
+   - Build and deploy the site to the gh-pages branch
+
+5. **Common Errors**:
+   - If you see errors about RubyGems version incompatibility, check that the workflow is updating RubyGems properly.
+   - For native extension build failures, make sure the workflow has the necessary build tools installed.
 
 ### Cloudflare Pages
 
