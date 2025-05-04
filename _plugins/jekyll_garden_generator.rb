@@ -206,6 +206,8 @@ module JekyllGarden
         'links' => links
       }
       
+      # Write to both locations for compatibility
+      # 1. Root graph-data.json (for backward compatibility)
       graph_data_file = Jekyll::StaticFile.new(
         site,
         site.source,
@@ -215,6 +217,12 @@ module JekyllGarden
       
       File.write(File.join(site.source, 'graph-data.json'), JSON.pretty_generate(graph_data))
       site.static_files << graph_data_file
+      
+      # 2. _includes/notes_graph.json (for direct inclusion in HTML)
+      includes_dir = File.join(site.source, '_includes')
+      Dir.mkdir(includes_dir) unless Dir.exist?(includes_dir)
+      
+      File.write(File.join(includes_dir, 'notes_graph.json'), JSON.pretty_generate(graph_data))
     end
   end
 end
