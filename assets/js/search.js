@@ -13,11 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Load the search index
   const loadSearchIndex = async () => {
     try {
-      // Use site root-relative path to ensure it works with base URL configurations
-      const siteRoot = document.querySelector('meta[name="site-root"]')?.getAttribute('content') || '';
-      const searchIndexPath = `${siteRoot}/search-index.json`;
-      
-      const response = await fetch(searchIndexPath);
+      const response = await fetch('/search-index.json');
       if (!response.ok) {
         throw new Error('Failed to load search index');
       }
