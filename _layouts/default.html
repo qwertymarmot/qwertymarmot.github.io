@@ -36,6 +36,9 @@
   {% if site.search_enabled %}
   <script src="{{ "/assets/js/search.js" | relative_url }}"></script>
   {% endif %}
+  {% if page.layout == 'note' or page.layout == 'home' %}
+  <script src="{{ "/assets/js/graph.js" | relative_url }}"></script>
+  {% endif %}
   {% if page.layout == 'home' %}
   <script src="{{ "/assets/js/filters.js" | relative_url }}"></script>
   {% endif %}

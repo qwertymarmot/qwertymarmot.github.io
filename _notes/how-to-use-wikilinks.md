@@ -38,8 +38,6 @@ I'm learning about the [[zettelkasten-method]] for note-taking.
 Check out this book: [[Book: How to Take Smart Notes]].
 ```
 
-For example, here's a link to a book: [[Book: How to Take Smart Notes]].
-
 ## Best Practices for Wikilinks
 
 To get the most out of wikilinks in your digital garden:
