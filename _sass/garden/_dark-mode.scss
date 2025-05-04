@@ -109,7 +109,6 @@ html[data-theme="dark"] {
   
   // Filter buttons
   .filter-container {
-    background-color: $dark-light-gray;
     border-color: $dark-border-color;
     
     .filter-group {
@@ -119,7 +118,7 @@ html[data-theme="dark"] {
       
       .filter-btn {
         background-color: $dark-background-color;
-        color: $dark-medium-gray;
+        color: white;
         border-color: $dark-border-color;
         
         &:hover {
@@ -128,7 +127,7 @@ html[data-theme="dark"] {
         
         &.active {
           background-color: $dark-link-color;
-          color: $dark-text-color;
+          color: white;
           border-color: $dark-link-color;
         }
       }
@@ -142,7 +141,7 @@ html[data-theme="dark"] {
     
     .view-toggle-btn {
       background-color: $dark-background-color;
-      color: $dark-medium-gray;
+      color: white;
       border-color: $dark-border-color;
       
       &:hover {
@@ -151,7 +150,7 @@ html[data-theme="dark"] {
       
       &.active {
         background-color: $dark-link-color;
-        color: $dark-text-color;
+        color: white;
         border-color: $dark-link-color;
       }
     }
