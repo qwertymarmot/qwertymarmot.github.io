@@ -1,7 +1,7 @@
 ---
 title: How to Take Smart Notes
 author: Sönke Ahrens
-cover: /assets/images/books/placeholder.txt
+cover: /assets/images/books/how-to-take-smart-notes.jpg
 date_read: 2025-01-15
 rating: 5
 tags: [productivity, note-taking, zettelkasten, writing]
