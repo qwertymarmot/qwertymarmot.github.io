@@ -100,7 +100,11 @@ module JekyllGarden
           target_collection = 'notes'
           if link_text.start_with?('Book:')
             target_collection = 'books'
-            link_text = link_text[5..-1].strip
+            if link_text.start_with?('Book: ')
+              link_text = link_text[6..-1].strip  # Remove "Book: " with space
+            else
+              link_text = link_text[5..-1].strip  # Remove "Book:" without space
+            end
           end
           
           # Create slug
