@@ -2,6 +2,36 @@
 # Generates search index and graph data for Jekyll Garden
 
 require 'json'
+require 'fileutils'
+
+# Register a hook to copy files after site generation
+Jekyll::Hooks.register :site, :post_write do |site|
+  puts "Post-write hook executed"
+  
+  # Copy search-index.json to the destination directory
+  search_index_source_path = File.join(site.source, 'search-index.json')
+  search_index_dest_path = File.join(site.dest, 'search-index.json')
+  
+  if File.exist?(search_index_source_path)
+    FileUtils.cp(search_index_source_path, search_index_dest_path)
+    puts "Copied search-index.json to #{search_index_dest_path}"
+    puts "File exists in dest after copy: #{File.exist?(search_index_dest_path)}"
+  else
+    puts "Source file #{search_index_source_path} does not exist"
+  end
+  
+  # Copy graph-data.json to the destination directory
+  graph_data_source_path = File.join(site.source, 'graph-data.json')
+  graph_data_dest_path = File.join(site.dest, 'graph-data.json')
+  
+  if File.exist?(graph_data_source_path)
+    FileUtils.cp(graph_data_source_path, graph_data_dest_path)
+    puts "Copied graph-data.json to #{graph_data_dest_path}"
+    puts "File exists in dest after copy: #{File.exist?(graph_data_dest_path)}"
+  else
+    puts "Source file #{graph_data_source_path} does not exist"
+  end
+end
 
 module JekyllGarden
   class SearchIndexGenerator < Jekyll::Generator
@@ -49,15 +79,29 @@ module JekyllGarden
         'documents' => documents
       }
       
-      search_index_file = Jekyll::StaticFile.new(
-        site,
-        site.source,
-        '',
-        'search-index.json'
-      )
+      # Debug output
+      puts "Generating search index with #{documents.length} documents"
+      puts "Writing search index to #{File.join(site.dest, 'search-index.json')}"
       
-      File.write(File.join(site.source, 'search-index.json'), JSON.pretty_generate(search_index))
-      site.static_files << search_index_file
+      # Write search index to both the destination directory and the source directory
+      search_index_path = File.join(site.dest, 'search-index.json')
+      search_index_source_path = File.join(site.source, 'search-index.json')
+      
+      FileUtils.mkdir_p(site.dest) unless File.directory?(site.dest)
+      begin
+        # Write to destination directory
+        File.write(search_index_path, JSON.pretty_generate(search_index))
+        puts "Search index written successfully to #{search_index_path}"
+        puts "File exists in dest: #{File.exist?(search_index_path)}"
+        
+        # Also write to source directory as a fallback
+        File.write(search_index_source_path, JSON.pretty_generate(search_index))
+        puts "Search index also written to #{search_index_source_path}"
+        puts "File exists in source: #{File.exist?(search_index_source_path)}"
+      rescue => e
+        puts "Error writing search index: #{e.message}"
+        puts e.backtrace.join("\n")
+      end
       
       # Generate graph data
       nodes = []
@@ -163,15 +207,21 @@ module JekyllGarden
         'links' => links
       }
       
-      graph_data_file = Jekyll::StaticFile.new(
-        site,
-        site.source,
-        '',
-        'graph-data.json'
-      )
+      # Debug output
+      puts "Generating graph data with #{nodes.length} nodes and #{links.length} links"
+      puts "Writing graph data to #{File.join(site.dest, 'graph-data.json')}"
       
-      File.write(File.join(site.source, 'graph-data.json'), JSON.pretty_generate(graph_data))
-      site.static_files << graph_data_file
+      # Write graph data directly to the destination directory
+      graph_data_path = File.join(site.dest, 'graph-data.json')
+      FileUtils.mkdir_p(site.dest) unless File.directory?(site.dest)
+      begin
+        File.write(graph_data_path, JSON.pretty_generate(graph_data))
+        puts "Graph data written successfully to #{graph_data_path}"
+        puts "File exists: #{File.exist?(graph_data_path)}"
+      rescue => e
+        puts "Error writing graph data: #{e.message}"
+        puts e.backtrace.join("\n")
+      end
     end
   end
 end

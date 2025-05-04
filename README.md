@@ -133,7 +133,19 @@ This repository is configured for deployment to GitHub Pages using GitHub Action
 
 1. Make sure your repository is named `yourusername.github.io` or update the `baseurl` in `_config.yml` accordingly.
 
-2. Push your changes to GitHub:
+2. **Generate data files for search and graph visualization**:
+
+```bash
+# Run the data files generation script
+./generate-data-files.sh
+```
+
+This script will:
+- Build the site locally with plugins enabled
+- Generate the search-index.json and graph-data.json files
+- Copy these files to the root directory
+
+3. Push your changes to GitHub:
 
 ```bash
 # Initialize git repository if not already done

@@ -3,6 +3,9 @@ source "https://rubygems.org"
 # Use Jekyll with a specific version
 gem "jekyll", "~> 3.9.3"
 
+# Use the minima theme
+gem "minima", "~> 2.5.1"
+
 # Exclude eventmachine and use a pure Ruby server instead
 gem "webrick", "~> 1.7"
 
