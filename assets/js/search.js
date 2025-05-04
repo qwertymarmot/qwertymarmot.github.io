@@ -13,11 +13,30 @@ document.addEventListener('DOMContentLoaded', function() {
   // Load the search index
   const loadSearchIndex = async () => {
     try {
-      const response = await fetch('/search-index.json');
-      if (!response.ok) {
-        throw new Error('Failed to load search index');
+      // Check if search index is already in localStorage
+      const searchIndexJson = localStorage.getItem('searchIndex');
+      if (searchIndexJson) {
+        return JSON.parse(searchIndexJson);
       }
-      return await response.json();
+      
+      // Wait for search index to be generated
+      return await new Promise((resolve) => {
+        // Check if event has already been dispatched
+        if (window.searchIndexData) {
+          resolve(window.searchIndexData);
+          return;
+        }
+        
+        // Listen for searchIndexReady event
+        document.addEventListener('searchIndexReady', (event) => {
+          resolve(event.detail);
+        }, { once: true });
+        
+        // Timeout after 10 seconds
+        setTimeout(() => {
+          resolve({ documents: [] });
+        }, 10000);
+      });
     } catch (error) {
       console.error('Error loading search index:', error);
       return { documents: [] };
