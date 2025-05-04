@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     button.addEventListener('click', function() {
       // Get filter group (type or tag)
       const filterGroup = this.closest('.filter-group');
-      const isTagFilter = filterGroup.querySelector('.tags-filter') !== null;
+      const isTagFilter = filterGroup.querySelector('label').textContent.toLowerCase().includes('tag');
       const filterType = isTagFilter ? 'tag' : 'type';
       
       // Update active button in this group
