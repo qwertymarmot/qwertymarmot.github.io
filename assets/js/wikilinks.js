@@ -21,24 +21,17 @@ document.addEventListener('DOMContentLoaded', function() {
         // Extract the link text
         linkText = linkText.trim();
         
-        // Create a URL-friendly slug
-        const slug = linkText.toLowerCase()
-          .replace(/\s+/g, '-')           // Replace spaces with hyphens
-          .replace(/[^\w\-]+/g, '')       // Remove non-word chars
-          .replace(/\-\-+/g, '-')         // Replace multiple hyphens with single hyphen
-          .replace(/^-+/, '')             // Trim hyphens from start
-          .replace(/-+$/, '');            // Trim hyphens from end
-        
         // Determine the collection (notes by default)
         let collection = 'notes';
+        let displayText = linkText;
         
         // Check if the link is to a book
         if (linkText.startsWith('Book:')) {
           collection = 'books';
-          linkText = linkText.substring(5).trim(); // Remove the "Book:" prefix
+          displayText = linkText.substring(5).trim(); // Remove the "Book:" prefix for display
         } else if (linkText.startsWith('Book: ')) {
           collection = 'books';
-          linkText = linkText.substring(6).trim(); // Remove the "Book: " prefix with space
+          displayText = linkText.substring(6).trim(); // Remove the "Book: " prefix with space for display
         } else {
           // Check if a book with this name exists
           const bookSlug = linkText.toLowerCase()
@@ -54,6 +47,14 @@ document.addEventListener('DOMContentLoaded', function() {
             collection = 'books';
           }
         }
+        
+        // Create a URL-friendly slug from the display text (without the Book: prefix if it's a book)
+        const slug = displayText.toLowerCase()
+          .replace(/\s+/g, '-')           // Replace spaces with hyphens
+          .replace(/[^\w\-]+/g, '')       // Remove non-word chars
+          .replace(/\-\-+/g, '-')         // Replace multiple hyphens with single hyphen
+          .replace(/^-+/, '')             // Trim hyphens from start
+          .replace(/-+$/, '');            // Trim hyphens from end
         
         // Create the link
         return `<a href="/${collection}/${slug}" class="wikilink">${linkText}</a>`;
