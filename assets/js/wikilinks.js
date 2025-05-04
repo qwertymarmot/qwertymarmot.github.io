@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
           .replace(/-+$/, '');            // Trim hyphens from end
         
         // Create the link
-        return `<a href="/${collection}/${slug}" class="wikilink">${linkText}</a>`;
+        return `<a href="/${collection}/${slug}" class="wikilink">${displayText}</a>`;
       });
       
       // Update the content
