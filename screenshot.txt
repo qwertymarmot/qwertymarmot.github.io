@@ -1,0 +1,10 @@
+This is a placeholder for the screenshot.png file mentioned in the README.
+
+In a real implementation, you would replace this with an actual screenshot of your Jekyll Garden site.
+
+The screenshot should:
+- Show the homepage with some example notes
+- Demonstrate the design and layout of the site
+- Include the graph visualization if possible
+- Be in PNG or JPG format
+- Have a resolution of approximately 1200x800 pixels

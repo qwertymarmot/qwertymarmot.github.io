@@ -1,0 +1,247 @@
+// Book styles
+
+.book {
+  max-width: 800px;
+  margin: 0 auto;
+  
+  .book-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: $spacing-unit;
+    margin-bottom: $spacing-large;
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+    
+    .book-cover-container {
+      @include mobile {
+        text-align: center;
+        margin-bottom: $spacing-unit;
+      }
+      
+      .book-cover {
+        width: 100%;
+        max-width: 250px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: $border-radius;
+      }
+      
+      .book-cover-placeholder {
+        width: 100%;
+        max-width: 250px;
+        height: 350px;
+        background-color: $light-gray;
+        border-radius: $border-radius;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $spacing-small;
+        text-align: center;
+        font-weight: 500;
+        color: $dark-gray;
+      }
+      
+      .book-rating {
+        margin-top: $spacing-small;
+        text-align: center;
+        
+        .star {
+          color: $medium-gray;
+          font-size: 1.2rem;
+          
+          &.filled {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+    
+    .book-details {
+      .book-header {
+        margin-bottom: $spacing-unit;
+        
+        .book-title {
+          @include heading-1;
+          margin-bottom: 0.25rem;
+        }
+        
+        .book-author {
+          font-size: 1.2rem;
+          color: $dark-gray;
+          margin-bottom: $spacing-small;
+        }
+        
+        .book-date-read {
+          font-size: 0.875rem;
+          color: $dark-gray;
+          margin-bottom: $spacing-small;
+        }
+        
+        .book-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-top: $spacing-small;
+          
+          .book-tag {
+            @extend .tag;
+          }
+        }
+      }
+      
+      .book-description {
+        margin-bottom: $spacing-unit;
+      }
+      
+      .book-quotes {
+        margin-bottom: $spacing-unit;
+        
+        .quotes-title {
+          @include heading-3;
+          margin-bottom: $spacing-small;
+        }
+        
+        .quotes-list {
+          list-style: none;
+          margin-left: 0;
+          
+          .quote {
+            margin-bottom: $spacing-small;
+            padding: $spacing-small;
+            background-color: $light-gray;
+            border-radius: $border-radius;
+            border-left: 3px solid $primary-color;
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+  
+  .book-content {
+    margin-bottom: $spacing-large;
+    
+    .notes-title {
+      @include heading-2;
+      margin-bottom: $spacing-unit;
+      padding-bottom: $spacing-small;
+      border-bottom: 1px solid $border-color;
+    }
+    
+    .book-notes {
+      // Content styles are in typography.scss
+    }
+  }
+  
+  .book-footer {
+    padding-top: $spacing-unit;
+    border-top: 1px solid $border-color;
+    
+    .related-notes-title {
+      @include heading-3;
+      margin-bottom: $spacing-small;
+    }
+    
+    .related-notes-list {
+      list-style: none;
+      margin-left: 0;
+      
+      .related-note {
+        margin-bottom: $spacing-small;
+        padding: $spacing-small;
+        background-color: $light-gray;
+        border-radius: $border-radius;
+        
+        .related-note-link {
+          font-weight: 500;
+          display: block;
+          margin-bottom: 0.25rem;
+        }
+        
+        .related-note-excerpt {
+          font-size: 0.875rem;
+          color: $dark-gray;
+        }
+      }
+    }
+    
+    .no-related-notes {
+      color: $dark-gray;
+      font-style: italic;
+    }
+  }
+}
+
+// Dark mode book styles
+html[data-theme="dark"] {
+  .book {
+    .book-container {
+      .book-cover-container {
+        .book-cover-placeholder {
+          background-color: $dark-light-gray;
+          color: $dark-medium-gray;
+        }
+      }
+      
+      .book-details {
+        .book-header {
+          .book-title {
+            color: $dark-text-color;
+          }
+          
+          .book-author, .book-date-read {
+            color: $dark-medium-gray;
+          }
+        }
+        
+        .book-quotes {
+          .quotes-list {
+            .quote {
+              background-color: $dark-light-gray;
+              border-left-color: $dark-link-color;
+              color: $dark-text-color;
+            }
+          }
+        }
+      }
+    }
+    
+    .book-content {
+      .notes-title {
+        color: $dark-text-color;
+        border-bottom-color: $dark-border-color;
+      }
+    }
+    
+    .book-footer {
+      border-top-color: $dark-border-color;
+      
+      .related-notes-title {
+        color: $dark-text-color;
+      }
+      
+      .related-notes-list {
+        .related-note {
+          background-color: $dark-light-gray;
+          
+          .related-note-link {
+            color: $dark-text-color;
+            
+            &:hover, &:focus {
+              color: $dark-link-color;
+            }
+          }
+          
+          .related-note-excerpt {
+            color: $dark-medium-gray;
+          }
+        }
+      }
+      
+      .no-related-notes {
+        color: $dark-medium-gray;
+      }
+    }
+  }
+}

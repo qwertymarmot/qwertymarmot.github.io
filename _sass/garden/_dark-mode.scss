@@ -1,0 +1,140 @@
+// Dark mode styles
+
+// Base dark mode styles
+html[data-theme="dark"] {
+  background-color: $dark-background-color;
+  
+  body {
+    color: $dark-text-color;
+    background-color: $dark-background-color;
+  }
+  
+  a {
+    color: $dark-link-color;
+    
+    &:hover, &:focus {
+      color: $dark-link-hover-color;
+    }
+  }
+  
+  hr {
+    background-color: $dark-border-color;
+  }
+  
+  code {
+    background-color: $dark-light-gray;
+  }
+  
+  pre {
+    background-color: $dark-light-gray;
+  }
+  
+  blockquote {
+    color: $dark-medium-gray;
+  }
+  
+  th, td {
+    border-bottom-color: $dark-border-color;
+  }
+  
+  th {
+    background-color: $dark-light-gray;
+  }
+  
+  button, .button {
+    background-color: $dark-link-color;
+    
+    &:hover, &:focus {
+      background-color: lighten($dark-link-color, 10%);
+    }
+    
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($dark-link-color, 0.3);
+    }
+  }
+  
+  input, textarea, select {
+    background-color: $dark-background-color;
+    color: $dark-text-color;
+    border-color: $dark-border-color;
+    
+    &:focus {
+      border-color: $dark-link-color;
+      box-shadow: 0 0 0 3px rgba($dark-link-color, 0.1);
+    }
+  }
+  
+  // Typography
+  h1, h2, h3, h4, h5, h6 {
+    color: $dark-text-color;
+  }
+  
+  a.wikilink {
+    color: $dark-link-color;
+    border-bottom-color: $dark-link-color;
+    
+    &:hover, &:focus {
+      color: $dark-link-hover-color;
+      border-bottom-color: $dark-link-hover-color;
+    }
+  }
+  
+  ::selection {
+    background: rgba($dark-link-color, 0.2);
+  }
+  
+  .note-content {
+    a.wikilink {
+      background-color: rgba($dark-link-color, 0.1);
+      
+      &:hover, &:focus {
+        background-color: rgba($dark-link-color, 0.2);
+      }
+    }
+  }
+  
+  .meta-text {
+    color: $dark-medium-gray;
+  }
+  
+  .tag {
+    background-color: $dark-light-gray;
+    color: $dark-medium-gray;
+    
+    &:hover, &:focus {
+      background-color: lighten($dark-light-gray, 5%);
+      color: lighten($dark-medium-gray, 10%);
+    }
+  }
+}
+
+// Dark mode toggle functionality
+.theme-toggle {
+  #theme-toggle-btn {
+    .theme-toggle-icon {
+      &.light {
+        display: block;
+      }
+      
+      &.dark {
+        display: none;
+      }
+    }
+  }
+}
+
+html[data-theme="dark"] {
+  .theme-toggle {
+    #theme-toggle-btn {
+      .theme-toggle-icon {
+        &.light {
+          display: none;
+        }
+        
+        &.dark {
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+// Media queries
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$mobile-width + 1px}) and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$tablet-width + 1px}) {
+    @content;
+  }
+}
+
+// Flexbox
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Grid
+@mixin grid($columns: 1, $gap: $spacing-unit) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+// Typography
+@mixin heading-1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: $heading-line-height;
+  margin-bottom: $spacing-unit;
+}
+
+@mixin heading-2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: $heading-line-height;
+  margin-bottom: $spacing-small;
+}
+
+@mixin heading-3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: $heading-line-height;
+  margin-bottom: $spacing-small;
+}
+
+@mixin heading-4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: $heading-line-height;
+  margin-bottom: $spacing-small;
+}
+
+// Utilities
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin box-shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@mixin box-shadow-hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@mixin transition($property: all) {
+  transition: $property $transition-duration ease;
+}
+
+// Card styles
+@mixin card {
+  background-color: $background-color;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  padding: $spacing-unit;
+  @include box-shadow;
+  @include transition;
+
+  &:hover {
+    @include box-shadow-hover;
+  }
+}

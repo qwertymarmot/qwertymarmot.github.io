@@ -1,0 +1,30 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+// Import variables and mixins
+@import "garden/variables";
+@import "garden/mixins";
+
+// Base styles
+@import "garden/base";
+@import "garden/typography";
+@import "garden/layout";
+
+// Components
+@import "garden/header";
+@import "garden/footer";
+@import "garden/note-card";
+@import "garden/note";
+@import "garden/book-card";
+@import "garden/book";
+@import "garden/search";
+@import "garden/graph";
+
+// Dark mode
+@import "garden/dark-mode";
+
+// Utilities
+@import "garden/utilities";

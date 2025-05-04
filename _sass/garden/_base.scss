@@ -1,0 +1,253 @@
+// Reset and base styles
+
+// Box sizing
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+// Reset margins and paddings
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, figure, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+// Body styles
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: color $transition-duration ease, background-color $transition-duration ease;
+}
+
+// HTML5 display definitions
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+  display: block;
+}
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: none;
+  @include transition(color);
+
+  &:hover, &:focus {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: thin dotted;
+  }
+
+  &:active, &:hover {
+    outline: 0;
+  }
+}
+
+// Lists
+ul, ol {
+  list-style-position: inside;
+  margin-left: $spacing-unit;
+  margin-bottom: $spacing-unit;
+}
+
+li {
+  margin-bottom: $spacing-small / 2;
+  
+  > ul, > ol {
+    margin-top: $spacing-small / 2;
+    margin-bottom: 0;
+  }
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+}
+
+// Figures
+figure {
+  margin: $spacing-unit 0;
+  
+  > img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: $dark-gray;
+  text-align: center;
+  margin-top: $spacing-small / 2;
+}
+
+// Horizontal rule
+hr {
+  border: 0;
+  height: 1px;
+  background-color: $border-color;
+  margin: $spacing-unit 0;
+}
+
+// Code
+pre, code {
+  font-family: $monospace-font-family;
+  font-size: 0.9rem;
+  border-radius: $border-radius;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  background-color: $light-gray;
+}
+
+pre {
+  padding: $spacing-small;
+  overflow-x: auto;
+  background-color: $light-gray;
+  margin-bottom: $spacing-unit;
+  
+  > code {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+  }
+}
+
+// Blockquote
+blockquote {
+  border-left: 4px solid $primary-color;
+  padding-left: $spacing-small;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: $spacing-unit;
+  color: $dark-gray;
+  font-style: italic;
+  
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Tables
+table {
+  width: 100%;
+  margin-bottom: $spacing-unit;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th, td {
+  padding: $spacing-small / 2;
+  border-bottom: 1px solid $border-color;
+  text-align: left;
+}
+
+th {
+  background-color: $light-gray;
+  font-weight: 600;
+}
+
+// Buttons
+button, .button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-family: $base-font-family;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: $primary-color;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  cursor: pointer;
+  @include transition;
+  
+  &:hover, &:focus {
+    background-color: darken($primary-color, 10%);
+    color: white;
+    text-decoration: none;
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.3);
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+// Forms
+input, textarea, select {
+  font-family: $base-font-family;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0.5rem;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  background-color: white;
+  color: $text-color;
+  width: 100%;
+  @include transition;
+  
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: $spacing-small / 2;
+  font-weight: 500;
+}
+
+// Clearfix
+.clearfix {
+  @include clearfix;
+}
+
+// Wrapper
+.wrapper {
+  max-width: $content-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @include clearfix;
+  
+  @include mobile {
+    padding-right: $spacing-small;
+    padding-left: $spacing-small;
+  }
+}
+
+.wide-wrapper {
+  max-width: $wide-content-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @include clearfix;
+  
+  @include mobile {
+    padding-right: $spacing-small;
+    padding-left: $spacing-small;
+  }
+}

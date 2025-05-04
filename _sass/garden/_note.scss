@@ -1,0 +1,148 @@
+// Note styles
+
+.note {
+  max-width: 800px;
+  margin: 0 auto;
+  
+  .note-header {
+    margin-bottom: $spacing-large;
+    
+    .note-meta {
+      display: flex;
+      align-items: center;
+      margin-bottom: $spacing-small;
+      
+      .note-type {
+        margin-right: $spacing-small;
+      }
+      
+      .note-date {
+        font-size: 0.875rem;
+        color: $dark-gray;
+      }
+    }
+    
+    .note-title {
+      @include heading-1;
+      margin-bottom: $spacing-small;
+    }
+    
+    .note-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      
+      .note-tag {
+        @extend .tag;
+      }
+    }
+  }
+  
+  .note-content {
+    margin-bottom: $spacing-large;
+    
+    // Content styles are in typography.scss
+  }
+  
+  .note-footer {
+    padding-top: $spacing-unit;
+    border-top: 1px solid $border-color;
+    margin-top: $spacing-large;
+    
+    .backlinks-container, .graph-container {
+      margin-bottom: $spacing-large;
+      
+      h2 {
+        @include heading-3;
+        margin-bottom: $spacing-unit;
+      }
+    }
+    
+    .backlinks-list {
+      list-style: none;
+      margin-left: 0;
+      
+      .backlink {
+        margin-bottom: $spacing-small;
+        padding: $spacing-small;
+        background-color: $light-gray;
+        border-radius: $border-radius;
+        
+        .backlink-link {
+          font-weight: 500;
+          display: block;
+          margin-bottom: 0.25rem;
+        }
+        
+        .backlink-excerpt {
+          font-size: 0.875rem;
+          color: $dark-gray;
+        }
+      }
+    }
+    
+    .no-backlinks {
+      color: $dark-gray;
+      font-style: italic;
+    }
+    
+    #note-graph {
+      height: 300px;
+      background-color: $light-gray;
+      border-radius: $border-radius;
+    }
+  }
+}
+
+// Dark mode note styles
+html[data-theme="dark"] {
+  .note {
+    .note-header {
+      .note-meta {
+        .note-date {
+          color: $dark-medium-gray;
+        }
+      }
+      
+      .note-title {
+        color: $dark-text-color;
+      }
+    }
+    
+    .note-footer {
+      border-top-color: $dark-border-color;
+      
+      .backlinks-container, .graph-container {
+        h2 {
+          color: $dark-text-color;
+        }
+      }
+      
+      .backlinks-list {
+        .backlink {
+          background-color: $dark-light-gray;
+          
+          .backlink-link {
+            color: $dark-text-color;
+            
+            &:hover, &:focus {
+              color: $dark-link-color;
+            }
+          }
+          
+          .backlink-excerpt {
+            color: $dark-medium-gray;
+          }
+        }
+      }
+      
+      .no-backlinks {
+        color: $dark-medium-gray;
+      }
+      
+      #note-graph {
+        background-color: $dark-light-gray;
+      }
+    }
+  }
+}

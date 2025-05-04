@@ -1,0 +1,282 @@
+// Search styles
+
+.search-container {
+  margin-bottom: $spacing-large;
+  position: relative;
+  
+  #search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    border: 2px solid $border-color;
+    border-radius: $border-radius;
+    background-color: $background-color;
+    color: $text-color;
+    @include transition;
+    
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+    }
+    
+    &::placeholder {
+      color: $dark-gray;
+    }
+  }
+  
+  .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: $z-index-search;
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    overflow-y: auto;
+    display: none;
+    
+    &.active {
+      display: block;
+    }
+    
+    .search-result {
+      padding: $spacing-small;
+      border-bottom: 1px solid $border-color;
+      @include transition;
+      
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      .search-result-title {
+        font-weight: 500;
+        margin-bottom: 0.25rem;
+        color: $text-color;
+      }
+      
+      .search-result-excerpt {
+        font-size: 0.875rem;
+        color: $dark-gray;
+      }
+      
+      &:hover {
+        background-color: $light-gray;
+        cursor: pointer;
+      }
+    }
+    
+    .no-results {
+      padding: $spacing-small;
+      color: $dark-gray;
+      text-align: center;
+      font-style: italic;
+    }
+  }
+}
+
+// Search page
+.search-page {
+  .search-header {
+    margin-bottom: $spacing-large;
+    text-align: center;
+    
+    .search-title {
+      @include heading-1;
+      margin-bottom: $spacing-small;
+    }
+    
+    .search-description {
+      font-size: 1.1rem;
+      color: $dark-gray;
+      max-width: 600px;
+      margin: 0 auto $spacing-unit;
+    }
+  }
+  
+  .search-results-container {
+    .search-results-count {
+      margin-bottom: $spacing-unit;
+      font-size: 1.1rem;
+      color: $dark-gray;
+    }
+    
+    .search-results-list {
+      list-style: none;
+      margin-left: 0;
+      
+      .search-result-item {
+        margin-bottom: $spacing-unit;
+        padding-bottom: $spacing-unit;
+        border-bottom: 1px solid $border-color;
+        
+        &:last-child {
+          border-bottom: none;
+        }
+        
+        .search-result-title {
+          @include heading-3;
+          margin-bottom: $spacing-small / 2;
+          
+          a {
+            color: $text-color;
+            @include transition(color);
+            
+            &:hover, &:focus {
+              color: $primary-color;
+              text-decoration: none;
+            }
+          }
+        }
+        
+        .search-result-meta {
+          display: flex;
+          align-items: center;
+          margin-bottom: $spacing-small;
+          
+          .search-result-type {
+            margin-right: $spacing-small;
+          }
+          
+          .search-result-date {
+            font-size: 0.875rem;
+            color: $dark-gray;
+          }
+        }
+        
+        .search-result-excerpt {
+          margin-bottom: $spacing-small;
+        }
+        
+        .search-result-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          
+          .search-result-tag {
+            @extend .tag;
+          }
+        }
+      }
+    }
+    
+    .no-search-results {
+      text-align: center;
+      padding: $spacing-large 0;
+      
+      .no-results-icon {
+        font-size: 3rem;
+        margin-bottom: $spacing-small;
+        color: $medium-gray;
+      }
+      
+      .no-results-message {
+        font-size: 1.2rem;
+        color: $dark-gray;
+        margin-bottom: $spacing-small;
+      }
+      
+      .no-results-suggestion {
+        color: $dark-gray;
+      }
+    }
+  }
+}
+
+// Dark mode search styles
+html[data-theme="dark"] {
+  .search-container {
+    #search-input {
+      background-color: $dark-background-color;
+      color: $dark-text-color;
+      border-color: $dark-border-color;
+      
+      &:focus {
+        border-color: $dark-link-color;
+        box-shadow: 0 0 0 3px rgba($dark-link-color, 0.1);
+      }
+      
+      &::placeholder {
+        color: $dark-medium-gray;
+      }
+    }
+    
+    .search-results {
+      background-color: $dark-background-color;
+      border-color: $dark-border-color;
+      
+      .search-result {
+        border-bottom-color: $dark-border-color;
+        
+        .search-result-title {
+          color: $dark-text-color;
+        }
+        
+        .search-result-excerpt {
+          color: $dark-medium-gray;
+        }
+        
+        &:hover {
+          background-color: $dark-light-gray;
+        }
+      }
+      
+      .no-results {
+        color: $dark-medium-gray;
+      }
+    }
+  }
+  
+  .search-page {
+    .search-header {
+      .search-title {
+        color: $dark-text-color;
+      }
+      
+      .search-description {
+        color: $dark-medium-gray;
+      }
+    }
+    
+    .search-results-container {
+      .search-results-count {
+        color: $dark-medium-gray;
+      }
+      
+      .search-results-list {
+        .search-result-item {
+          border-bottom-color: $dark-border-color;
+          
+          .search-result-title {
+            a {
+              color: $dark-text-color;
+              
+              &:hover, &:focus {
+                color: $dark-link-color;
+              }
+            }
+          }
+          
+          .search-result-meta {
+            .search-result-date {
+              color: $dark-medium-gray;
+            }
+          }
+        }
+      }
+      
+      .no-search-results {
+        .no-results-icon {
+          color: $dark-medium-gray;
+        }
+        
+        .no-results-message, .no-results-suggestion {
+          color: $dark-medium-gray;
+        }
+      }
+    }
+  }
+}

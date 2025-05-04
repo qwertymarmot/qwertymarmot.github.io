@@ -1,0 +1,26 @@
+name: Build and deploy Jekyll site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # or master, depending on your default branch name
+
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      # Use GitHub Actions' cache to cache dependencies on servers
+      - uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      
+      # Use GitHub Deploy Action to build and deploy to GitHub Pages
+      - uses: helaili/jekyll-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target_branch: gh-pages  # The branch the action should deploy to

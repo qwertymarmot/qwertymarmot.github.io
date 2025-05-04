@@ -1,0 +1,231 @@
+// Typography styles
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
+  font-weight: 700;
+  line-height: $heading-line-height;
+  margin-bottom: $spacing-small;
+  color: $text-color;
+}
+
+h1 {
+  @include heading-1;
+}
+
+h2 {
+  @include heading-2;
+}
+
+h3 {
+  @include heading-3;
+}
+
+h4 {
+  @include heading-4;
+}
+
+h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: $spacing-small / 2;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: $spacing-small / 2;
+}
+
+// Paragraphs
+p {
+  margin-bottom: $spacing-unit;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Bold and italic
+strong, b {
+  font-weight: 700;
+}
+
+em, i {
+  font-style: italic;
+}
+
+// Small text
+small {
+  font-size: 0.875rem;
+}
+
+// Superscript and subscript
+sup, sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+// Links
+a.wikilink {
+  color: $primary-color;
+  border-bottom: 1px dashed $primary-color;
+  text-decoration: none;
+  
+  &:hover, &:focus {
+    color: darken($primary-color, 15%);
+    border-bottom-style: solid;
+    text-decoration: none;
+  }
+}
+
+// Abbreviations
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+  text-decoration: none;
+}
+
+// Text selection
+::selection {
+  background: rgba($primary-color, 0.2);
+  text-shadow: none;
+}
+
+// Markdown content
+.content {
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: $spacing-large;
+    margin-bottom: $spacing-small;
+    
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+  }
+  
+  p, ul, ol, blockquote, pre, table {
+    margin-bottom: $spacing-unit;
+  }
+  
+  img {
+    margin: $spacing-unit 0;
+  }
+  
+  a {
+    text-decoration: underline;
+    text-decoration-color: rgba($link-color, 0.3);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    
+    &:hover, &:focus {
+      text-decoration-color: $link-color;
+    }
+  }
+}
+
+// Note content
+.note-content {
+  @extend .content;
+  
+  // Special styling for wikilinks
+  a.wikilink {
+    background-color: rgba($primary-color, 0.05);
+    padding: 0.1em 0.3em;
+    border-radius: $border-radius;
+    border-bottom: none;
+    
+    &:hover, &:focus {
+      background-color: rgba($primary-color, 0.1);
+    }
+  }
+}
+
+// Book content
+.book-notes {
+  @extend .content;
+}
+
+// Meta text
+.meta-text {
+  font-size: 0.875rem;
+  color: $dark-gray;
+}
+
+// Tag styling
+.tag {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 1em;
+  background-color: $light-gray;
+  color: $dark-gray;
+  text-decoration: none;
+  @include transition;
+  
+  &:hover, &:focus {
+    background-color: darken($light-gray, 5%);
+    color: darken($dark-gray, 10%);
+    text-decoration: none;
+  }
+}
+
+// Note type styling
+.note-type {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 1em;
+  text-decoration: none;
+  @include transition;
+  
+  &.evergreen {
+    background-color: rgba($evergreen-color, 0.1);
+    color: darken($evergreen-color, 10%);
+  }
+  
+  &.seedling {
+    background-color: rgba($seedling-color, 0.1);
+    color: darken($seedling-color, 10%);
+  }
+  
+  &.budding {
+    background-color: rgba($budding-color, 0.1);
+    color: darken($budding-color, 10%);
+  }
+}

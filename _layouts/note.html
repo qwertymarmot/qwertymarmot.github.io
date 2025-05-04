@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+<article class="note">
+  <header class="note-header">
+    <div class="note-meta">
+      <span class="note-type {{ page.type | default: 'evergreen' }}">{{ page.type | default: "evergreen" }}</span>
+      <span class="note-date">
+        Last updated: {{ page.last_modified_at | default: page.date | date: "%b %d, %Y" }}
+      </span>
+    </div>
+    <h1 class="note-title">{{ page.title }}</h1>
+    {% if page.tags %}
+    <div class="note-tags">
+      {% for tag in page.tags %}
+      <span class="note-tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="note-content">
+    {{ content }}
+  </div>
+
+  <div class="note-footer">
+    <div class="backlinks-container">
+      <h2 class="backlinks-title">Backlinks</h2>
+      <div class="backlinks">
+        {% assign notes = site.notes | where_exp: "item", "item.url != page.url" %}
+        {% assign backlinks = notes | where_exp: "item", "item.content contains page.title" %}
+        {% if backlinks.size > 0 %}
+        <ul class="backlinks-list">
+          {% for backlink in backlinks %}
+          <li class="backlink">
+            <a href="{{ backlink.url | relative_url }}" class="backlink-link">{{ backlink.title }}</a>
+            <div class="backlink-excerpt">
+              {{ backlink.excerpt | strip_html | truncatewords: 20 }}
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p class="no-backlinks">No backlinks found.</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="graph-container">
+      <h2 class="graph-title">Connections</h2>
+      <div id="note-graph"></div>
+    </div>
+  </div>
+</article>
+
+<script>
+  // Process wikilinks in the note content
+  document.addEventListener('DOMContentLoaded', function() {
+    const noteContent = document.querySelector('.note-content');
+    if (noteContent) {
+      const wikilinksRegex = /\[\[(.*?)\]\]/g;
+      noteContent.innerHTML = noteContent.innerHTML.replace(wikilinksRegex, function(match, p1) {
+        const linkText = p1.trim();
+        const url = linkText.toLowerCase().replace(/\s+/g, '-');
+        return `<a href="/notes/${url}" class="wikilink">${linkText}</a>`;
+      });
+    }
+  });
+</script>

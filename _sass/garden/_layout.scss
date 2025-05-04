@@ -1,0 +1,520 @@
+// Layout styles
+
+// Site container
+.site-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+// Site content
+.site-content {
+  flex: 1;
+  padding: $spacing-unit 0 $spacing-large;
+}
+
+// Home layout
+.home {
+  .home-header {
+    text-align: center;
+    margin-bottom: $spacing-large;
+    
+    .home-title {
+      @include heading-1;
+      margin-bottom: $spacing-small;
+    }
+    
+    .home-description {
+      font-size: 1.2rem;
+      color: $dark-gray;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  
+  .section-divider {
+    height: 1px;
+    background-color: $border-color;
+    margin: $spacing-large 0;
+  }
+  
+  .section-title {
+    @include heading-2;
+    margin-bottom: $spacing-unit;
+    text-align: center;
+  }
+  
+  .view-all {
+    text-align: center;
+    margin-top: $spacing-unit;
+    
+    .view-all-link {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+      color: $primary-color;
+      border: 1px solid $primary-color;
+      border-radius: $border-radius;
+      @include transition;
+      
+      &:hover, &:focus {
+        background-color: $primary-color;
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Garden view
+.garden-view {
+  margin-bottom: $spacing-large;
+  
+  .view-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $spacing-unit;
+    
+    .view-toggle-btn {
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      background-color: $light-gray;
+      color: $dark-gray;
+      border: none;
+      border-radius: $border-radius;
+      font-weight: 500;
+      cursor: pointer;
+      @include transition;
+      
+      &:hover, &:focus {
+        background-color: darken($light-gray, 5%);
+      }
+      
+      &.active {
+        background-color: $primary-color;
+        color: white;
+      }
+    }
+  }
+  
+  .view-container {
+    position: relative;
+    
+    .cards-view, .graph-view {
+      display: none;
+      
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+// Filter container
+.filter-container {
+  margin-bottom: $spacing-unit;
+  
+  .filter-group {
+    margin-bottom: $spacing-small;
+    
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    
+    .filter-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      
+      .filter-btn {
+        padding: 0.3rem 0.8rem;
+        background-color: $light-gray;
+        color: $dark-gray;
+        border: none;
+        border-radius: $border-radius;
+        font-size: 0.875rem;
+        cursor: pointer;
+        @include transition;
+        
+        &:hover, &:focus {
+          background-color: darken($light-gray, 5%);
+        }
+        
+        &.active {
+          background-color: $primary-color;
+          color: white;
+        }
+      }
+    }
+    
+    .tags-filter {
+      max-height: 120px;
+      overflow-y: auto;
+      padding: 0.5rem;
+      background-color: $light-gray;
+      border-radius: $border-radius;
+    }
+  }
+}
+
+// Notes grid
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $spacing-unit;
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Books grid
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: $spacing-unit;
+  
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-small;
+  }
+}
+
+// Note layout
+.note {
+  .note-header {
+    margin-bottom: $spacing-large;
+    
+    .note-meta {
+      display: flex;
+      align-items: center;
+      margin-bottom: $spacing-small;
+      
+      .note-type {
+        margin-right: $spacing-small;
+      }
+      
+      .note-date {
+        font-size: 0.875rem;
+        color: $dark-gray;
+      }
+    }
+    
+    .note-title {
+      @include heading-1;
+      margin-bottom: $spacing-small;
+    }
+    
+    .note-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      
+      .note-tag {
+        @extend .tag;
+      }
+    }
+  }
+  
+  .note-content {
+    margin-bottom: $spacing-large;
+  }
+  
+  .note-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-unit;
+    padding-top: $spacing-unit;
+    border-top: 1px solid $border-color;
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+    
+    .backlinks-container, .graph-container {
+      h2 {
+        @include heading-3;
+        margin-bottom: $spacing-small;
+      }
+    }
+    
+    .backlinks-list {
+      list-style: none;
+      margin-left: 0;
+      
+      .backlink {
+        margin-bottom: $spacing-small;
+        padding: $spacing-small;
+        background-color: $light-gray;
+        border-radius: $border-radius;
+        
+        .backlink-link {
+          font-weight: 500;
+          display: block;
+          margin-bottom: 0.25rem;
+        }
+        
+        .backlink-excerpt {
+          font-size: 0.875rem;
+          color: $dark-gray;
+        }
+      }
+    }
+    
+    .no-backlinks {
+      color: $dark-gray;
+      font-style: italic;
+    }
+    
+    #note-graph {
+      height: 300px;
+      background-color: $light-gray;
+      border-radius: $border-radius;
+    }
+  }
+}
+
+// Book layout
+.book {
+  .book-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: $spacing-unit;
+    margin-bottom: $spacing-large;
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+    
+    .book-cover-container {
+      @include mobile {
+        text-align: center;
+        margin-bottom: $spacing-unit;
+      }
+      
+      .book-cover {
+        width: 100%;
+        max-width: 250px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: $border-radius;
+      }
+      
+      .book-cover-placeholder {
+        width: 100%;
+        max-width: 250px;
+        height: 350px;
+        background-color: $light-gray;
+        border-radius: $border-radius;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $spacing-small;
+        text-align: center;
+        font-weight: 500;
+        color: $dark-gray;
+      }
+      
+      .book-rating {
+        margin-top: $spacing-small;
+        text-align: center;
+        
+        .star {
+          color: $medium-gray;
+          font-size: 1.2rem;
+          
+          &.filled {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+    
+    .book-details {
+      .book-header {
+        margin-bottom: $spacing-unit;
+        
+        .book-title {
+          @include heading-1;
+          margin-bottom: 0.25rem;
+        }
+        
+        .book-author {
+          font-size: 1.2rem;
+          color: $dark-gray;
+          margin-bottom: $spacing-small;
+        }
+        
+        .book-date-read {
+          font-size: 0.875rem;
+          color: $dark-gray;
+          margin-bottom: $spacing-small;
+        }
+        
+        .book-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-top: $spacing-small;
+          
+          .book-tag {
+            @extend .tag;
+          }
+        }
+      }
+      
+      .book-description {
+        margin-bottom: $spacing-unit;
+      }
+      
+      .book-quotes {
+        margin-bottom: $spacing-unit;
+        
+        .quotes-title {
+          @include heading-3;
+          margin-bottom: $spacing-small;
+        }
+        
+        .quotes-list {
+          list-style: none;
+          margin-left: 0;
+          
+          .quote {
+            margin-bottom: $spacing-small;
+            padding: $spacing-small;
+            background-color: $light-gray;
+            border-radius: $border-radius;
+            border-left: 3px solid $primary-color;
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+  
+  .book-content {
+    margin-bottom: $spacing-large;
+    
+    .notes-title {
+      @include heading-2;
+      margin-bottom: $spacing-unit;
+      padding-bottom: $spacing-small;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+  
+  .book-footer {
+    padding-top: $spacing-unit;
+    border-top: 1px solid $border-color;
+    
+    .related-notes-title {
+      @include heading-3;
+      margin-bottom: $spacing-small;
+    }
+    
+    .related-notes-list {
+      list-style: none;
+      margin-left: 0;
+      
+      .related-note {
+        margin-bottom: $spacing-small;
+        padding: $spacing-small;
+        background-color: $light-gray;
+        border-radius: $border-radius;
+        
+        .related-note-link {
+          font-weight: 500;
+          display: block;
+          margin-bottom: 0.25rem;
+        }
+        
+        .related-note-excerpt {
+          font-size: 0.875rem;
+          color: $dark-gray;
+        }
+      }
+    }
+    
+    .no-related-notes {
+      color: $dark-gray;
+      font-style: italic;
+    }
+  }
+}
+
+// Search container
+.search-container {
+  margin-bottom: $spacing-large;
+  position: relative;
+  
+  #search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    border: 2px solid $border-color;
+    border-radius: $border-radius;
+    @include transition;
+    
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+    }
+  }
+  
+  .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: $z-index-search;
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    overflow-y: auto;
+    display: none;
+    
+    &.active {
+      display: block;
+    }
+    
+    .search-result {
+      padding: $spacing-small;
+      border-bottom: 1px solid $border-color;
+      
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      .search-result-title {
+        font-weight: 500;
+        margin-bottom: 0.25rem;
+      }
+      
+      .search-result-excerpt {
+        font-size: 0.875rem;
+        color: $dark-gray;
+      }
+      
+      &:hover {
+        background-color: $light-gray;
+      }
+    }
+    
+    .no-results {
+      padding: $spacing-small;
+      color: $dark-gray;
+      text-align: center;
+      font-style: italic;
+    }
+  }
+}
+
+// Graph container
+#graph-container {
+  height: 500px;
+  background-color: $light-gray;
+  border-radius: $border-radius;
+}

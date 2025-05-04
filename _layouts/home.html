@@ -1,0 +1,128 @@
+---
+layout: default
+---
+
+<div class="home">
+  <div class="home-header">
+    <h1 class="home-title">{{ site.title }}</h1>
+    <p class="home-description">{{ site.description }}</p>
+  </div>
+
+  {% if site.search_enabled %}
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="Search notes...">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  {% endif %}
+
+  <div class="garden-view">
+    <div class="view-toggle">
+      <button class="view-toggle-btn active" data-view="cards">Cards</button>
+      <button class="view-toggle-btn" data-view="graph">Graph</button>
+    </div>
+
+    <div class="view-container">
+      <div class="cards-view active">
+        <div class="filter-container">
+          <div class="filter-group">
+            <label>Filter by type:</label>
+            <div class="filter-options">
+              <button class="filter-btn active" data-filter="all">All</button>
+              {% for type in site.note_types %}
+              <button class="filter-btn" data-filter="{{ type }}">{{ type | capitalize }}</button>
+              {% endfor %}
+            </div>
+          </div>
+          
+          <div class="filter-group">
+            <label>Filter by tag:</label>
+            <div class="filter-options tags-filter">
+              <button class="filter-btn active" data-filter="all">All</button>
+              {% assign all_tags = site.notes | map: "tags" | compact | uniq | sort %}
+              {% for tag in all_tags %}
+              <button class="filter-btn" data-filter="{{ tag }}">{{ tag }}</button>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="notes-grid">
+          {% assign notes = site.notes | sort: "last_modified_at" | reverse %}
+          {% for note in notes %}
+          <div class="note-card" 
+               data-type="{{ note.type | default: 'evergreen' }}"
+               data-tags="{{ note.tags | join: ',' }}">
+            <div class="note-card-header">
+              <span class="note-type {{ note.type | default: 'evergreen' }}">{{ note.type | default: "evergreen" }}</span>
+              <span class="note-date">{{ note.last_modified_at | default: note.date | date: "%b %d, %Y" }}</span>
+            </div>
+            <h2 class="note-title">
+              <a href="{{ note.url | relative_url }}">{{ note.title }}</a>
+            </h2>
+            <div class="note-excerpt">
+              {{ note.excerpt | strip_html | truncatewords: 30 }}
+            </div>
+            <div class="note-meta">
+              {% if note.tags %}
+              <div class="note-tags">
+                {% for tag in note.tags %}
+                <span class="note-tag">{{ tag }}</span>
+                {% endfor %}
+              </div>
+              {% endif %}
+              
+              {% if note.links %}
+              <div class="note-links">
+                <span class="links-count">{{ note.links | size }} links</span>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="graph-view">
+        <div id="graph-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="recent-books">
+    <h2 class="section-title">Recent Books</h2>
+    <div class="books-grid">
+      {% assign books = site.books | sort: "date" | reverse | limit: 4 %}
+      {% for book in books %}
+      <div class="book-card">
+        <div class="book-cover">
+          {% if book.cover %}
+          <img src="{{ book.cover | relative_url }}" alt="{{ book.title }}">
+          {% else %}
+          <div class="book-cover-placeholder">
+            <span>{{ book.title | truncate: 20 }}</span>
+          </div>
+          {% endif %}
+        </div>
+        <div class="book-info">
+          <h3 class="book-title">
+            <a href="{{ book.url | relative_url }}">{{ book.title }}</a>
+          </h3>
+          <p class="book-author">{{ book.author }}</p>
+          {% if book.rating %}
+          <div class="book-rating">
+            {% for i in (1..5) %}
+            <span class="star {% if i <= book.rating %}filled{% endif %}">★</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="view-all">
+      <a href="{{ '/books' | relative_url }}" class="view-all-link">View all books →</a>
+    </div>
+  </div>
+</div>

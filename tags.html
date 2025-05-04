@@ -1,0 +1,205 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<div class="tags-page">
+  <h1 class="tags-title">Browse by Tag</h1>
+  
+  <p class="tags-description">
+    Tags help organize notes by topic. Click on a tag to see all notes with that tag.
+  </p>
+  
+  <div class="tags-cloud">
+    {% assign all_tags = site.notes | map: "tags" | compact | uniq | sort %}
+    {% for tag in all_tags %}
+      <a href="#{{ tag | slugify }}" class="tag">{{ tag }}</a>
+    {% endfor %}
+  </div>
+  
+  <div class="tags-list">
+    {% assign all_tags = site.notes | map: "tags" | compact | uniq | sort %}
+    {% for tag in all_tags %}
+      <div class="tag-section" id="{{ tag | slugify }}">
+        <h2 class="tag-name">{{ tag }}</h2>
+        <ul class="tag-notes">
+          {% for note in site.notes %}
+            {% if note.tags contains tag %}
+              <li class="tag-note">
+                <a href="{{ note.url | relative_url }}" class="tag-note-link">{{ note.title }}</a>
+                <span class="tag-note-date">{{ note.last_modified_at | default: note.date | date: "%b %d, %Y" }}</span>
+                <span class="tag-note-type {{ note.type | default: 'evergreen' }}">{{ note.type | default: "evergreen" }}</span>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+  
+  <div class="tags-books">
+    <h2 class="tags-books-title">Tags in Books</h2>
+    
+    <div class="tags-cloud">
+      {% assign book_tags = site.books | map: "tags" | compact | uniq | sort %}
+      {% for tag in book_tags %}
+        <a href="#book-{{ tag | slugify }}" class="tag">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    
+    <div class="tags-list">
+      {% assign book_tags = site.books | map: "tags" | compact | uniq | sort %}
+      {% for tag in book_tags %}
+        <div class="tag-section" id="book-{{ tag | slugify }}">
+          <h2 class="tag-name">{{ tag }}</h2>
+          <ul class="tag-books">
+            {% for book in site.books %}
+              {% if book.tags contains tag %}
+                <li class="tag-book">
+                  <a href="{{ book.url | relative_url }}" class="tag-book-link">{{ book.title }}</a>
+                  <span class="tag-book-author">by {{ book.author }}</span>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .tags-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .tags-title {
+    margin-bottom: 10px;
+  }
+  
+  .tags-description {
+    margin-bottom: 30px;
+    color: var(--dark-gray);
+  }
+  
+  .tags-cloud {
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tag {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  
+  .tag:hover {
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+  }
+  
+  .tag-section {
+    margin-bottom: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .tag-name {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+  }
+  
+  .tag-notes, .tag-books {
+    list-style: none;
+    margin-left: 0;
+  }
+  
+  .tag-note, .tag-book {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: var(--light-gray);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .tag-note-link, .tag-book-link {
+    font-weight: 500;
+    margin-right: 10px;
+  }
+  
+  .tag-note-date, .tag-book-author {
+    font-size: 0.85rem;
+    color: var(--dark-gray);
+    margin-right: 10px;
+  }
+  
+  .tag-note-type {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: auto;
+  }
+  
+  .tag-note-type.evergreen {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: rgb(46, 204, 113);
+  }
+  
+  .tag-note-type.seedling {
+    background-color: rgba(245, 166, 35, 0.1);
+    color: rgb(245, 166, 35);
+  }
+  
+  .tag-note-type.budding {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: rgb(52, 152, 219);
+  }
+  
+  .tags-books {
+    margin-top: 60px;
+  }
+  
+  .tags-books-title {
+    margin-bottom: 20px;
+  }
+  
+  /* Dark mode styles */
+  html[data-theme="dark"] .tag {
+    background-color: var(--dark-light-gray);
+    color: var(--dark-medium-gray);
+  }
+  
+  html[data-theme="dark"] .tag:hover {
+    background-color: var(--dark-link-color);
+    color: var(--dark-background-color);
+  }
+  
+  html[data-theme="dark"] .tag-section {
+    border-top-color: var(--dark-border-color);
+  }
+  
+  html[data-theme="dark"] .tag-name {
+    color: var(--dark-link-color);
+  }
+  
+  html[data-theme="dark"] .tag-note, html[data-theme="dark"] .tag-book {
+    background-color: var(--dark-light-gray);
+  }
+  
+  html[data-theme="dark"] .tag-note-date, html[data-theme="dark"] .tag-book-author {
+    color: var(--dark-medium-gray);
+  }
+</style>

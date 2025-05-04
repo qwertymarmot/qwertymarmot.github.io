@@ -1,0 +1,80 @@
+# Welcome to Jekyll Garden!
+#
+# This config file sets up your digital garden. You can customize the settings
+# to match your preferences.
+
+# Site settings
+title: My Digital Garden
+email: your-email@example.com
+author: Your Name
+description: >- # this means to ignore newlines until "baseurl:"
+  A digital garden of interconnected notes, thoughts, and ideas.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://qwertymarmot.github.io" # the base hostname & protocol for your site
+twitter_username: yourusername
+github_username: qwertymarmot
+
+# Build settings
+markdown: kramdown
+theme: minima # We'll override this with our custom theme
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-relative-links
+
+# Digital Garden settings
+permalink: pretty
+collections:
+  notes:
+    output: true
+    permalink: /notes/:slug/
+  books:
+    output: true
+    permalink: /books/:slug/
+
+# Default front matter settings
+defaults:
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "note"
+  - scope:
+      path: ""
+      type: "books"
+    values:
+      layout: "book"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Custom variables
+note_types:
+  - evergreen
+  - seedling
+  - budding
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+
+# Search settings
+search_enabled: true
+
+# Theme settings
+color_scheme: light # light or dark

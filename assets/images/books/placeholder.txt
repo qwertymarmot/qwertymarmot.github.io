@@ -1,0 +1,13 @@
+This is a placeholder file for book cover images.
+
+In a real implementation, you would place actual image files (JPG, PNG) in this directory.
+
+For example:
+- how-to-take-smart-notes.jpg
+- building-a-second-brain.jpg
+- etc.
+
+The book cover images should ideally be:
+- 300px wide by 450px tall
+- In JPG or PNG format
+- Less than 100KB in size for optimal performance

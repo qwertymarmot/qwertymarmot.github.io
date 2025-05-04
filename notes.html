@@ -1,0 +1,375 @@
+---
+layout: default
+title: Notes
+permalink: /notes/
+---
+
+<div class="notes-page">
+  <h1 class="notes-title">All Notes</h1>
+  
+  <p class="notes-description">
+    Browse all notes in my digital garden. Notes are categorized by type and tagged for easy navigation.
+  </p>
+  
+  <div class="notes-filter">
+    <label for="notes-search">Filter notes:</label>
+    <input type="text" id="notes-search" placeholder="Search by title or content...">
+    
+    <div class="notes-types">
+      <span class="notes-types-label">Filter by type:</span>
+      <div class="notes-types-list">
+        <button class="notes-type-btn active" data-type="all">All</button>
+        {% for type in site.note_types %}
+          <button class="notes-type-btn" data-type="{{ type }}">{{ type | capitalize }}</button>
+        {% endfor %}
+      </div>
+    </div>
+    
+    <div class="notes-tags">
+      <span class="notes-tags-label">Filter by tag:</span>
+      <div class="notes-tags-list">
+        <button class="notes-tag-btn active" data-tag="all">All</button>
+        {% assign all_tags = site.notes | map: "tags" | compact | uniq | sort %}
+        {% for tag in all_tags %}
+          <button class="notes-tag-btn" data-tag="{{ tag }}">{{ tag }}</button>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  
+  <div class="notes-grid">
+    {% assign notes = site.notes | sort: "last_modified_at" | reverse %}
+    {% for note in notes %}
+    <div class="note-card" 
+         data-type="{{ note.type | default: 'evergreen' }}"
+         data-tags="{{ note.tags | join: ',' }}"
+         data-title="{{ note.title }}"
+         data-content="{{ note.content | strip_html }}">
+      <div class="note-card-header">
+        <span class="note-type {{ note.type | default: 'evergreen' }}">{{ note.type | default: "evergreen" }}</span>
+        <span class="note-date">{{ note.last_modified_at | default: note.date | date: "%b %d, %Y" }}</span>
+      </div>
+      <h2 class="note-title">
+        <a href="{{ note.url | relative_url }}">{{ note.title }}</a>
+      </h2>
+      <div class="note-excerpt">
+        {{ note.excerpt | strip_html | truncatewords: 30 }}
+      </div>
+      <div class="note-meta">
+        {% if note.tags %}
+        <div class="note-tags">
+          {% for tag in note.tags %}
+          <span class="note-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+  <div class="no-notes-message" style="display: none;">
+    <p>No notes match your search criteria. Try adjusting your filters.</p>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('notes-search');
+    const typeButtons = document.querySelectorAll('.notes-type-btn');
+    const tagButtons = document.querySelectorAll('.notes-tag-btn');
+    const noteCards = document.querySelectorAll('.note-card');
+    const noNotesMessage = document.querySelector('.no-notes-message');
+    
+    // Filter notes based on search input, selected type, and selected tag
+    function filterNotes() {
+      const searchTerm = searchInput.value.toLowerCase();
+      const activeTypeButton = document.querySelector('.notes-type-btn.active');
+      const activeType = activeTypeButton.getAttribute('data-type');
+      const activeTagButton = document.querySelector('.notes-tag-btn.active');
+      const activeTag = activeTagButton.getAttribute('data-tag');
+      
+      let visibleCount = 0;
+      
+      noteCards.forEach(card => {
+        const title = card.getAttribute('data-title').toLowerCase();
+        const content = card.getAttribute('data-content').toLowerCase();
+        const type = card.getAttribute('data-type').toLowerCase();
+        const tags = card.getAttribute('data-tags').toLowerCase();
+        
+        const matchesSearch = title.includes(searchTerm) || content.includes(searchTerm);
+        const matchesType = activeType === 'all' || type === activeType;
+        const matchesTag = activeTag === 'all' || tags.split(',').includes(activeTag);
+        
+        if (matchesSearch && matchesType && matchesTag) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      
+      // Show/hide no notes message
+      if (visibleCount === 0) {
+        noNotesMessage.style.display = 'block';
+      } else {
+        noNotesMessage.style.display = 'none';
+      }
+    }
+    
+    // Event listeners
+    searchInput.addEventListener('input', filterNotes);
+    
+    typeButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Update active button
+        typeButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Filter notes
+        filterNotes();
+      });
+    });
+    
+    tagButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Update active button
+        tagButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Filter notes
+        filterNotes();
+      });
+    });
+  });
+</script>
+
+<style>
+  .notes-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .notes-title {
+    margin-bottom: 10px;
+  }
+  
+  .notes-description {
+    margin-bottom: 30px;
+    color: var(--dark-gray);
+  }
+  
+  .notes-filter {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+  }
+  
+  #notes-search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+  }
+  
+  .notes-types, .notes-tags {
+    margin-top: 15px;
+  }
+  
+  .notes-types-label, .notes-tags-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .notes-types-list, .notes-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .notes-type-btn, .notes-tag-btn {
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  
+  .notes-type-btn:hover, .notes-tag-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+  
+  .notes-type-btn.active, .notes-tag-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+  
+  .notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .note-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .note-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .note-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .note-type {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+  
+  .note-type.evergreen {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: rgb(46, 204, 113);
+  }
+  
+  .note-type.seedling {
+    background-color: rgba(245, 166, 35, 0.1);
+    color: rgb(245, 166, 35);
+  }
+  
+  .note-type.budding {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: rgb(52, 152, 219);
+  }
+  
+  .note-date {
+    font-size: 0.75rem;
+    color: var(--dark-gray);
+  }
+  
+  .note-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .note-title a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  
+  .note-title a:hover {
+    color: var(--primary-color);
+  }
+  
+  .note-excerpt {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+    flex-grow: 1;
+  }
+  
+  .note-meta {
+    margin-top: auto;
+  }
+  
+  .note-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .note-tag {
+    font-size: 0.8rem;
+    padding: 3px 8px;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+    color: var(--dark-gray);
+  }
+  
+  .no-notes-message {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    margin-top: 30px;
+  }
+  
+  /* Dark mode styles */
+  html[data-theme="dark"] .notes-filter {
+    background-color: var(--dark-light-gray);
+  }
+  
+  html[data-theme="dark"] #notes-search {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+    border-color: var(--dark-border-color);
+  }
+  
+  html[data-theme="dark"] .notes-type-btn, html[data-theme="dark"] .notes-tag-btn {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+    border-color: var(--dark-border-color);
+  }
+  
+  html[data-theme="dark"] .notes-type-btn:hover, html[data-theme="dark"] .notes-tag-btn:hover {
+    background-color: var(--dark-link-color);
+    color: var(--dark-background-color);
+    border-color: var(--dark-link-color);
+  }
+  
+  html[data-theme="dark"] .notes-type-btn.active, html[data-theme="dark"] .notes-tag-btn.active {
+    background-color: var(--dark-link-color);
+    color: var(--dark-background-color);
+    border-color: var(--dark-link-color);
+  }
+  
+  html[data-theme="dark"] .note-card {
+    border-color: var(--dark-border-color);
+  }
+  
+  html[data-theme="dark"] .note-title a {
+    color: var(--dark-text-color);
+  }
+  
+  html[data-theme="dark"] .note-title a:hover {
+    color: var(--dark-link-color);
+  }
+  
+  html[data-theme="dark"] .note-excerpt {
+    color: var(--dark-medium-gray);
+  }
+  
+  html[data-theme="dark"] .note-date {
+    color: var(--dark-medium-gray);
+  }
+  
+  html[data-theme="dark"] .note-tag {
+    background-color: var(--dark-light-gray);
+    color: var(--dark-medium-gray);
+  }
+  
+  html[data-theme="dark"] .no-notes-message {
+    background-color: var(--dark-light-gray);
+    color: var(--dark-text-color);
+  }
+</style>

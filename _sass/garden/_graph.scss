@@ -1,0 +1,255 @@
+// Graph styles
+
+.graph-view {
+  display: none;
+  
+  &.active {
+    display: block;
+  }
+}
+
+#graph-container {
+  height: 500px;
+  background-color: $light-gray;
+  border-radius: $border-radius;
+  overflow: hidden;
+  position: relative;
+  
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .node {
+    cursor: pointer;
+    
+    circle {
+      fill: $primary-color;
+      stroke: white;
+      stroke-width: 1.5px;
+      transition: all $transition-duration ease;
+    }
+    
+    &.evergreen circle {
+      fill: $evergreen-color;
+    }
+    
+    &.seedling circle {
+      fill: $seedling-color;
+    }
+    
+    &.budding circle {
+      fill: $budding-color;
+    }
+    
+    &.book circle {
+      fill: $secondary-color;
+    }
+    
+    &:hover circle {
+      stroke-width: 2.5px;
+      r: 8;
+    }
+    
+    &.active circle {
+      stroke-width: 3px;
+      r: 10;
+    }
+    
+    text {
+      font-size: 10px;
+      font-family: $base-font-family;
+      pointer-events: none;
+      fill: $text-color;
+      text-anchor: middle;
+      dy: 3px;
+    }
+  }
+  
+  .link {
+    stroke: $border-color;
+    stroke-opacity: 0.6;
+    stroke-width: 1.5px;
+  }
+  
+  .graph-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba($background-color, 0.8);
+    border-radius: $border-radius;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    
+    button {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      padding: 5px;
+      cursor: pointer;
+      color: $dark-gray;
+      transition: color $transition-duration ease;
+      
+      &:hover {
+        color: $primary-color;
+      }
+      
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  
+  .graph-tooltip {
+    position: absolute;
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    padding: $spacing-small;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity $transition-duration ease;
+    max-width: 250px;
+    
+    &.visible {
+      opacity: 1;
+    }
+    
+    .tooltip-title {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    
+    .tooltip-type {
+      font-size: 0.75rem;
+      margin-bottom: 5px;
+      
+      &.evergreen {
+        color: $evergreen-color;
+      }
+      
+      &.seedling {
+        color: $seedling-color;
+      }
+      
+      &.budding {
+        color: $budding-color;
+      }
+      
+      &.book {
+        color: $secondary-color;
+      }
+    }
+    
+    .tooltip-excerpt {
+      font-size: 0.8rem;
+      color: $dark-gray;
+    }
+  }
+}
+
+#note-graph {
+  height: 300px;
+  background-color: $light-gray;
+  border-radius: $border-radius;
+  overflow: hidden;
+  position: relative;
+  
+  // Same styles as #graph-container
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .node {
+    cursor: pointer;
+    
+    circle {
+      fill: $primary-color;
+      stroke: white;
+      stroke-width: 1.5px;
+      transition: all $transition-duration ease;
+    }
+    
+    &.evergreen circle {
+      fill: $evergreen-color;
+    }
+    
+    &.seedling circle {
+      fill: $seedling-color;
+    }
+    
+    &.budding circle {
+      fill: $budding-color;
+    }
+    
+    &.book circle {
+      fill: $secondary-color;
+    }
+    
+    &:hover circle {
+      stroke-width: 2.5px;
+      r: 8;
+    }
+    
+    &.active circle {
+      stroke-width: 3px;
+      r: 10;
+    }
+    
+    text {
+      font-size: 10px;
+      font-family: $base-font-family;
+      pointer-events: none;
+      fill: $text-color;
+      text-anchor: middle;
+      dy: 3px;
+    }
+  }
+  
+  .link {
+    stroke: $border-color;
+    stroke-opacity: 0.6;
+    stroke-width: 1.5px;
+  }
+}
+
+// Dark mode graph styles
+html[data-theme="dark"] {
+  #graph-container, #note-graph {
+    background-color: $dark-light-gray;
+    
+    .node {
+      text {
+        fill: $dark-text-color;
+      }
+    }
+    
+    .link {
+      stroke: $dark-border-color;
+    }
+    
+    .graph-controls {
+      background-color: rgba($dark-background-color, 0.8);
+      
+      button {
+        color: $dark-medium-gray;
+        
+        &:hover {
+          color: $dark-link-color;
+        }
+      }
+    }
+    
+    .graph-tooltip {
+      background-color: $dark-background-color;
+      border-color: $dark-border-color;
+      
+      .tooltip-excerpt {
+        color: $dark-medium-gray;
+      }
+    }
+  }
+}

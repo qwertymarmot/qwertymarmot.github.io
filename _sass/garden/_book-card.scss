@@ -1,0 +1,114 @@
+// Book card styles
+
+.book-card {
+  @include card;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: $spacing-small;
+  transition: transform $transition-duration ease, box-shadow $transition-duration ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+  }
+  
+  .book-cover {
+    margin-bottom: $spacing-small;
+    text-align: center;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      max-height: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: $border-radius;
+    }
+    
+    .book-cover-placeholder {
+      width: 100%;
+      height: 200px;
+      background-color: $light-gray;
+      border-radius: $border-radius;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: $spacing-small;
+      text-align: center;
+      font-weight: 500;
+      color: $dark-gray;
+    }
+  }
+  
+  .book-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    
+    .book-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      line-height: 1.3;
+      
+      a {
+        color: $text-color;
+        @include transition(color);
+        
+        &:hover, &:focus {
+          color: $primary-color;
+          text-decoration: none;
+        }
+      }
+    }
+    
+    .book-author {
+      font-size: 0.9rem;
+      color: $dark-gray;
+      margin-bottom: $spacing-small;
+    }
+    
+    .book-rating {
+      margin-top: auto;
+      
+      .star {
+        color: $medium-gray;
+        font-size: 1rem;
+        
+        &.filled {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+// Dark mode book card styles
+html[data-theme="dark"] {
+  .book-card {
+    background-color: $dark-background-color;
+    border-color: $dark-border-color;
+    
+    .book-cover {
+      .book-cover-placeholder {
+        background-color: $dark-light-gray;
+        color: $dark-medium-gray;
+      }
+    }
+    
+    .book-info {
+      .book-title {
+        a {
+          color: $dark-text-color;
+          
+          &:hover, &:focus {
+            color: $dark-link-color;
+          }
+        }
+      }
+      
+      .book-author {
+        color: $dark-medium-gray;
+      }
+    }
+  }
+}

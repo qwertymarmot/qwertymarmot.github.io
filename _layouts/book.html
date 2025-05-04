@@ -1,0 +1,104 @@
+---
+layout: default
+---
+
+<article class="book">
+  <div class="book-container">
+    <div class="book-cover-container">
+      {% if page.cover %}
+      <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}" class="book-cover">
+      {% else %}
+      <div class="book-cover-placeholder">
+        <span>{{ page.title }}</span>
+      </div>
+      {% endif %}
+      
+      {% if page.rating %}
+      <div class="book-rating">
+        {% for i in (1..5) %}
+        <span class="star {% if i <= page.rating %}filled{% endif %}">★</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    
+    <div class="book-details">
+      <header class="book-header">
+        <h1 class="book-title">{{ page.title }}</h1>
+        <p class="book-author">by {{ page.author }}</p>
+        
+        {% if page.date_read %}
+        <p class="book-date-read">Read: {{ page.date_read | date: "%B %Y" }}</p>
+        {% endif %}
+        
+        {% if page.tags %}
+        <div class="book-tags">
+          {% for tag in page.tags %}
+          <span class="book-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </header>
+      
+      {% if page.description %}
+      <div class="book-description">
+        {{ page.description | markdownify }}
+      </div>
+      {% endif %}
+      
+      {% if page.favorite_quotes %}
+      <div class="book-quotes">
+        <h2 class="quotes-title">Favorite Quotes</h2>
+        <ul class="quotes-list">
+          {% for quote in page.favorite_quotes %}
+          <li class="quote">{{ quote | markdownify }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  
+  <div class="book-content">
+    <h2 class="notes-title">Notes & Thoughts</h2>
+    <div class="book-notes">
+      {{ content }}
+    </div>
+  </div>
+  
+  <div class="book-footer">
+    <div class="related-notes">
+      <h2 class="related-notes-title">Related Notes</h2>
+      {% assign notes = site.notes | where_exp: "item", "item.content contains page.title" %}
+      {% if notes.size > 0 %}
+      <ul class="related-notes-list">
+        {% for note in notes %}
+        <li class="related-note">
+          <a href="{{ note.url | relative_url }}" class="related-note-link">{{ note.title }}</a>
+          <div class="related-note-excerpt">
+            {{ note.excerpt | strip_html | truncatewords: 20 }}
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="no-related-notes">No related notes found.</p>
+      {% endif %}
+    </div>
+  </div>
+</article>
+
+<script>
+  // Process wikilinks in the book content
+  document.addEventListener('DOMContentLoaded', function() {
+    const bookContent = document.querySelector('.book-notes');
+    if (bookContent) {
+      const wikilinksRegex = /\[\[(.*?)\]\]/g;
+      bookContent.innerHTML = bookContent.innerHTML.replace(wikilinksRegex, function(match, p1) {
+        const linkText = p1.trim();
+        const url = linkText.toLowerCase().replace(/\s+/g, '-');
+        return `<a href="/notes/${url}" class="wikilink">${linkText}</a>`;
+      });
+    }
+  });
+</script>

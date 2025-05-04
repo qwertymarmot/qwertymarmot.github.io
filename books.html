@@ -1,0 +1,379 @@
+---
+layout: default
+title: Books
+permalink: /books/
+---
+
+<div class="books-page">
+  <h1 class="books-title">Book Notes</h1>
+  
+  <p class="books-description">
+    This is a collection of notes and thoughts on books I've read. Each book entry includes my key takeaways, favorite quotes, and connections to other ideas in my digital garden.
+  </p>
+  
+  <div class="books-filter">
+    <label for="books-search">Filter books:</label>
+    <input type="text" id="books-search" placeholder="Search by title, author, or tag...">
+    
+    <div class="books-tags">
+      <span class="books-tags-label">Filter by tag:</span>
+      <div class="books-tags-list">
+        <button class="books-tag-btn active" data-tag="all">All</button>
+        {% assign all_tags = site.books | map: "tags" | compact | uniq | sort %}
+        {% for tag in all_tags %}
+          <button class="books-tag-btn" data-tag="{{ tag }}">{{ tag }}</button>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  
+  <div class="books-grid">
+    {% assign books = site.books | sort: "date_read" | reverse %}
+    {% for book in books %}
+    <div class="book-card" data-tags="{{ book.tags | join: ',' }}" data-title="{{ book.title }}" data-author="{{ book.author }}">
+      <div class="book-card-cover">
+        {% if book.cover %}
+        <img src="{{ book.cover | relative_url }}" alt="{{ book.title }}" class="book-card-img">
+        {% else %}
+        <div class="book-card-placeholder">
+          <span>{{ book.title | truncate: 20 }}</span>
+        </div>
+        {% endif %}
+      </div>
+      
+      <div class="book-card-content">
+        <h2 class="book-card-title">
+          <a href="{{ book.url | relative_url }}">{{ book.title }}</a>
+        </h2>
+        
+        <p class="book-card-author">by {{ book.author }}</p>
+        
+        {% if book.date_read %}
+        <p class="book-card-date">Read: {{ book.date_read | date: "%B %Y" }}</p>
+        {% endif %}
+        
+        {% if book.rating %}
+        <div class="book-card-rating">
+          {% for i in (1..5) %}
+          <span class="star {% if i <= book.rating %}filled{% endif %}">★</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        
+        {% if book.tags %}
+        <div class="book-card-tags">
+          {% for tag in book.tags %}
+          <span class="book-card-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+  <div class="no-books-message" style="display: none;">
+    <p>No books match your search criteria. Try adjusting your filters.</p>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('books-search');
+    const tagButtons = document.querySelectorAll('.books-tag-btn');
+    const bookCards = document.querySelectorAll('.book-card');
+    const noBooksMessage = document.querySelector('.no-books-message');
+    
+    // Filter books based on search input and selected tag
+    function filterBooks() {
+      const searchTerm = searchInput.value.toLowerCase();
+      const activeTagButton = document.querySelector('.books-tag-btn.active');
+      const activeTag = activeTagButton.getAttribute('data-tag');
+      
+      let visibleCount = 0;
+      
+      bookCards.forEach(card => {
+        const title = card.getAttribute('data-title').toLowerCase();
+        const author = card.getAttribute('data-author').toLowerCase();
+        const tags = card.getAttribute('data-tags').toLowerCase();
+        
+        const matchesSearch = title.includes(searchTerm) || 
+                             author.includes(searchTerm) || 
+                             tags.includes(searchTerm);
+        
+        const matchesTag = activeTag === 'all' || tags.split(',').includes(activeTag);
+        
+        if (matchesSearch && matchesTag) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      
+      // Show/hide no books message
+      if (visibleCount === 0) {
+        noBooksMessage.style.display = 'block';
+      } else {
+        noBooksMessage.style.display = 'none';
+      }
+    }
+    
+    // Event listeners
+    searchInput.addEventListener('input', filterBooks);
+    
+    tagButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Update active button
+        tagButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Filter books
+        filterBooks();
+      });
+    });
+  });
+</script>
+
+<style>
+  .books-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .books-title {
+    margin-bottom: 10px;
+  }
+  
+  .books-description {
+    margin-bottom: 30px;
+    color: var(--dark-gray);
+  }
+  
+  .books-filter {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+  }
+  
+  #books-search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+  }
+  
+  .books-tags {
+    margin-top: 15px;
+  }
+  
+  .books-tags-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .books-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .books-tag-btn {
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  
+  .books-tag-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+  
+  .books-tag-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+  
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .book-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-card-cover {
+    height: 200px;
+    overflow: hidden;
+    background-color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .book-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .book-card-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    font-weight: 500;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .book-card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .book-card-title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .book-card-title a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  
+  .book-card-title a:hover {
+    color: var(--primary-color);
+  }
+  
+  .book-card-author {
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  
+  .book-card-date {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+  }
+  
+  .book-card-rating {
+    margin-bottom: 15px;
+  }
+  
+  .star {
+    color: var(--medium-gray);
+  }
+  
+  .star.filled {
+    color: var(--secondary-color);
+  }
+  
+  .book-card-tags {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .book-card-tag {
+    font-size: 0.8rem;
+    padding: 3px 8px;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+    color: var(--dark-gray);
+  }
+  
+  .no-books-message {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    margin-top: 30px;
+  }
+  
+  /* Dark mode styles */
+  html[data-theme="dark"] .books-filter {
+    background-color: var(--dark-light-gray);
+  }
+  
+  html[data-theme="dark"] #books-search {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+    border-color: var(--dark-border-color);
+  }
+  
+  html[data-theme="dark"] .books-tag-btn {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+    border-color: var(--dark-border-color);
+  }
+  
+  html[data-theme="dark"] .books-tag-btn:hover {
+    background-color: var(--dark-link-color);
+    color: var(--dark-background-color);
+    border-color: var(--dark-link-color);
+  }
+  
+  html[data-theme="dark"] .books-tag-btn.active {
+    background-color: var(--dark-link-color);
+    color: var(--dark-background-color);
+    border-color: var(--dark-link-color);
+  }
+  
+  html[data-theme="dark"] .book-card {
+    border-color: var(--dark-border-color);
+  }
+  
+  html[data-theme="dark"] .book-card-title a {
+    color: var(--dark-text-color);
+  }
+  
+  html[data-theme="dark"] .book-card-title a:hover {
+    color: var(--dark-link-color);
+  }
+  
+  html[data-theme="dark"] .book-card-placeholder {
+    background-color: var(--dark-light-gray);
+    color: var(--dark-medium-gray);
+  }
+  
+  html[data-theme="dark"] .book-card-tag {
+    background-color: var(--dark-light-gray);
+    color: var(--dark-medium-gray);
+  }
+  
+  html[data-theme="dark"] .no-books-message {
+    background-color: var(--dark-light-gray);
+    color: var(--dark-text-color);
+  }
+</style>
