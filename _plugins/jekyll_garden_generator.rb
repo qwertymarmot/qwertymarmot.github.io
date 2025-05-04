@@ -63,29 +63,35 @@ module JekyllGarden
       nodes = []
       links = []
       
-      # Add notes to graph data
-      site.collections['notes']&.docs&.each do |note|
-        next if note.data['exclude_from_graph']
+      all_notes = site.collections['notes']&.docs || []
+      all_books = site.collections['books']&.docs || []
+      all_docs = all_notes + all_books
+      
+      # Process all documents to find wikilinks and create nodes
+      all_docs.each do |doc|
+        next if doc.data['exclude_from_graph']
         
         # Create node
+        doc_type = doc.collection.label == 'books' ? 'book' : (doc.data['type'] || 'evergreen')
+        
         node = {
-          'id' => note.basename_without_ext,
-          'title' => note.data['title'] || note.basename_without_ext.tr('-', ' ').capitalize,
-          'url' => note.url,
-          'type' => note.data['type'] || 'evergreen'
+          'id' => doc.basename_without_ext,
+          'title' => doc.data['title'] || doc.basename_without_ext.tr('-', ' ').capitalize,
+          'url' => doc.url,
+          'type' => doc_type
         }
         
         # Add excerpt if available
-        if note.content.length > 150
-          node['excerpt'] = note.content.gsub(/<[^>]*>/, ' ').gsub(/\s+/, ' ').strip[0...150] + '...'
+        if doc.content.length > 150
+          node['excerpt'] = doc.content.gsub(/<[^>]*>/, ' ').gsub(/\s+/, ' ').strip[0...150] + '...'
         else
-          node['excerpt'] = note.content.gsub(/<[^>]*>/, ' ').gsub(/\s+/, ' ').strip
+          node['excerpt'] = doc.content.gsub(/<[^>]*>/, ' ').gsub(/\s+/, ' ').strip
         end
         
         nodes << node
         
-        # Find links in content
-        wikilinks = note.content.scan(/\[\[(.*?)\]\]/)
+        # Find wikilinks in content
+        wikilinks = doc.content.scan(/\[\[(.*?)\]\]/)
         
         wikilinks.each do |link|
           link_text = link[0].strip
@@ -106,61 +112,49 @@ module JekyllGarden
           
           # Add link
           links << {
-            'source' => note.basename_without_ext,
+            'source' => doc.basename_without_ext,
             'target' => slug,
             'type' => target_collection
           }
         end
       end
       
-      # Add books to graph data
-      site.collections['books']&.docs&.each do |book|
-        next if book.data['exclude_from_graph']
-        
-        # Create node
-        node = {
-          'id' => book.basename_without_ext,
-          'title' => book.data['title'] || book.basename_without_ext.tr('-', ' ').capitalize,
-          'url' => book.url,
-          'type' => 'book'
-        }
-        
-        # Add excerpt if available
-        if book.content.length > 150
-          node['excerpt'] = book.content.gsub(/<[^>]*>/, ' ').gsub(/\s+/, ' ').strip[0...150] + '...'
-        else
-          node['excerpt'] = book.content.gsub(/<[^>]*>/, ' ').gsub(/\s+/, ' ').strip
+      # Process backlinks
+      all_docs.each do |current_doc|
+        # Find documents that link to the current document
+        docs_linking_to_current = all_docs.filter do |other_doc|
+          other_doc.url != current_doc.url && 
+          (
+            # Check for explicit wikilinks
+            other_doc.content.include?("[[#{current_doc.data['title']}]]") ||
+            other_doc.content.include?("[[#{current_doc.basename_without_ext.tr('-', ' ').capitalize}]]") ||
+            # Check for links with custom text
+            other_doc.content.match(/\[\[#{Regexp.escape(current_doc.data['title'] || current_doc.basename_without_ext.tr('-', ' ').capitalize)}\|.*?\]\]/) ||
+            # Check for HTML links to the current document
+            other_doc.content.include?(current_doc.url)
+          )
         end
         
-        nodes << node
-        
-        # Find links in content
-        wikilinks = book.content.scan(/\[\[(.*?)\]\]/)
-        
-        wikilinks.each do |link|
-          link_text = link[0].strip
-          
-          # Determine target collection
-          target_collection = 'notes'
-          if link_text.start_with?('Book:')
-            target_collection = 'books'
-            link_text = link_text[5..-1].strip
+        # Add backlinks to graph data
+        docs_linking_to_current.each do |linking_doc|
+          # Check if this link already exists (to avoid duplicates)
+          existing_link = links.find do |link| 
+            link['source'] == linking_doc.basename_without_ext && 
+            link['target'] == current_doc.basename_without_ext
           end
           
-          # Create slug
-          slug = link_text.downcase
-            .gsub(/\s+/, '-')
-            .gsub(/[^\w\-]/, '')
-            .gsub(/-{2,}/, '-')
-            .gsub(/^-|-$/, '')
-          
-          # Add link
-          links << {
-            'source' => book.basename_without_ext,
-            'target' => slug,
-            'type' => target_collection
-          }
+          # Only add if the link doesn't already exist
+          unless existing_link
+            links << {
+              'source' => linking_doc.basename_without_ext,
+              'target' => current_doc.basename_without_ext,
+              'type' => current_doc.collection.label
+            }
+          end
         end
+        
+        # Store backlinks in document data for use in templates
+        current_doc.data['backlinks'] = docs_linking_to_current
       end
       
       # Create graph data file
