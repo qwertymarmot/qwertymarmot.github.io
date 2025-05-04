@@ -14,10 +14,20 @@
   const FONT_BASELINE = 40;
   const MAX_LABEL_LENGTH = 50;
 
+  // Create a default graph data structure with empty nodes and edges
+  const defaultGraphData = {
+    nodes: [],
+    edges: []
+  };
+
   // Load graph data from the JSON file, trying multiple locations
   fetch('/notes_graph.json')
     .catch(() => fetch('/assets/js/notes_graph.json'))
     .catch(() => fetch('/_includes/notes_graph.json'))
+    .catch(() => {
+      console.warn("Could not load graph data from any location, using empty graph");
+      return new Response(JSON.stringify(defaultGraphData));
+    })
     .then(response => response.json())
     .then(data => {
       const nodesData = data.nodes;
