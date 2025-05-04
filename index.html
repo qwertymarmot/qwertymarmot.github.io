@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Home - My Digital Garden</title>
+  <meta name="description" content="A digital garden of interconnected notes, thoughts, and ideas.">
+  
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="https://qwertymarmot.github.io/">
+  <link rel="alternate" type="application/rss+xml" title="My Digital Garden" href="/feed.xml">
+  
+  
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="site-header">
+  <div class="wrapper">
+    <div class="site-header-content">
+      <a class="site-title" href="/">My Digital Garden</a>
+      
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <a class="page-link" href="/">Home</a>
+          <a class="page-link" href="/notes">Notes</a>
+          <a class="page-link" href="/books">Books</a>
+          <a class="page-link" href="/tags">Tags</a>
+          <a class="page-link" href="/about">About</a>
+        </div>
+      </nav>
+      
+      <div class="theme-toggle">
+        <button id="theme-toggle-btn" aria-label="Toggle dark mode">
+          <span class="theme-toggle-icon light">☀️</span>
+          <span class="theme-toggle-icon dark">🌙</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+    
+    <main class="site-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="home">
+  <div class="home-header">
+    <h1 class="home-title">My Digital Garden</h1>
+    <p class="home-description">A digital garden of interconnected notes, thoughts, and ideas.</p>
+  </div>
+
+  
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="Search notes...">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  
+
+  <div class="garden-view">
+    <div class="view-toggle">
+      <button class="view-toggle-btn active" data-view="cards">Cards</button>
+      <button class="view-toggle-btn" data-view="graph">Graph</button>
+    </div>
+
+    <div class="view-container">
+      <div class="cards-view active">
+        <div class="filter-container">
+          <div class="filter-group">
+            <label>Filter by type:</label>
+            <div class="filter-options">
+              <button class="filter-btn active" data-filter="all">All</button>
+              
+              <button class="filter-btn" data-filter="evergreen">Evergreen</button>
+              
+              <button class="filter-btn" data-filter="seedling">Seedling</button>
+              
+              <button class="filter-btn" data-filter="budding">Budding</button>
+              
+            </div>
+          </div>
+          
+          <div class="filter-group">
+            <label>Filter by tag:</label>
+            <div class="filter-options tags-filter">
+              <button class="filter-btn active" data-filter="all">All</button>
+              
+              
+              <button class="filter-btn" data-filter="connections">connections</button>
+              
+              <button class="filter-btn" data-filter="digital-garden">digital-garden</button>
+              
+              <button class="filter-btn" data-filter="knowledge-management">knowledge-management</button>
+              
+              <button class="filter-btn" data-filter="meta">meta</button>
+              
+              <button class="filter-btn" data-filter="note-taking">note-taking</button>
+              
+              <button class="filter-btn" data-filter="philosophy">philosophy</button>
+              
+              <button class="filter-btn" data-filter="productivity">productivity</button>
+              
+              <button class="filter-btn" data-filter="thinking">thinking</button>
+              
+              <button class="filter-btn" data-filter="tutorial">tutorial</button>
+              
+              <button class="filter-btn" data-filter="wikilinks">wikilinks</button>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="notes-grid">
+          
+          
+          <div class="note-card" 
+               data-type="seedling"
+               data-tags="note-taking,knowledge-management,productivity">
+            <div class="note-card-header">
+              <span class="note-type seedling">seedling</span>
+              <span class="note-date">May 04, 2025</span>
+            </div>
+            <h2 class="note-title">
+              <a href="/notes/zettelkasten-method/">Zettelkasten Method</a>
+            </h2>
+            <div class="note-excerpt">
+              Zettelkasten Method
+
+
+            </div>
+            <div class="note-meta">
+              
+              <div class="note-tags">
+                
+                <span class="note-tag">note-taking</span>
+                
+                <span class="note-tag">knowledge-management</span>
+                
+                <span class="note-tag">productivity</span>
+                
+              </div>
+              
+              
+              
+            </div>
+          </div>
+          
+          <div class="note-card" 
+               data-type="evergreen"
+               data-tags="meta,digital-garden">
+            <div class="note-card-header">
+              <span class="note-type evergreen">evergreen</span>
+              <span class="note-date">May 04, 2025</span>
+            </div>
+            <h2 class="note-title">
+              <a href="/notes/welcome-to-my-digital-garden/">Welcome to My Digital Garden</a>
+            </h2>
+            <div class="note-excerpt">
+              Welcome to My Digital Garden (Small Change)
+
+
+            </div>
+            <div class="note-meta">
+              
+              <div class="note-tags">
+                
+                <span class="note-tag">meta</span>
+                
+                <span class="note-tag">digital-garden</span>
+                
+              </div>
+              
+              
+              
+            </div>
+          </div>
+          
+          <div class="note-card" 
+               data-type="budding"
+               data-tags="thinking,knowledge-management,connections">
+            <div class="note-card-header">
+              <span class="note-type budding">budding</span>
+              <span class="note-date">May 04, 2025</span>
+            </div>
+            <h2 class="note-title">
+              <a href="/notes/networked-thought/">Networked Thought</a>
+            </h2>
+            <div class="note-excerpt">
+              Networked Thought
+
+
+            </div>
+            <div class="note-meta">
+              
+              <div class="note-tags">
+                
+                <span class="note-tag">thinking</span>
+                
+                <span class="note-tag">knowledge-management</span>
+                
+                <span class="note-tag">connections</span>
+                
+              </div>
+              
+              
+              
+            </div>
+          </div>
+          
+          <div class="note-card" 
+               data-type="evergreen"
+               data-tags="digital-garden,wikilinks,tutorial">
+            <div class="note-card-header">
+              <span class="note-type evergreen">evergreen</span>
+              <span class="note-date">May 04, 2025</span>
+            </div>
+            <h2 class="note-title">
+              <a href="/notes/how-to-use-wikilinks/">How to Use Wikilinks</a>
+            </h2>
+            <div class="note-excerpt">
+              How to Use Wikilinks
+
+
+            </div>
+            <div class="note-meta">
+              
+              <div class="note-tags">
+                
+                <span class="note-tag">digital-garden</span>
+                
+                <span class="note-tag">wikilinks</span>
+                
+                <span class="note-tag">tutorial</span>
+                
+              </div>
+              
+              
+              
+            </div>
+          </div>
+          
+          <div class="note-card" 
+               data-type="budding"
+               data-tags="digital-garden,philosophy,knowledge-management">
+            <div class="note-card-header">
+              <span class="note-type budding">budding</span>
+              <span class="note-date">May 04, 2025</span>
+            </div>
+            <h2 class="note-title">
+              <a href="/notes/digital-garden-philosophy/">Digital Garden Philosophy</a>
+            </h2>
+            <div class="note-excerpt">
+              Digital Garden Philosophy
+
+
+            </div>
+            <div class="note-meta">
+              
+              <div class="note-tags">
+                
+                <span class="note-tag">digital-garden</span>
+                
+                <span class="note-tag">philosophy</span>
+                
+                <span class="note-tag">knowledge-management</span>
+                
+              </div>
+              
+              
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="graph-view">
+        <div id="graph-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="recent-books">
+    <h2 class="section-title">Recent Books</h2>
+    <div class="books-grid">
+      
+      
+      <div class="book-card">
+        <div class="book-cover">
+          
+          <img src="/assets/images/books/placeholder.txt" alt="How to Take Smart Notes">
+          
+        </div>
+        <div class="book-info">
+          <h3 class="book-title">
+            <a href="/books/how-to-take-smart-notes/">How to Take Smart Notes</a>
+          </h3>
+          <p class="book-author">Sönke Ahrens</p>
+          
+          <div class="book-rating">
+            
+            <span class="star filled">★</span>
+            
+            <span class="star filled">★</span>
+            
+            <span class="star filled">★</span>
+            
+            <span class="star filled">★</span>
+            
+            <span class="star filled">★</span>
+            
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+    <div class="view-all">
+      <a href="/books" class="view-all-link">View all books →</a>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </main>
+    
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-content">
+      <div class="footer-col footer-col-1">
+        <h2 class="footer-heading">My Digital Garden</h2>
+        <p>A digital garden of interconnected notes, thoughts, and ideas.</p>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <h2 class="footer-heading">Connect</h2>
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/qwertymarmot">
+              <span class="icon">
+                <svg viewBox="0 0 16 16" width="16px" height="16px">
+                  <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+              </span>
+              <span class="username">qwertymarmot</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/yourusername">
+              <span class="icon">
+                <svg viewBox="0 0 16 16" width="16px" height="16px">
+                  <path fill="currentColor" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+                </svg>
+              </span>
+              <span class="username">yourusername</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <h2 class="footer-heading">Subscribe</h2>
+        <p>
+          <a href="/feed.xml">
+            <span class="icon">
+              <svg viewBox="0 0 16 16" width="16px" height="16px">
+                <path fill="currentColor" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
+              </svg>
+            </span>
+            Subscribe via RSS
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">
+        &copy; 2025 Your Name. 
+        Built with <a href="https://jekyllrb.com" target="_blank">Jekyll</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  
+  <script src="/assets/js/theme-toggle.js"></script>
+  <script src="/assets/js/wikilinks.js"></script>
+  
+  <script src="/assets/js/search.js"></script>
+  
+  
+  <script src="/assets/js/graph.js"></script>
+  
+</body>
+</html>
