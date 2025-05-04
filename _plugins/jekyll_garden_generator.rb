@@ -7,6 +7,20 @@ module JekyllGarden
   class SearchIndexGenerator < Jekyll::Generator
     safe true
     priority :low
+    
+    # Helper method to remove code blocks from content
+    def remove_code_blocks(content)
+      # Replace code blocks (both fenced with ``` and indented) with placeholders
+      content_without_code_blocks = content.dup
+      
+      # Remove fenced code blocks (```code```)
+      content_without_code_blocks.gsub!(/```.*?```/m, '')
+      
+      # Remove inline code blocks (`code`)
+      content_without_code_blocks.gsub!(/`[^`]+`/, '')
+      
+      return content_without_code_blocks
+    end
 
     def generate(site)
       # Generate search index
@@ -90,8 +104,9 @@ module JekyllGarden
         
         nodes << node
         
-        # Find wikilinks in content
-        wikilinks = doc.content.scan(/\[\[(.*?)\]\]/)
+        # Find wikilinks in content, excluding those in code blocks
+        content_without_code_blocks = remove_code_blocks(doc.content)
+        wikilinks = content_without_code_blocks.scan(/\[\[(.*?)\]\]/)
         
         wikilinks.each do |link|
           link_text = link[0].strip
@@ -143,18 +158,22 @@ module JekyllGarden
       
       # Process backlinks
       all_docs.each do |current_doc|
-        # Find documents that link to the current document
+        # Find documents that link to the current document, excluding links in code blocks
         docs_linking_to_current = all_docs.filter do |other_doc|
-          other_doc.url != current_doc.url && 
-          (
+          if other_doc.url == current_doc.url
+            false
+          else
+            # Remove code blocks from content before checking for links
+            content_without_code_blocks = remove_code_blocks(other_doc.content)
+            
             # Check for explicit wikilinks
-            other_doc.content.include?("[[#{current_doc.data['title']}]]") ||
-            other_doc.content.include?("[[#{current_doc.basename_without_ext.tr('-', ' ').capitalize}]]") ||
+            content_without_code_blocks.include?("[[#{current_doc.data['title']}]]") ||
+            content_without_code_blocks.include?("[[#{current_doc.basename_without_ext.tr('-', ' ').capitalize}]]") ||
             # Check for links with custom text
-            other_doc.content.match(/\[\[#{Regexp.escape(current_doc.data['title'] || current_doc.basename_without_ext.tr('-', ' ').capitalize)}\|.*?\]\]/) ||
+            content_without_code_blocks.match(/\[\[#{Regexp.escape(current_doc.data['title'] || current_doc.basename_without_ext.tr('-', ' ').capitalize)}\|.*?\]\]/) ||
             # Check for HTML links to the current document
-            other_doc.content.include?(current_doc.url)
-          )
+            content_without_code_blocks.include?(current_doc.url)
+          end
         end
         
         # Add backlinks to graph data
