@@ -1,5 +1,7 @@
 # Jekyll Garden Generator
 # Generates search index and graph data for Jekyll Garden
+# Based on the bidirectional_links_generator.rb from digital-garden-jekyll-template
+# by Maxime Vaillancourt (https://github.com/maximevaillancourt/digital-garden-jekyll-template)
 
 require 'json'
 

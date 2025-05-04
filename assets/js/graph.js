@@ -1,6 +1,7 @@
 /**
- * Simplified Graph Visualization for Jekyll Garden
- * Based on the approach from digital-garden-jekyll-template
+ * Graph Visualization for Jekyll Garden
+ * Based on the approach from digital-garden-jekyll-template by Maxime Vaillancourt
+ * https://github.com/maximevaillancourt/digital-garden-jekyll-template
  */
 
 document.addEventListener('DOMContentLoaded', function() {
