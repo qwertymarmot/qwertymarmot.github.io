@@ -98,12 +98,29 @@ module JekyllGarden
           
           # Determine target collection
           target_collection = 'notes'
+          
+          # Check if link starts with Book: prefix
           if link_text.start_with?('Book:')
             target_collection = 'books'
             if link_text.start_with?('Book: ')
               link_text = link_text[6..-1].strip  # Remove "Book: " with space
             else
               link_text = link_text[5..-1].strip  # Remove "Book:" without space
+            end
+          else
+            # Check if a book with this name exists
+            book_slug = link_text.downcase
+              .gsub(/\s+/, '-')
+              .gsub(/[^\w\-]/, '')
+              .gsub(/-{2,}/, '-')
+              .gsub(/^-|-$/, '')
+            
+            # Look for a book with this slug
+            site.collections['books']&.docs&.each do |book|
+              if book.basename_without_ext == book_slug
+                target_collection = 'books'
+                break
+              end
             end
           end
           

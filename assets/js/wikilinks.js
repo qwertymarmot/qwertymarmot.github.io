@@ -39,6 +39,20 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (linkText.startsWith('Book: ')) {
           collection = 'books';
           linkText = linkText.substring(6).trim(); // Remove the "Book: " prefix with space
+        } else {
+          // Check if a book with this name exists
+          const bookSlug = linkText.toLowerCase()
+            .replace(/\s+/g, '-')
+            .replace(/[^\w\-]+/g, '')
+            .replace(/\-\-+/g, '-')
+            .replace(/^-+/, '')
+            .replace(/-+$/, '');
+          
+          // Look for a book element with this slug
+          const bookElement = document.querySelector(`a[href="/books/${bookSlug}"]`);
+          if (bookElement) {
+            collection = 'books';
+          }
         }
         
         // Create the link
