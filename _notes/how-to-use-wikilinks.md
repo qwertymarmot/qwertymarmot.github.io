@@ -35,7 +35,7 @@ This is a link to [[welcome-to-my-digital-garden]].
 
 I'm learning about the [[zettelkasten-method]] for note-taking.
 
-Check out this book: [[Book: How to Take Smart Notes]].
+Check out this book: [[how-to-take-smart-notes]]].
 ```
 
 ## Best Practices for Wikilinks
