@@ -1,7 +1,6 @@
 /**
- * Graph visualization for Jekyll Garden
- * Creates interactive graph visualizations of note connections
- * Uses D3.js for visualization
+ * Simplified Graph Visualization for Jekyll Garden
+ * Based on the approach from digital-garden-jekyll-template
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -98,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .selectAll('line')
       .data(data.links)
       .enter().append('line')
-      .attr('class', 'link');
+      .attr('class', d => `link ${d.type || ''}`);
     
     // Create the nodes
     const node = g.append('g')
@@ -250,7 +249,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const initializeNoteGraph = async (d3, container) => {
     // Get the current note ID from the URL
     const path = window.location.pathname;
-    const noteId = path.split('/').filter(Boolean).pop();
+    const segments = path.split('/').filter(Boolean);
+    const collection = segments[segments.length - 2]; // 'notes' or 'books'
+    const noteId = segments[segments.length - 1];
     
     if (!noteId) return;
     
@@ -272,8 +273,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Find connected nodes
     const connectedLinks = data.links.filter(l => 
-      l.source === noteId || l.source.id === noteId || 
-      l.target === noteId || l.target.id === noteId
+      l.source === noteId || (typeof l.source === 'object' && l.source.id === noteId) || 
+      l.target === noteId || (typeof l.target === 'object' && l.target.id === noteId)
     );
     
     const connectedNodeIds = new Set();
@@ -309,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .selectAll('line')
       .data(connectedLinks)
       .enter().append('line')
-      .attr('class', 'link');
+      .attr('class', d => `link ${d.type || ''}`);
     
     // Create the nodes
     const node = svg.append('g')

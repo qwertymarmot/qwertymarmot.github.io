@@ -13,30 +13,15 @@ document.addEventListener('DOMContentLoaded', function() {
   // Load the search index
   const loadSearchIndex = async () => {
     try {
-      // Check if search index is already in localStorage
-      const searchIndexJson = localStorage.getItem('searchIndex');
-      if (searchIndexJson) {
-        return JSON.parse(searchIndexJson);
-      }
+      // Use site root-relative path to ensure it works with base URL configurations
+      const siteRoot = document.querySelector('meta[name="site-root"]')?.getAttribute('content') || '';
+      const searchIndexPath = `${siteRoot}/search-index.json`;
       
-      // Wait for search index to be generated
-      return await new Promise((resolve) => {
-        // Check if event has already been dispatched
-        if (window.searchIndexData) {
-          resolve(window.searchIndexData);
-          return;
-        }
-        
-        // Listen for searchIndexReady event
-        document.addEventListener('searchIndexReady', (event) => {
-          resolve(event.detail);
-        }, { once: true });
-        
-        // Timeout after 10 seconds
-        setTimeout(() => {
-          resolve({ documents: [] });
-        }, 10000);
-      });
+      const response = await fetch(searchIndexPath);
+      if (!response.ok) {
+        throw new Error('Failed to load search index');
+      }
+      return await response.json();
     } catch (error) {
       console.error('Error loading search index:', error);
       return { documents: [] };
