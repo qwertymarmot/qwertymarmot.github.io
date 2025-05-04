@@ -134,6 +134,47 @@ html[data-theme="dark"] {
       }
     }
   }
+  
+  // View toggle buttons
+  .view-toggle {
+    background-color: $dark-light-gray;
+    border-color: $dark-border-color;
+    
+    .view-toggle-btn {
+      background-color: $dark-background-color;
+      color: $dark-medium-gray;
+      border-color: $dark-border-color;
+      
+      &:hover {
+        background-color: lighten($dark-background-color, 5%);
+      }
+      
+      &.active {
+        background-color: $dark-link-color;
+        color: $dark-text-color;
+        border-color: $dark-link-color;
+      }
+    }
+  }
+  
+  // Tags filter
+  .tags-filter {
+    .filter-btn {
+      background-color: $dark-background-color;
+      color: $dark-medium-gray;
+      border-color: $dark-border-color;
+      
+      &:hover {
+        background-color: lighten($dark-background-color, 5%);
+      }
+      
+      &.active {
+        background-color: $dark-link-color;
+        color: $dark-text-color;
+        border-color: $dark-link-color;
+      }
+    }
+  }
 }
 
 // Dark mode toggle functionality
