@@ -216,7 +216,7 @@
   }
 }
 
-// Dark mode graph styles
+// Dark mode graph styles - Catppuccin Frappe
 html[data-theme="dark"] {
   #graph-container, #note-graph {
     background-color: $dark-light-gray;
@@ -224,6 +224,26 @@ html[data-theme="dark"] {
     .node {
       text {
         fill: $dark-text-color;
+      }
+      
+      &.evergreen circle {
+        fill: #a6d189; // Frappe Green
+      }
+      
+      &.seedling circle {
+        fill: #ef9f76; // Frappe Peach
+      }
+      
+      &.budding circle {
+        fill: #8caaee; // Frappe Blue
+      }
+      
+      &.book circle {
+        fill: #f4b8e4; // Frappe Pink
+      }
+      
+      &.active circle {
+        stroke: #c6d0f5; // Frappe Text
       }
     }
     
@@ -246,6 +266,28 @@ html[data-theme="dark"] {
     .graph-tooltip {
       background-color: $dark-background-color;
       border-color: $dark-border-color;
+      
+      .tooltip-title {
+        color: #c6d0f5; // Frappe Text
+      }
+      
+      .tooltip-type {
+        &.evergreen {
+          color: #a6d189; // Frappe Green
+        }
+        
+        &.seedling {
+          color: #ef9f76; // Frappe Peach
+        }
+        
+        &.budding {
+          color: #8caaee; // Frappe Blue
+        }
+        
+        &.book {
+          color: #f4b8e4; // Frappe Pink
+        }
+      }
       
       .tooltip-excerpt {
         color: $dark-medium-gray;

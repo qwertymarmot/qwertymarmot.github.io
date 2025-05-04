@@ -49,11 +49,11 @@ $z-index-header: 100;
 $z-index-search: 200;
 $z-index-modal: 300;
 
-// Dark mode colors
-$dark-background-color: #1a1a1a;
-$dark-text-color: #e0e0e0;
-$dark-border-color: #444444;
-$dark-light-gray: #333333;
-$dark-medium-gray: #555555;
-$dark-link-color: #4ecdc4;
-$dark-link-hover-color: lighten($dark-link-color, 15%);
+// Dark mode colors - Catppuccin Frappe
+$dark-background-color: #303446; // Base
+$dark-text-color: #c6d0f5;       // Text
+$dark-border-color: #51576d;     // Overlay
+$dark-light-gray: #414559;       // Surface
+$dark-medium-gray: #626880;      // Subtext0
+$dark-link-color: #8caaee;       // Blue
+$dark-link-hover-color: #ca9ee6; // Mauve

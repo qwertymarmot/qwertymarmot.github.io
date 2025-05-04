@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Load the graph data
   const loadGraphData = async () => {
     try {
-      const response = await fetch('/graph-data.json');
+      // Use relative URL to ensure it works with base URL configurations
+      const response = await fetch(new URL('graph-data.json', window.location.origin).pathname);
       if (!response.ok) {
         throw new Error('Failed to load graph data');
       }
