@@ -1,6 +1,8 @@
 /**
  * Wikilinks processing for Jekyll Garden
  * Converts [[wikilinks]] to proper HTML links
+ * Based on the approach from digital-garden-jekyll-template by Maxime Vaillancourt
+ * https://github.com/maximevaillancourt/digital-garden-jekyll-template
  */
 
 document.addEventListener('DOMContentLoaded', function() {
