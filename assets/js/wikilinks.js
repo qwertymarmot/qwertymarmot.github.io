@@ -11,13 +11,33 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (!contentAreas.length) return;
     
+    // Get all book slugs for reference
+    const bookLinks = document.querySelectorAll('a[href^="/books/"]');
+    const bookSlugs = new Set();
+    bookLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      const slug = href.split('/').pop();
+      if (slug) bookSlugs.add(slug);
+    });
+    
     contentAreas.forEach(content => {
-      // Find all wikilinks in the content
-      const wikilinksRegex = /\[\[(.*?)\]\]/g;
+      // Find all wikilinks in the content that are not inside code blocks
       const html = content.innerHTML;
       
-      // Replace wikilinks with HTML links
-      const processedHtml = html.replace(wikilinksRegex, (match, linkText) => {
+      // Process wikilinks outside of code blocks
+      let processedHtml = html;
+      
+      // First, temporarily replace code blocks with placeholders
+      const codeBlocks = [];
+      processedHtml = processedHtml.replace(/<pre><code[\s\S]*?<\/code><\/pre>/g, (match) => {
+        const placeholder = `CODE_BLOCK_${codeBlocks.length}`;
+        codeBlocks.push(match);
+        return placeholder;
+      });
+      
+      // Then, process wikilinks
+      const wikilinksRegex = /\[\[(.*?)\]\]/g;
+      processedHtml = processedHtml.replace(wikilinksRegex, (match, linkText) => {
         // Extract the link text
         linkText = linkText.trim();
         
@@ -34,16 +54,15 @@ document.addEventListener('DOMContentLoaded', function() {
           displayText = linkText.substring(6).trim(); // Remove the "Book: " prefix with space for display
         } else {
           // Check if a book with this name exists
-          const bookSlug = linkText.toLowerCase()
-            .replace(/\s+/g, '-')
-            .replace(/[^\w\-]+/g, '')
-            .replace(/\-\-+/g, '-')
-            .replace(/^-+/, '')
-            .replace(/-+$/, '');
+          const bookSlug = displayText.toLowerCase()
+            .replace(/\s+/g, '-')           // Replace spaces with hyphens
+            .replace(/[^\w\-]+/g, '')       // Remove non-word chars
+            .replace(/\-\-+/g, '-')         // Replace multiple hyphens with single hyphen
+            .replace(/^-+/, '')             // Trim hyphens from start
+            .replace(/-+$/, '');            // Trim hyphens from end
           
-          // Look for a book element with this slug
-          const bookElement = document.querySelector(`a[href="/books/${bookSlug}"]`);
-          if (bookElement) {
+          // Check if this slug exists in our book slugs set
+          if (bookSlugs.has(bookSlug)) {
             collection = 'books';
           }
         }
@@ -57,7 +76,12 @@ document.addEventListener('DOMContentLoaded', function() {
           .replace(/-+$/, '');            // Trim hyphens from end
         
         // Create the link
-        return `<a href="/${collection}/${slug}" class="wikilink">${displayText}</a>`;
+        return `<a href="/${collection}/${slug}" class="wikilink" data-link-type="${collection}">${displayText}</a>`;
+      });
+      
+      // Finally, restore code blocks
+      codeBlocks.forEach((block, index) => {
+        processedHtml = processedHtml.replace(`CODE_BLOCK_${index}`, block);
       });
       
       // Update the content

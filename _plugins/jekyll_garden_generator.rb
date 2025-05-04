@@ -104,41 +104,41 @@ module JekyllGarden
         
         nodes << node
         
-        # Find wikilinks in content, excluding those in code blocks
-        content_without_code_blocks = remove_code_blocks(doc.content)
-        wikilinks = content_without_code_blocks.scan(/\[\[(.*?)\]\]/)
+      # Find wikilinks in content, excluding those in code blocks
+      content_without_code_blocks = remove_code_blocks(doc.content)
+      wikilinks = content_without_code_blocks.scan(/\[\[(.*?)\]\]/)
+      
+      wikilinks.each do |link|
+        link_text = link[0].strip
         
-        wikilinks.each do |link|
-          link_text = link[0].strip
-          
-          # Determine target collection and prepare display text
-          target_collection = 'notes'
-          display_text = link_text
-          
-          # Check if link starts with Book: prefix
-          if link_text.start_with?('Book:')
-            target_collection = 'books'
-            if link_text.start_with?('Book: ')
-              display_text = link_text[6..-1].strip  # Remove "Book: " with space
-            else
-              display_text = link_text[5..-1].strip  # Remove "Book:" without space
-            end
+        # Determine target collection and prepare display text
+        target_collection = 'notes'
+        display_text = link_text
+        
+        # Check if link starts with Book: prefix
+        if link_text.start_with?('Book:')
+          target_collection = 'books'
+          if link_text.start_with?('Book: ')
+            display_text = link_text[6..-1].strip  # Remove "Book: " with space
           else
-            # Check if a book with this name exists
-            book_slug = link_text.downcase
-              .gsub(/\s+/, '-')
-              .gsub(/[^\w\-]/, '')
-              .gsub(/-{2,}/, '-')
-              .gsub(/^-|-$/, '')
-            
-            # Look for a book with this slug
-            site.collections['books']&.docs&.each do |book|
-              if book.basename_without_ext == book_slug
-                target_collection = 'books'
-                break
-              end
+            display_text = link_text[5..-1].strip  # Remove "Book:" without space
+          end
+        else
+          # Check if a book with this name exists
+          book_slug = link_text.downcase
+            .gsub(/\s+/, '-')
+            .gsub(/[^\w\-]/, '')
+            .gsub(/-{2,}/, '-')
+            .gsub(/^-|-$/, '')
+          
+          # Look for a book with this slug
+          site.collections['books']&.docs&.each do |book|
+            if book.basename_without_ext == book_slug || book.data['title']&.downcase&.gsub(/\s+/, '-')&.gsub(/[^\w\-]/, '')&.gsub(/-{2,}/, '-')&.gsub(/^-|-$/, '') == book_slug
+              target_collection = 'books'
+              break
             end
           end
+        end
           
           # Create slug from the display text (without the Book: prefix if it's a book)
           slug = display_text.downcase
