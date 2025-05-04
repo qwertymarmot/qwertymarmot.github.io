@@ -59,6 +59,20 @@ class BidirectionalLinksGenerator < Jekyll::Generator
           /\[\[(#{note_title_regexp_pattern})\]\]/i,
           anchor_tag
         )
+        
+        # Handle "Book:" prefix for book links
+        # [[Book: How to Take Smart Notes]]
+        if note_potentially_linked_to.collection.label == 'books'
+          book_title = note_potentially_linked_to.data['title']
+          current_note.content.gsub!(
+            /\[\[Book: #{Regexp.escape(book_title)}\]\]/i,
+            anchor_tag
+          )
+          current_note.content.gsub!(
+            /\[\[Book:#{Regexp.escape(book_title)}\]\]/i,
+            anchor_tag
+          )
+        end
       end
 
       # At this point, all remaining double-bracket-wrapped words are
@@ -79,11 +93,17 @@ class BidirectionalLinksGenerator < Jekyll::Generator
     all_notes.each do |current_note|
       # Nodes: Jekyll
       notes_linking_to_current_note = all_notes.filter do |e|
-        e.url != current_note.url && e.content.include?(current_note.url)
+        e.url != current_note.url && (
+          e.content.include?(current_note.url) || 
+          e.content.include?("[[#{current_note.data['title']}]]") ||
+          e.content.include?("[[#{current_note.basename_without_ext.tr('-', ' ').capitalize}]]")
+        )
       end
 
       books_linking_to_current_note = all_books.filter do |e|
-        e.content.include?(current_note.url)
+        e.content.include?(current_note.url) || 
+        e.content.include?("[[#{current_note.data['title']}]]") ||
+        e.content.include?("[[#{current_note.basename_without_ext.tr('-', ' ').capitalize}]]")
       end
 
       # Nodes: Graph
@@ -116,11 +136,21 @@ class BidirectionalLinksGenerator < Jekyll::Generator
     all_books.each do |current_book|
       # Nodes: Jekyll
       notes_linking_to_current_book = all_notes.filter do |e|
-        e.content.include?(current_book.url)
+        e.content.include?(current_book.url) || 
+        e.content.include?("[[#{current_book.data['title']}]]") ||
+        e.content.include?("[[Book: #{current_book.data['title']}]]") ||
+        e.content.include?("[[Book:#{current_book.data['title']}]]") ||
+        e.content.include?("[[#{current_book.basename_without_ext.tr('-', ' ').capitalize}]]")
       end
 
       books_linking_to_current_book = all_books.filter do |e|
-        e.url != current_book.url && e.content.include?(current_book.url)
+        e.url != current_book.url && (
+          e.content.include?(current_book.url) || 
+          e.content.include?("[[#{current_book.data['title']}]]") ||
+          e.content.include?("[[Book: #{current_book.data['title']}]]") ||
+          e.content.include?("[[Book:#{current_book.data['title']}]]") ||
+          e.content.include?("[[#{current_book.basename_without_ext.tr('-', ' ').capitalize}]]")
+        )
       end
 
       # Nodes: Graph
