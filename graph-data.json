@@ -1,49 +1,168 @@
 {
   "nodes": [
     {
-      "id": "welcome-to-my-digital-garden",
-      "title": "Welcome to My Digital Garden",
-      "url": "/notes/welcome-to-my-digital-garden",
-      "type": "evergreen",
-      "excerpt": "Welcome to my digital garden! This is a place where I cultivate ideas, share knowledge, and document my learning journey."
-    },
-    {
       "id": "digital-garden-philosophy",
       "title": "Digital Garden Philosophy",
-      "url": "/notes/digital-garden-philosophy",
-      "type": "seedling",
-      "excerpt": "A digital garden is a different way of thinking about our online writing. It's less performative than a blog, more collaborative than a personal journal."
+      "url": "/notes/digital-garden-philosophy/",
+      "type": "budding",
+      "excerpt": "# Digital Garden Philosophy The digital garden philosophy represents a shift in how we think about creating and sharing content online. It's a move aw..."
+    },
+    {
+      "id": "habit-formation",
+      "title": "Habit Formation",
+      "url": "/notes/habit-formation/",
+      "type": "budding",
+      "excerpt": "# Habit Formation Habit formation is the process by which behaviors become automatic. When we repeat actions in consistent contexts, they become habit..."
     },
     {
       "id": "how-to-use-wikilinks",
       "title": "How to Use Wikilinks",
-      "url": "/notes/how-to-use-wikilinks",
-      "type": "budding",
-      "excerpt": "Wikilinks are a powerful way to connect notes in your digital garden. Learn how to use them effectively."
+      "url": "/notes/how-to-use-wikilinks/",
+      "type": "evergreen",
+      "excerpt": "# How to Use Wikilinks Wikilinks are a powerful feature of digital gardens that allow you to create connections between notes. They're a simple way to..."
     },
     {
       "id": "networked-thought",
       "title": "Networked Thought",
-      "url": "/notes/networked-thought",
+      "url": "/notes/networked-thought/",
+      "type": "budding",
+      "excerpt": "# Networked Thought Networked thought is an approach to thinking and knowledge management that emphasizes connections between ideas rather than hierar..."
+    },
+    {
+      "id": "welcome-to-my-digital-garden",
+      "title": "Welcome to My Digital Garden",
+      "url": "/notes/welcome-to-my-digital-garden/",
       "type": "evergreen",
-      "excerpt": "Networked thought is about connecting ideas rather than keeping them isolated. It's a fundamental concept in digital gardening."
+      "excerpt": "# Welcome to My Digital Garden (Small Change) This is my digital garden, a place where I cultivate ideas, thoughts, and knowledge. Unlike traditional ..."
     },
     {
       "id": "zettelkasten-method",
       "title": "Zettelkasten Method",
-      "url": "/notes/zettelkasten-method",
-      "type": "evergreen",
-      "excerpt": "The Zettelkasten method is a note-taking system created by German sociologist Niklas Luhmann to enhance thinking and writing."
+      "url": "/notes/zettelkasten-method/",
+      "type": "seedling",
+      "excerpt": "# Zettelkasten Method The Zettelkasten method is a note-taking and knowledge management system developed by German sociologist Niklas Luhmann. The wor..."
+    },
+    {
+      "id": "atomic-habits",
+      "title": "Atomic Habits",
+      "url": "/books/atomic-habits/",
+      "type": "book",
+      "excerpt": "# Atomic Habits *Atomic Habits* is a book by James Clear that explores how small, incremental changes can lead to remarkable results over time. The bo..."
     },
     {
       "id": "how-to-take-smart-notes",
       "title": "How to Take Smart Notes",
-      "url": "/books/how-to-take-smart-notes",
+      "url": "/books/how-to-take-smart-notes/",
       "type": "book",
-      "excerpt": "A comprehensive guide to the Zettelkasten method by Sönke Ahrens."
+      "excerpt": "# How to Take Smart Notes *How to Take Smart Notes* by Sönke Ahrens is a comprehensive guide to the Zettelkasten method of note-taking developed by Ge..."
     }
   ],
   "links": [
+    {
+      "source": "digital-garden-philosophy",
+      "target": "welcome-to-my-digital-garden",
+      "type": "notes"
+    },
+    {
+      "source": "digital-garden-philosophy",
+      "target": "zettelkasten-method",
+      "type": "notes"
+    },
+    {
+      "source": "digital-garden-philosophy",
+      "target": "networked-thought",
+      "type": "notes"
+    },
+    {
+      "source": "digital-garden-philosophy",
+      "target": "how-to-take-smart-notes",
+      "type": "books"
+    },
+    {
+      "source": "habit-formation",
+      "target": "atomic-habits",
+      "type": "books"
+    },
+    {
+      "source": "habit-formation",
+      "target": "zettelkasten-method",
+      "type": "notes"
+    },
+    {
+      "source": "how-to-use-wikilinks",
+      "target": "note-title",
+      "type": "notes"
+    },
+    {
+      "source": "how-to-use-wikilinks",
+      "target": "like-this",
+      "type": "notes"
+    },
+    {
+      "source": "how-to-use-wikilinks",
+      "target": "welcome-to-my-digital-garden",
+      "type": "notes"
+    },
+    {
+      "source": "how-to-use-wikilinks",
+      "target": "zettelkasten-method",
+      "type": "notes"
+    },
+    {
+      "source": "how-to-use-wikilinks",
+      "target": "how-to-take-smart-notes",
+      "type": "books"
+    },
+    {
+      "source": "how-to-use-wikilinks",
+      "target": "title-of-the-book",
+      "type": "books"
+    },
+    {
+      "source": "how-to-use-wikilinks",
+      "target": "note-title",
+      "type": "notes"
+    },
+    {
+      "source": "how-to-use-wikilinks",
+      "target": "welcome-to-my-digital-garden",
+      "type": "notes"
+    },
+    {
+      "source": "how-to-use-wikilinks",
+      "target": "digital-garden-philosophy",
+      "type": "notes"
+    },
+    {
+      "source": "how-to-use-wikilinks",
+      "target": "networked-thought",
+      "type": "notes"
+    },
+    {
+      "source": "networked-thought",
+      "target": "digital-garden-philosophy",
+      "type": "notes"
+    },
+    {
+      "source": "networked-thought",
+      "target": "zettelkasten-method",
+      "type": "notes"
+    },
+    {
+      "source": "networked-thought",
+      "target": "how-to-use-wikilinks",
+      "type": "notes"
+    },
+    {
+      "source": "networked-thought",
+      "target": "how-to-take-smart-notes",
+      "type": "books"
+    },
+    {
+      "source": "welcome-to-my-digital-garden",
+      "target": "wikilinks",
+      "type": "notes"
+    },
     {
       "source": "welcome-to-my-digital-garden",
       "target": "digital-garden-philosophy",
@@ -55,13 +174,23 @@
       "type": "notes"
     },
     {
-      "source": "digital-garden-philosophy",
+      "source": "welcome-to-my-digital-garden",
+      "target": "how-to-take-smart-notes",
+      "type": "books"
+    },
+    {
+      "source": "zettelkasten-method",
+      "target": "digital-garden-philosophy",
+      "type": "notes"
+    },
+    {
+      "source": "zettelkasten-method",
       "target": "networked-thought",
       "type": "notes"
     },
     {
-      "source": "networked-thought",
-      "target": "zettelkasten-method",
+      "source": "zettelkasten-method",
+      "target": "how-to-use-wikilinks",
       "type": "notes"
     },
     {
@@ -70,8 +199,33 @@
       "type": "books"
     },
     {
-      "source": "how-to-use-wikilinks",
+      "source": "atomic-habits",
+      "target": "zettelkasten-method",
+      "type": "notes"
+    },
+    {
+      "source": "atomic-habits",
+      "target": "digital-garden-philosophy",
+      "type": "notes"
+    },
+    {
+      "source": "how-to-take-smart-notes",
+      "target": "zettelkasten-method",
+      "type": "notes"
+    },
+    {
+      "source": "how-to-take-smart-notes",
       "target": "networked-thought",
+      "type": "notes"
+    },
+    {
+      "source": "how-to-take-smart-notes",
+      "target": "digital-garden-philosophy",
+      "type": "notes"
+    },
+    {
+      "source": "how-to-take-smart-notes",
+      "target": "how-to-use-wikilinks",
       "type": "notes"
     }
   ]

@@ -1,5 +1,17 @@
 // Search styles
 
+// Header search
+.site-header .search-container {
+  position: relative;
+  margin-right: $spacing-unit;
+  width: 200px;
+  
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+// Main search container
 .search-container {
   margin-bottom: $spacing-large;
   position: relative;

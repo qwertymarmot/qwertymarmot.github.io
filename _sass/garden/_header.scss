@@ -11,6 +11,7 @@
   
   .site-header-content {
     @include flex-between;
+    align-items: center;
   }
   
   .site-title {

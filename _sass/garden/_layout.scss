@@ -85,6 +85,9 @@
       font-weight: 500;
       cursor: pointer;
       @include transition;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
       
       &:hover, &:focus {
         background-color: darken($light-gray, 5%);
@@ -93,6 +96,15 @@
       &.active {
         background-color: $primary-color;
         color: white;
+      }
+      
+      &.graph-link {
+        background-color: $secondary-color;
+        color: white;
+        
+        &:hover, &:focus {
+          background-color: darken($secondary-color, 5%);
+        }
       }
     }
   }

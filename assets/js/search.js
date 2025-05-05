@@ -4,56 +4,102 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Check if search is enabled
-  const searchInput = document.getElementById('search-input');
-  const searchResults = document.getElementById('search-results');
+  // Initialize search for main search box
+  initializeSearchBox('search-input', 'search-results');
   
-  if (!searchInput || !searchResults) return;
+  // Load lunr.js script dynamically
+  function loadLunrScript() {
+    return new Promise((resolve, reject) => {
+      if (window.lunr) {
+        resolve(window.lunr);
+        return;
+      }
+      
+      const script = document.createElement('script');
+      script.src = 'https://unpkg.com/lunr/lunr.js';
+      script.onload = () => resolve(window.lunr);
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+  }
   
   // Load the search index
-  const loadSearchIndex = async () => {
+  async function loadSearchIndex() {
     try {
-      const response = await fetch('/search-index.json');
+      // Use site root-relative path to ensure it works with base URL configurations
+      const siteRoot = document.querySelector('meta[name="site-root"]')?.getAttribute('content') || '';
+      const searchIndexPath = `${siteRoot}/search-index.json`;
+      
+      console.log('Fetching search index from:', searchIndexPath);
+      const response = await fetch(searchIndexPath);
+      
       if (!response.ok) {
-        throw new Error('Failed to load search index');
+        throw new Error(`Failed to load search index: ${response.status} ${response.statusText}`);
       }
       return await response.json();
     } catch (error) {
       console.error('Error loading search index:', error);
       return { documents: [] };
     }
-  };
+  }
   
-  // Initialize lunr.js search
-  const initializeSearch = async () => {
-    const searchIndex = await loadSearchIndex();
+  // Initialize search for a specific search box
+  function initializeSearchBox(inputId, resultsId) {
+    const searchInput = document.getElementById(inputId);
+    const searchResults = document.getElementById(resultsId);
     
-    if (!searchIndex.documents || !searchIndex.documents.length) {
-      console.warn('Search index is empty or invalid');
-      return;
+    if (!searchInput || !searchResults) return;
+    
+    let searchIndex = null;
+    let idx = null;
+    
+    // Initialize lunr.js search
+    async function initializeSearch() {
+      try {
+        const lunr = await loadLunrScript();
+        searchIndex = await loadSearchIndex();
+        
+        if (!searchIndex.documents || !searchIndex.documents.length) {
+          console.warn('Search index is empty or invalid');
+          return;
+        }
+        
+        // Create lunr index
+        idx = lunr(function() {
+          this.ref('id');
+          this.field('title', { boost: 10 });
+          this.field('content');
+          this.field('tags', { boost: 5 });
+          
+          // Add documents to the index
+          searchIndex.documents.forEach(doc => {
+            this.add({
+              id: doc.id,
+              title: doc.title,
+              content: doc.content,
+              tags: doc.tags ? doc.tags.join(' ') : ''
+            });
+          });
+        });
+        
+        // Add event listeners
+        searchInput.addEventListener('input', (e) => {
+          performSearch(e.target.value);
+        });
+        
+        searchInput.addEventListener('focus', () => {
+          if (searchInput.value.trim() !== '') {
+            performSearch(searchInput.value);
+          }
+        });
+      } catch (error) {
+        console.error('Failed to initialize search:', error);
+      }
     }
     
-    // Create lunr index
-    const idx = lunr(function() {
-      this.ref('id');
-      this.field('title', { boost: 10 });
-      this.field('content');
-      this.field('tags', { boost: 5 });
-      
-      // Add documents to the index
-      searchIndex.documents.forEach(doc => {
-        this.add({
-          id: doc.id,
-          title: doc.title,
-          content: doc.content,
-          tags: doc.tags ? doc.tags.join(' ') : ''
-        });
-      });
-    });
-    
     // Function to perform search
-    const performSearch = (query) => {
-      if (!query || query.trim() === '') {
+    function performSearch(query) {
+      if (!idx || !query || query.trim() === '') {
         hideSearchResults();
         return;
       }
@@ -110,23 +156,12 @@ document.addEventListener('DOMContentLoaded', function() {
         searchResults.innerHTML = '<div class="no-results">Search error. Try a different query.</div>';
         searchResults.classList.add('active');
       }
-    };
+    }
     
     // Function to hide search results
-    const hideSearchResults = () => {
+    function hideSearchResults() {
       searchResults.classList.remove('active');
-    };
-    
-    // Add event listeners
-    searchInput.addEventListener('input', (e) => {
-      performSearch(e.target.value);
-    });
-    
-    searchInput.addEventListener('focus', () => {
-      if (searchInput.value.trim() !== '') {
-        performSearch(searchInput.value);
-      }
-    });
+    }
     
     // Close search results when clicking outside
     document.addEventListener('click', (e) => {
@@ -142,21 +177,8 @@ document.addEventListener('DOMContentLoaded', function() {
         hideSearchResults();
       }
     });
-  };
-  
-  // Load lunr.js script dynamically
-  const loadLunrScript = () => {
-    return new Promise((resolve, reject) => {
-      const script = document.createElement('script');
-      script.src = 'https://unpkg.com/lunr/lunr.js';
-      script.onload = resolve;
-      script.onerror = reject;
-      document.head.appendChild(script);
-    });
-  };
-  
-  // Initialize search when lunr.js is loaded
-  loadLunrScript()
-    .then(initializeSearch)
-    .catch(error => console.error('Failed to load lunr.js:', error));
+    
+    // Initialize search
+    initializeSearch();
+  }
 });

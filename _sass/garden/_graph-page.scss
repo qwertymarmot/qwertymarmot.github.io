@@ -1,0 +1,51 @@
+// Graph page styles
+
+.graph-page {
+  padding: $spacing-unit 0;
+  
+  .graph-header {
+    text-align: center;
+    margin-bottom: $spacing-large;
+    
+    .graph-title {
+      @include heading-1;
+      margin-bottom: $spacing-small;
+    }
+    
+    .graph-description {
+      font-size: 1.1rem;
+      color: $dark-gray;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  
+  .full-graph-container {
+    width: 100%;
+    height: 80vh;
+    min-height: 600px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    overflow: hidden;
+    
+    .full-graph {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// Dark mode styles
+html[data-theme="dark"] {
+  .graph-page {
+    .graph-header {
+      .graph-description {
+        color: $dark-medium-gray;
+      }
+    }
+    
+    .full-graph-container {
+      border-color: $dark-border-color;
+    }
+  }
+}

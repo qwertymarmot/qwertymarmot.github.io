@@ -8,28 +8,28 @@ require 'fileutils'
 Jekyll::Hooks.register :site, :post_write do |site|
   puts "Post-write hook executed"
   
-  # Copy search-index.json to the destination directory
-  search_index_source_path = File.join(site.source, 'search-index.json')
+  # Copy search-index.json from the destination directory to the source directory
   search_index_dest_path = File.join(site.dest, 'search-index.json')
+  search_index_source_path = File.join(site.source, 'search-index.json')
   
-  if File.exist?(search_index_source_path)
-    FileUtils.cp(search_index_source_path, search_index_dest_path)
-    puts "Copied search-index.json to #{search_index_dest_path}"
-    puts "File exists in dest after copy: #{File.exist?(search_index_dest_path)}"
+  if File.exist?(search_index_dest_path)
+    FileUtils.cp(search_index_dest_path, search_index_source_path)
+    puts "Copied search-index.json from #{search_index_dest_path} to #{search_index_source_path}"
+    puts "File exists in source after copy: #{File.exist?(search_index_source_path)}"
   else
-    puts "Source file #{search_index_source_path} does not exist"
+    puts "Destination file #{search_index_dest_path} does not exist"
   end
   
-  # Copy graph-data.json to the destination directory
-  graph_data_source_path = File.join(site.source, 'graph-data.json')
+  # Copy graph-data.json from the destination directory to the source directory
   graph_data_dest_path = File.join(site.dest, 'graph-data.json')
+  graph_data_source_path = File.join(site.source, 'graph-data.json')
   
-  if File.exist?(graph_data_source_path)
-    FileUtils.cp(graph_data_source_path, graph_data_dest_path)
-    puts "Copied graph-data.json to #{graph_data_dest_path}"
-    puts "File exists in dest after copy: #{File.exist?(graph_data_dest_path)}"
+  if File.exist?(graph_data_dest_path)
+    FileUtils.cp(graph_data_dest_path, graph_data_source_path)
+    puts "Copied graph-data.json from #{graph_data_dest_path} to #{graph_data_source_path}"
+    puts "File exists in source after copy: #{File.exist?(graph_data_source_path)}"
   else
-    puts "Source file #{graph_data_source_path} does not exist"
+    puts "Destination file #{graph_data_dest_path} does not exist"
   end
 end
 
@@ -111,6 +111,12 @@ module JekyllGarden
       all_books = site.collections['books']&.docs || []
       all_docs = all_notes + all_books
       
+      # Debug output for all documents
+      puts "All documents:"
+      all_docs.each do |doc|
+        puts "  #{doc.basename_without_ext} (#{doc.collection.label})"
+      end
+      
       # Process all documents to find wikilinks and create nodes
       all_docs.each do |doc|
         next if doc.data['exclude_from_graph']
@@ -132,34 +138,43 @@ module JekyllGarden
           node['excerpt'] = doc.content.gsub(/<[^>]*>/, ' ').gsub(/\s+/, ' ').strip
         end
         
+        puts "Adding node: #{node['id']} (#{node['type']})"
         nodes << node
         
         # Find wikilinks in content
         wikilinks = doc.content.scan(/\[\[(.*?)\]\]/)
         
+        puts "Found #{wikilinks.length} wikilinks in #{doc.basename_without_ext}"
+        
         wikilinks.each do |link|
           link_text = link[0].strip
+          puts "  Processing wikilink: #{link_text}"
           
-          # Determine target collection
+          # Determine target collection and prepare slug text
           target_collection = 'notes'
+          slug_text = link_text
+          
           if link_text.start_with?('Book:')
             target_collection = 'books'
-            link_text = link_text[5..-1].strip
+            slug_text = link_text[5..-1].strip  # Remove 'Book:' prefix for slug
+            puts "  Book link detected, slug_text: #{slug_text}, target_collection: #{target_collection}"
           end
           
           # Create slug
-          slug = link_text.downcase
+          slug = slug_text.downcase
             .gsub(/\s+/, '-')
             .gsub(/[^\w\-]/, '')
             .gsub(/-{2,}/, '-')
             .gsub(/^-|-$/, '')
           
           # Add link
-          links << {
+          link_data = {
             'source' => doc.basename_without_ext,
             'target' => slug,
             'type' => target_collection
           }
+          puts "  Adding link: #{link_data.inspect}"
+          links << link_data
         end
       end
       
@@ -172,6 +187,10 @@ module JekyllGarden
             # Check for explicit wikilinks
             other_doc.content.include?("[[#{current_doc.data['title']}]]") ||
             other_doc.content.include?("[[#{current_doc.basename_without_ext.tr('-', ' ').capitalize}]]") ||
+            # Check for book links
+            (current_doc.collection.label == 'books' && 
+             (other_doc.content.include?("[[Book: #{current_doc.data['title']}]]") ||
+              other_doc.content.include?("[[Book: #{current_doc.basename_without_ext.tr('-', ' ').capitalize}]]"))) ||
             # Check for links with custom text
             other_doc.content.match(/\[\[#{Regexp.escape(current_doc.data['title'] || current_doc.basename_without_ext.tr('-', ' ').capitalize)}\|.*?\]\]/) ||
             # Check for HTML links to the current document
@@ -201,23 +220,64 @@ module JekyllGarden
         current_doc.data['backlinks'] = docs_linking_to_current
       end
       
+      # Debug output for links
+      puts "Links before creating graph data:"
+      links.each_with_index do |link, index|
+        puts "  #{index}: #{link.inspect}"
+      end
+      
       # Create graph data file
+      # Make deep copies of the nodes and links arrays to avoid any modifications
+      nodes_copy = nodes.map { |node| node.dup }
+      links_copy = links.map { |link| link.dup }
+      
+      # Debug output for nodes
+      puts "Nodes before creating graph data:"
+      nodes.each_with_index do |node, index|
+        puts "  #{index}: #{node.inspect}"
+      end
+      
       graph_data = {
-        'nodes' => nodes,
-        'links' => links
+        'nodes' => nodes_copy,
+        'links' => links_copy
       }
       
       # Debug output
       puts "Generating graph data with #{nodes.length} nodes and #{links.length} links"
       puts "Writing graph data to #{File.join(site.dest, 'graph-data.json')}"
       
-      # Write graph data directly to the destination directory
+      # Debug output for graph data
+      puts "Graph data before writing to file:"
+      puts "  Nodes: #{graph_data['nodes'].length}"
+      puts "  Links: #{graph_data['links'].length}"
+      
+      # Write graph data directly to both the destination and source directories
       graph_data_path = File.join(site.dest, 'graph-data.json')
+      graph_data_source_path = File.join(site.source, 'graph-data.json')
       FileUtils.mkdir_p(site.dest) unless File.directory?(site.dest)
       begin
-        File.write(graph_data_path, JSON.pretty_generate(graph_data))
+        # Convert to JSON
+        json_data = JSON.pretty_generate(graph_data)
+        
+        # Debug output for JSON data
+        puts "JSON data length: #{json_data.length}"
+        
+        # Write to destination file
+        File.write(graph_data_path, json_data)
         puts "Graph data written successfully to #{graph_data_path}"
-        puts "File exists: #{File.exist?(graph_data_path)}"
+        puts "File exists in dest: #{File.exist?(graph_data_path)}"
+        
+        # Also write to source directory as a fallback
+        File.write(graph_data_source_path, json_data)
+        puts "Graph data also written to #{graph_data_source_path}"
+        puts "File exists in source: #{File.exist?(graph_data_source_path)}"
+        
+        # Read the file back to verify
+        file_content = File.read(graph_data_path)
+        file_data = JSON.parse(file_content)
+        puts "File data after reading back:"
+        puts "  Nodes: #{file_data['nodes'].length}"
+        puts "  Links: #{file_data['links'].length}"
       rescue => e
         puts "Error writing graph data: #{e.message}"
         puts e.backtrace.join("\n")

@@ -15,6 +15,20 @@
       "last_modified_at": "2025-05-04"
     },
     {
+      "id": "habit-formation",
+      "title": "Habit Formation",
+      "content": "# Habit Formation Habit formation is the process by which behaviors become automatic. When we repeat actions in consistent contexts, they become habitual—requiring less conscious thought and effort to perform. ## The Science of Habit Formation Habits form through a neurological loop consisting of three parts: 1. **Cue**: The trigger that initiates the behavior 2. **Routine**: The behavior itself 3. **Reward**: The benefit you gain from the behavior This loop, when repeated over time, creates neural pathways that strengthen with each repetition, making the behavior increasingly automatic. ## Timeframe for Habit Formation Contrary to the popular myth that it takes 21 days to form a habit, research by Phillippa Lally at University College London found that it takes anywhere from 18 to 254 days for a person to form a new habit, with an average of 66 days for a new behavior to become automatic. ## Strategies for Effective Habit Formation ### 1. Start Small Begin with tiny habits that require minimal motivation. As James Clear discusses in [[Book: Atomic Habits]], these small changes can lead to remarkable results over time through the power of compounding. ### 2. Use Implementation Intentions Frame your intentions in the format: \"When situation X arises, I will perform response Y.\" This strategy has been shown to significantly increase follow-through. ### 3. Stack Habits Attach new habits to existing ones. For example, \"After I brush my teeth, I will meditate for one minute.\" ### 4. Design Your Environment Make good habits obvious, attractive, easy, and satisfying while making bad habits invisible, unattractive, difficult, and unsatisfying. ### 5. Track Your Progress Use habit trackers to maintain awareness of your behavior patterns and to provide visual feedback on your consistency. ## Breaking Bad Habits Breaking existing habits requires: 1. Identifying the cues that trigger the habit 2. Disrupting the routine by substituting a new behavior 3. Finding alternative ways to experience the reward ## Connection to Other Concepts The process of habit formation relates closely to the [[zettelkasten-method]] in that both involve creating systems that reduce friction and cognitive load. Just as good habits automate beneficial behaviors, the Zettelkasten method automates aspects of knowledge management. ## References 1. Clear, J. (2018). *Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones*. 2. Duhigg, C. (2012). *The Power of Habit: Why We Do What We Do in Life and Business*. 3. Lally, P., van Jaarsveld, C. H. M., Potts, H. W. W., & Wardle, J. (2010). How are habits formed: Modelling habit formation in the real world. *European Journal of Social Psychology*, 40(6), 998-1009.",
+      "url": "/notes/habit-formation/",
+      "tags": [
+        "productivity",
+        "habits",
+        "psychology"
+      ],
+      "type": "budding",
+      "date": "2025-05-04",
+      "last_modified_at": "2025-05-04"
+    },
+    {
       "id": "how-to-use-wikilinks",
       "title": "How to Use Wikilinks",
       "content": "# How to Use Wikilinks Wikilinks are a powerful feature of digital gardens that allow you to create connections between notes. They're a simple way to link to other notes in your garden, making it easy to navigate and discover related ideas. ## What Are Wikilinks? Wikilinks (also called bidirectional links) are a special type of link that uses double square brackets to reference another note. For example, `[[note-title]]` creates a link to a note with the title \"note-title\". What makes wikilinks special is that they create a two-way connection: 1. The link in your current note points to the target note 2. The target note automatically shows a \"backlink\" pointing back to your current note This bidirectional nature helps build a network of interconnected ideas. ## How to Create Wikilinks Creating wikilinks in your digital garden is simple: 1. Identify a concept or idea that should link to another note 2. Surround the concept with double square brackets: `[[like this]]` 3. The text inside the brackets will be used to find or create the target note ### Examples ```markdown This is a link to [[welcome-to-my-digital-garden]]. I'm learning about the [[zettelkasten-method]] for note-taking. Check out this book: [[Book: How to Take Smart Notes]]. ``` ## Best Practices for Wikilinks To get the most out of wikilinks in your digital garden: ### 1. Link Liberally Don't be shy about creating links. The more connections you make, the richer your garden becomes. If you mention a concept that has its own note (or should have its own note), link to it. ### 2. Use Consistent Naming Try to be consistent in how you name your notes and how you reference them. This makes it easier to create and maintain links. ### 3. Create Links Before Notes You can create wikilinks to notes that don't exist yet. This is a great way to identify gaps in your garden that you might want to fill later. ### 4. Review Backlinks Regularly review the backlinks section of your notes to discover unexpected connections and to see how ideas relate to each other. ### 5. Link to Books To link to a book note, use the format `[[Book: Title of the Book]]`. This helps distinguish book notes from regular notes. ## Wikilinks vs. Traditional Links | Wikilinks | Traditional HTML Links | |-----------|------------------------| | `[[note-title]]` | `[Link text](url)` | | Bidirectional | One-way only | | Internal to your garden | Can link anywhere | | Focus on connections | Focus on navigation | | Automatically show backlinks | No backlink tracking | ## Related Notes - [[welcome-to-my-digital-garden]] - [[digital-garden-philosophy]] - [[networked-thought]]",
@@ -66,6 +80,20 @@
         "productivity"
       ],
       "type": "seedling",
+      "date": "2025-05-04",
+      "last_modified_at": "2025-05-04"
+    },
+    {
+      "id": "atomic-habits",
+      "title": "Atomic Habits",
+      "content": "# Atomic Habits *Atomic Habits* is a book by James Clear that explores how small, incremental changes can lead to remarkable results over time. The book provides a practical framework for building good habits and breaking bad ones. ## Key Concepts ### 1. The Power of Tiny Changes Clear argues that improvements of just 1% each day can yield exponential results over time. The effects of our habits multiply as we repeat them. ### 2. The Four Laws of Behavior Change The book presents a framework for creating good habits and breaking bad ones: - **Make it obvious** (cue) - **Make it attractive** (craving) - **Make it easy** (response) - **Make it satisfying** (reward) ### 3. Identity-Based Habits One of the most powerful insights in the book is that lasting change comes from focusing on who you wish to become, not just what you want to achieve. When habits become part of your identity, they're much more likely to stick. ### 4. Habit Stacking Clear introduces the concept of \"habit stacking,\" which involves pairing a new habit with an existing one to make it easier to implement. ## Connections to Other Ideas The concept of small, incremental improvements in Atomic Habits connects well with the [[zettelkasten-method]], which emphasizes building knowledge gradually through small, interconnected notes. The focus on systems rather than goals aligns with the philosophy of [[digital-garden-philosophy]], where the emphasis is on the process of growing ideas rather than producing finished products. ## References 1. Clear, J. (2018). *Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones*. Avery.",
+      "url": "/books/atomic-habits/",
+      "tags": [
+        "productivity",
+        "habits",
+        "self-improvement"
+      ],
+      "type": "book",
       "date": "2025-05-04",
       "last_modified_at": "2025-05-04"
     },
