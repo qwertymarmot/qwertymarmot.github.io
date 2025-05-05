@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Set up the SVG container
     const width = container.clientWidth;
-    const height = container.clientHeight;
+    const height = container.clientHeight || container.offsetHeight || 600;
     
     const svg = d3.select(container)
       .append('svg')
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle window resize
     const resizeGraph = () => {
       const newWidth = container.clientWidth;
-      const newHeight = container.clientHeight;
+      const newHeight = container.clientHeight || container.offsetHeight || 600;
       
       svg.attr('width', newWidth)
         .attr('height', newHeight)
@@ -295,7 +295,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Set up the SVG container
     const width = container.clientWidth;
-    const height = container.clientHeight;
+    const height = container.clientHeight || container.offsetHeight || 300;
     
     const svg = d3.select(container)
       .append('svg')
@@ -378,7 +378,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle window resize
     const resizeGraph = () => {
       const newWidth = container.clientWidth;
-      const newHeight = container.clientHeight;
+      const newHeight = container.clientHeight || container.offsetHeight || 300;
       
       svg.attr('width', newWidth)
         .attr('height', newHeight)
