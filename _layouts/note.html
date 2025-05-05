@@ -25,28 +25,6 @@ layout: default
   </div>
 
   <div class="note-footer">
-    <div class="backlinks-container">
-      <h2 class="backlinks-title">Backlinks</h2>
-      <div class="backlinks">
-        {% assign notes = site.notes | where_exp: "item", "item.url != page.url" %}
-        {% assign backlinks = notes | where_exp: "item", "item.content contains page.title" %}
-        {% if backlinks.size > 0 %}
-        <ul class="backlinks-list">
-          {% for backlink in backlinks %}
-          <li class="backlink">
-            <a href="{{ backlink.url | relative_url }}" class="backlink-link">{{ backlink.title }}</a>
-            <div class="backlink-excerpt">
-              {{ backlink.excerpt | strip_html | truncatewords: 20 }}
-            </div>
-          </li>
-          {% endfor %}
-        </ul>
-        {% else %}
-        <p class="no-backlinks">No backlinks found.</p>
-        {% endif %}
-      </div>
-    </div>
-
     <div class="graph-container">
       <h2 class="graph-title">Connections</h2>
       <div id="note-graph"></div>
