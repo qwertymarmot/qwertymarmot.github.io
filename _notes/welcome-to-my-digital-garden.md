@@ -28,13 +28,12 @@ You can explore this garden in several ways:
 1. Browse the notes on the homepage
 2. Use the search function to find specific topics
 3. Click on tags to see related notes
-4. Follow [[wikilinks]] to discover connected ideas
+4. Follow wikilinks to discover connected ideas
 5. Explore the graph visualization to see the network of notes
 
 ## Types of Notes
 
 In this garden, notes are categorized by their stage of development:
-
 - **Evergreen notes**: Well-developed, mature ideas
 - **Seedling notes**: Early thoughts that need development
 - **Budding notes**: Ideas that are starting to take shape

@@ -90,16 +90,6 @@
     },
     {
       "source": "how-to-use-wikilinks",
-      "target": "note-title",
-      "type": "notes"
-    },
-    {
-      "source": "how-to-use-wikilinks",
-      "target": "like-this",
-      "type": "notes"
-    },
-    {
-      "source": "how-to-use-wikilinks",
       "target": "welcome-to-my-digital-garden",
       "type": "notes"
     },
@@ -115,13 +105,8 @@
     },
     {
       "source": "how-to-use-wikilinks",
-      "target": "title-of-the-book",
+      "target": "how-to-take-smart-notes",
       "type": "books"
-    },
-    {
-      "source": "how-to-use-wikilinks",
-      "target": "note-title",
-      "type": "notes"
     },
     {
       "source": "how-to-use-wikilinks",
@@ -157,11 +142,6 @@
       "source": "networked-thought",
       "target": "how-to-take-smart-notes",
       "type": "books"
-    },
-    {
-      "source": "welcome-to-my-digital-garden",
-      "target": "wikilinks",
-      "type": "notes"
     },
     {
       "source": "welcome-to-my-digital-garden",

@@ -12,7 +12,7 @@ Wikilinks are a powerful feature of digital gardens that allow you to create con
 
 ## What Are Wikilinks?
 
-Wikilinks (also called bidirectional links) are a special type of link that uses double square brackets to reference another note. For example, `[[note-title]]` creates a link to a note with the title "note-title".
+Wikilinks (also called bidirectional links) are a special type of link that uses double square brackets to reference another note. For example, `note-title` creates a link to a note with the title "note-title".
 
 What makes wikilinks special is that they create a two-way connection:
 1. The link in your current note points to the target note
@@ -25,7 +25,7 @@ This bidirectional nature helps build a network of interconnected ideas.
 Creating wikilinks in your digital garden is simple:
 
 1. Identify a concept or idea that should link to another note
-2. Surround the concept with double square brackets: `[[like this]]`
+2. Surround the concept with double square brackets: `like this`
 3. The text inside the brackets will be used to find or create the target note
 
 ### Examples
@@ -60,13 +60,13 @@ Regularly review the backlinks section of your notes to discover unexpected conn
 
 ### 5. Link to Books
 
-To link to a book note, use the format `[[Book: Title of the Book]]`. This helps distinguish book notes from regular notes.
+To link to a book note, use the format `[[Book: How to Take Smart Notes]]`. This helps distinguish book notes from regular notes.
 
 ## Wikilinks vs. Traditional Links
 
 | Wikilinks | Traditional HTML Links |
 |-----------|------------------------|
-| `[[note-title]]` | `[Link text](url)` |
+| `note-title` | `[Link text](url)` |
 | Bidirectional | One-way only |
 | Internal to your garden | Can link anywhere |
 | Focus on connections | Focus on navigation |
