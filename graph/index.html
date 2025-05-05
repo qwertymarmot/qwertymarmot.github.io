@@ -5,12 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>My Digital Garden</title>
+  <title>Knowledge Graph - My Digital Garden</title>
   <meta name="description" content="A digital garden of interconnected notes, thoughts, and ideas.">
   <meta name="site-root" content="">
   
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="https://qwertymarmot.github.io/404.html">
+  <link rel="canonical" href="https://qwertymarmot.github.io/graph/">
   <link rel="alternate" type="application/rss+xml" title="My Digital Garden" href="/feed.xml">
   
   
@@ -56,56 +56,19 @@
     
     <main class="site-content" aria-label="Content">
       <div class="wrapper">
-        <style type="text/css" media="screen">
-  .not-found-container {
-    margin: 60px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  .not-found-title {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-    color: var(--primary-color);
-  }
-  .not-found-message {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-  }
-  .not-found-suggestions {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: var(--light-gray);
-    border-radius: 8px;
-    text-align: left;
-  }
-  .not-found-suggestions h2 {
-    margin-top: 0;
-  }
-  .not-found-suggestions ul {
-    margin-bottom: 0;
-  }
-</style>
-
-<div class="not-found-container">
-  <h1 class="not-found-title">404</h1>
+        <div class="graph-page">
+  <div class="graph-header">
+    <h1 class="graph-title">Knowledge Graph</h1>
+    <p class="graph-description">A visual representation of the connections between notes and books in my digital garden.</p>
+  </div>
   
-  <p class="not-found-message"><strong>Oops! This note hasn't been planted yet.</strong></p>
-  <p>The page you're looking for doesn't exist in this digital garden.</p>
-  
-  <a href="/" class="button">Return to Garden Home</a>
-  
-  <div class="not-found-suggestions">
-    <h2>Suggestions:</h2>
-    <ul>
-      <li>Check if the URL is correct</li>
-      <li>Use the search function to find what you're looking for</li>
-      <li>Browse the notes on the homepage</li>
-      <li>Explore the graph visualization to discover other notes</li>
-    </ul>
+  <div class="full-graph-container">
+    <div id="graph-container" class="full-graph"></div>
   </div>
 </div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="/assets/js/graph.js"></script>
 
       </div>
     </main>

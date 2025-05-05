@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://qwertymarmot.github.io/books/atomic-habits/</loc>
+<lastmod>2025-05-04T00:00:00+00:00</lastmod>
+</url>
+<url>
 <loc>https://qwertymarmot.github.io/books/how-to-take-smart-notes/</loc>
-<lastmod>2025-05-04T23:41:10+00:00</lastmod>
+<lastmod>2025-05-05T00:43:38+00:00</lastmod>
 </url>
 <url>
 <loc>https://qwertymarmot.github.io/notes/digital-garden-philosophy/</loc>
+<lastmod>2025-05-04T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://qwertymarmot.github.io/notes/habit-formation/</loc>
 <lastmod>2025-05-04T00:00:00+00:00</lastmod>
 </url>
 <url>
@@ -35,6 +43,9 @@
 <loc>https://qwertymarmot.github.io/books/</loc>
 </url>
 <url>
+<loc>https://qwertymarmot.github.io/graph/</loc>
+</url>
+<url>
 <loc>https://qwertymarmot.github.io/</loc>
 </url>
 <url>
@@ -48,10 +59,10 @@
 </url>
 <url>
 <loc>https://qwertymarmot.github.io/demo.html</loc>
-<lastmod>2025-05-04T23:41:02+00:00</lastmod>
+<lastmod>2025-05-05T00:43:30+00:00</lastmod>
 </url>
 <url>
 <loc>https://qwertymarmot.github.io/placeholder-book-cover.html</loc>
-<lastmod>2025-05-04T23:41:02+00:00</lastmod>
+<lastmod>2025-05-05T00:43:30+00:00</lastmod>
 </url>
 </urlset>

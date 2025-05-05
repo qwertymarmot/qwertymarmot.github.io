@@ -21,22 +21,24 @@ document.addEventListener('DOMContentLoaded', function() {
         // Extract the link text
         linkText = linkText.trim();
         
+        // Determine the collection (notes by default)
+        let collection = 'notes';
+        let slugText = linkText;
+        
+        // Check if the link is to a book
+        if (linkText.startsWith('Book:')) {
+          collection = 'books';
+          slugText = linkText.substring(5).trim(); // Remove the "Book:" prefix for the slug
+          linkText = linkText.substring(5).trim(); // Remove the "Book:" prefix for display
+        }
+        
         // Create a URL-friendly slug
-        const slug = linkText.toLowerCase()
+        const slug = slugText.toLowerCase()
           .replace(/\s+/g, '-')           // Replace spaces with hyphens
           .replace(/[^\w\-]+/g, '')       // Remove non-word chars
           .replace(/\-\-+/g, '-')         // Replace multiple hyphens with single hyphen
           .replace(/^-+/, '')             // Trim hyphens from start
           .replace(/-+$/, '');            // Trim hyphens from end
-        
-        // Determine the collection (notes by default)
-        let collection = 'notes';
-        
-        // Check if the link is to a book
-        if (linkText.startsWith('Book:')) {
-          collection = 'books';
-          linkText = linkText.substring(5).trim(); // Remove the "Book:" prefix
-        }
         
         // Create the link
         return `<a href="/${collection}/${slug}" class="wikilink">${linkText}</a>`;

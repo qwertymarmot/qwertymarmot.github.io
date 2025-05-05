@@ -92,13 +92,20 @@ document.addEventListener('DOMContentLoaded', function() {
       .force('center', d3.forceCenter(width / 2, height / 2))
       .force('collision', d3.forceCollide().radius(30));
     
+    // Debug output for links
+    console.log('Graph data loaded:', data);
+    console.log('Number of nodes:', data.nodes.length);
+    console.log('Number of links:', data.links.length);
+    
     // Create the links
     const link = g.append('g')
       .attr('class', 'links')
       .selectAll('line')
       .data(data.links)
       .enter().append('line')
-      .attr('class', 'link');
+      .attr('class', d => `link ${d.type || ''}`)
+      .attr('data-source', d => d.source.id || d.source)
+      .attr('data-target', d => d.target.id || d.target);
     
     // Create the nodes
     const node = g.append('g')

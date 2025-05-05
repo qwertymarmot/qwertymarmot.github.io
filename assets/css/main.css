@@ -136,9 +136,11 @@ abbr[title] { border-bottom: 1px dotted; cursor: help; text-decoration: none; }
 
 .garden-view { margin-bottom: 60px; }
 .garden-view .view-toggle { display: flex; justify-content: center; margin-bottom: 30px; }
-.garden-view .view-toggle .view-toggle-btn { padding: 0.5rem 1rem; margin: 0 0.5rem; background-color: #f5f5f5; color: #757575; border: none; border-radius: 4px; font-weight: 500; cursor: pointer; transition: all 0.3s ease; }
+.garden-view .view-toggle .view-toggle-btn { padding: 0.5rem 1rem; margin: 0 0.5rem; background-color: #f5f5f5; color: #757575; border: none; border-radius: 4px; font-weight: 500; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: inline-block; text-align: center; }
 .garden-view .view-toggle .view-toggle-btn:hover, .garden-view .view-toggle .view-toggle-btn:focus { background-color: #e8e8e8; }
 .garden-view .view-toggle .view-toggle-btn.active { background-color: #34a8a5; color: white; }
+.garden-view .view-toggle .view-toggle-btn.graph-link { background-color: #f5a623; color: white; }
+.garden-view .view-toggle .view-toggle-btn.graph-link:hover, .garden-view .view-toggle .view-toggle-btn.graph-link:focus { background-color: #f39c0b; }
 .garden-view .view-container { position: relative; }
 .garden-view .view-container .cards-view, .garden-view .view-container .graph-view { display: none; }
 .garden-view .view-container .cards-view.active, .garden-view .view-container .graph-view.active { display: block; }
@@ -218,7 +220,7 @@ abbr[title] { border-bottom: 1px dotted; cursor: help; text-decoration: none; }
 #graph-container { height: 500px; background-color: #f5f5f5; border-radius: 4px; }
 
 .site-header { background-color: #ffffff; border-bottom: 1px solid #e0e0e0; padding: 15px 0; position: sticky; top: 0; z-index: 100; transition: background-color 0.3s ease, border-color 0.3s ease; }
-.site-header .site-header-content { display: flex; align-items: center; justify-content: space-between; }
+.site-header .site-header-content { display: flex; align-items: center; justify-content: space-between; align-items: center; }
 .site-header .site-title { font-size: 1.5rem; font-weight: 700; color: #333333; text-decoration: none; transition: color 0.3s ease; }
 .site-header .site-title:hover, .site-header .site-title:focus { color: #34a8a5; text-decoration: none; }
 .site-header .site-nav { display: flex; align-items: center; justify-content: space-between; }
@@ -385,6 +387,9 @@ html[data-theme="dark"] .book .book-footer .related-notes-list .related-note .re
 html[data-theme="dark"] .book .book-footer .related-notes-list .related-note .related-note-excerpt { color: #626880; }
 html[data-theme="dark"] .book .book-footer .no-related-notes { color: #626880; }
 
+.site-header .search-container { position: relative; margin-right: 30px; width: 200px; }
+@media (max-width: 600px) { .site-header .search-container { display: none; } }
+
 .search-container { margin-bottom: 60px; position: relative; }
 .search-container #search-input { width: 100%; padding: 0.75rem 1rem; font-size: 1.1rem; border: 2px solid #e0e0e0; border-radius: 4px; background-color: #ffffff; color: #333333; transition: all 0.3s ease; }
 .search-container #search-input:focus { border-color: #34a8a5; outline: none; box-shadow: 0 0 0 3px rgba(52, 168, 165, 0.1); }
@@ -497,6 +502,16 @@ html[data-theme="dark"] #graph-container .graph-tooltip .tooltip-type.seedling, 
 html[data-theme="dark"] #graph-container .graph-tooltip .tooltip-type.budding, html[data-theme="dark"] #note-graph .graph-tooltip .tooltip-type.budding { color: #8caaee; }
 html[data-theme="dark"] #graph-container .graph-tooltip .tooltip-type.book, html[data-theme="dark"] #note-graph .graph-tooltip .tooltip-type.book { color: #f4b8e4; }
 html[data-theme="dark"] #graph-container .graph-tooltip .tooltip-excerpt, html[data-theme="dark"] #note-graph .graph-tooltip .tooltip-excerpt { color: #626880; }
+
+.graph-page { padding: 30px 0; }
+.graph-page .graph-header { text-align: center; margin-bottom: 60px; }
+.graph-page .graph-header .graph-title { font-size: 2.5rem; font-weight: 700; line-height: 1.2; margin-bottom: 30px; margin-bottom: 15px; }
+.graph-page .graph-header .graph-description { font-size: 1.1rem; color: #757575; max-width: 600px; margin: 0 auto; }
+.graph-page .full-graph-container { width: 100%; height: 80vh; min-height: 600px; border: 1px solid #e0e0e0; border-radius: 4px; overflow: hidden; }
+.graph-page .full-graph-container .full-graph { width: 100%; height: 100%; }
+
+html[data-theme="dark"] .graph-page .graph-header .graph-description { color: #626880; }
+html[data-theme="dark"] .graph-page .full-graph-container { border-color: #51576d; }
 
 html[data-theme="dark"] { background-color: #303446; }
 html[data-theme="dark"] body { color: #c6d0f5; background-color: #303446; }

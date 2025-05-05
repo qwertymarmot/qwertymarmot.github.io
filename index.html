@@ -19,6 +19,7 @@
 <body>
   <div class="site-container">
     <header class="site-header">
+  <meta name="site-root" content="">
   <div class="wrapper">
     <div class="site-header-content">
       <a class="site-title" href="/">My Digital Garden</a>
@@ -71,7 +72,7 @@
   <div class="garden-view">
     <div class="view-toggle">
       <button class="view-toggle-btn active" data-view="cards">Cards</button>
-      <button class="view-toggle-btn" data-view="graph">Graph</button>
+      <a href="/graph/" class="view-toggle-btn graph-link">Full Graph</a>
     </div>
 
     <div class="view-container">
@@ -101,6 +102,8 @@
               
               <button class="filter-btn" data-filter="digital-garden">digital-garden</button>
               
+              <button class="filter-btn" data-filter="habits">habits</button>
+              
               <button class="filter-btn" data-filter="knowledge-management">knowledge-management</button>
               
               <button class="filter-btn" data-filter="meta">meta</button>
@@ -110,6 +113,8 @@
               <button class="filter-btn" data-filter="philosophy">philosophy</button>
               
               <button class="filter-btn" data-filter="productivity">productivity</button>
+              
+              <button class="filter-btn" data-filter="psychology">psychology</button>
               
               <button class="filter-btn" data-filter="thinking">thinking</button>
               
@@ -252,6 +257,38 @@
           
           <div class="note-card" 
                data-type="budding"
+               data-tags="productivity,habits,psychology">
+            <div class="note-card-header">
+              <span class="note-type budding">budding</span>
+              <span class="note-date">May 04, 2025</span>
+            </div>
+            <h2 class="note-title">
+              <a href="/notes/habit-formation/">Habit Formation</a>
+            </h2>
+            <div class="note-excerpt">
+              Habit Formation
+
+
+            </div>
+            <div class="note-meta">
+              
+              <div class="note-tags">
+                
+                <span class="note-tag">productivity</span>
+                
+                <span class="note-tag">habits</span>
+                
+                <span class="note-tag">psychology</span>
+                
+              </div>
+              
+              
+              
+            </div>
+          </div>
+          
+          <div class="note-card" 
+               data-type="budding"
                data-tags="digital-garden,philosophy,knowledge-management">
             <div class="note-card-header">
               <span class="note-type budding">budding</span>
@@ -323,6 +360,23 @@
             <span class="star filled">★</span>
             
           </div>
+          
+        </div>
+      </div>
+      
+      <div class="book-card">
+        <div class="book-cover">
+          
+          <div class="book-cover-placeholder">
+            <span>Atomic Habits</span>
+          </div>
+          
+        </div>
+        <div class="book-info">
+          <h3 class="book-title">
+            <a href="/books/atomic-habits/">Atomic Habits</a>
+          </h3>
+          <p class="book-author"></p>
           
         </div>
       </div>
