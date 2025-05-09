@@ -1,6 +1,7 @@
 ---
 title: Zettelkasten Method
 type: seedling
+category: Tools and Techniques
 tags: [note-taking, knowledge-management, productivity]
 date: 2025-05-04
 last_modified_at: 2025-05-04

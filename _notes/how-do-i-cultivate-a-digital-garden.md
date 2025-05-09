@@ -1,6 +1,7 @@
 ---
 title: How do I cultivate a digital garden?
 type: seedling
+category: Ideas I'm Exploring
 tags: [digital-garden, knowledge-management, personal-development]
 date: 2025-05-08
 last_modified_at: 2025-05-08
@@ -13,4 +14,3 @@ last_modified_at: 2025-05-08
 
 ## Questions?
 - What things interest me enough to sit in my digital garden?
-

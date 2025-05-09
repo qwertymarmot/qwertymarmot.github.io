@@ -25,11 +25,21 @@ layout: default
       <div class="cards-view active">
         <div class="filter-container">
           <div class="filter-group">
+            <label>Filter by category:</label>
+            <div class="filter-options">
+              <button class="filter-btn active" data-filter-category="all">All</button>
+              {% for category in site.note_categories %}
+              <button class="filter-btn" data-filter-category="{{ category }}">{{ category }}</button>
+              {% endfor %}
+            </div>
+          </div>
+          
+          <div class="filter-group">
             <label>Filter by type:</label>
             <div class="filter-options">
-              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn active" data-filter-type="all">All</button>
               {% for type in site.note_types %}
-              <button class="filter-btn" data-filter="{{ type }}">{{ type | capitalize }}</button>
+              <button class="filter-btn" data-filter-type="{{ type }}">{{ type | capitalize }}</button>
               {% endfor %}
             </div>
           </div>
@@ -37,10 +47,10 @@ layout: default
           <div class="filter-group">
             <label>Filter by tag:</label>
             <div class="filter-options">
-              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn active" data-filter-tag="all">All</button>
               {% assign all_tags = site.notes | map: "tags" | compact | uniq | sort %}
               {% for tag in all_tags %}
-              <button class="filter-btn" data-filter="{{ tag }}">{{ tag }}</button>
+              <button class="filter-btn" data-filter-tag="{{ tag }}">{{ tag }}</button>
               {% endfor %}
             </div>
           </div>
@@ -51,6 +61,7 @@ layout: default
           {% for note in notes %}
           <div class="note-card" 
                data-type="{{ note.type | default: 'evergreen' }}"
+               data-category="{{ note.category }}"
                data-tags="{{ note.tags | join: ',' }}">
             <div class="note-card-header">
               <span class="note-type {{ note.type | default: 'evergreen' }}">{{ note.type | default: "evergreen" }}</span>
@@ -74,6 +85,12 @@ layout: default
               {% if note.links %}
               <div class="note-links">
                 <span class="links-count">{{ note.links | size }} links</span>
+              </div>
+              {% endif %}
+              
+              {% if note.category %}
+              <div class="note-category-container">
+                <span class="note-category {{ note.category | slugify }}">{{ note.category }}</span>
               </div>
               {% endif %}
             </div>

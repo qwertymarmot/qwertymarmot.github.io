@@ -1,6 +1,7 @@
 ---
 title: Welcome to My Digital Garden
 type: evergreen
+category: Stories That Resonate
 tags: [meta, digital-garden]
 date: 2025-05-04
 last_modified_at: 2025-05-04

@@ -61,6 +61,13 @@ note_types:
   - seedling
   - budding
 
+# Note categories
+note_categories:
+  - Ideas I'm Exploring
+  - Tools and Techniques
+  - Principles and Beliefs
+  - Stories That Resonate
+
 # Exclude from processing
 exclude:
   - Gemfile

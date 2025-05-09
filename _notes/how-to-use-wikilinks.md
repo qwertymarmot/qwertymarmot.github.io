@@ -1,6 +1,7 @@
 ---
 title: How to Use Wikilinks
 type: evergreen
+category: Tools and Techniques
 tags: [digital-garden, wikilinks, tutorial]
 date: 2025-05-04
 last_modified_at: 2025-05-04

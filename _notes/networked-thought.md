@@ -1,6 +1,7 @@
 ---
 title: Networked Thought
 type: budding
+category: Ideas I'm Exploring
 tags: [thinking, knowledge-management, connections]
 date: 2025-05-04
 last_modified_at: 2025-05-04

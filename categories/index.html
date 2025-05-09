@@ -1,0 +1,162 @@
+---
+layout: default
+title: Note Categories
+permalink: /categories/
+---
+
+<div class="categories-page">
+  <h1 class="categories-title">Note Categories</h1>
+  
+  <p class="categories-description">
+    Browse notes by category. Each category represents a different area of focus in my digital garden.
+  </p>
+  
+  <div class="categories-grid">
+    {% for category in site.note_categories %}
+    {% if category == "Ideas I'm Exploring" %}
+      {% assign category_slug = "ideas-im-exploring" %}
+    {% else %}
+      {% assign category_slug = category | replace: "'", "" | replace: " ", "-" | downcase %}
+    {% endif %}
+    {% assign category_notes = site.notes | where: "category", category %}
+    <div class="category-card">
+      <h2 class="category-title">
+        <a href="/categories/{{ category_slug }}/">{{ category }}</a>
+      </h2>
+      <p class="category-count">{{ category_notes.size }} note{% if category_notes.size != 1 %}s{% endif %}</p>
+      <div class="category-description">
+        {% case category %}
+          {% when "Ideas I'm Exploring" %}
+            Notes about concepts, theories, and ideas that I'm currently exploring and developing.
+          {% when "Tools and Techniques" %}
+            Notes about practical methods, tools, and techniques that I find useful.
+          {% when "Principles and Beliefs" %}
+            Notes about core principles, values, and beliefs that guide my thinking and actions.
+          {% when "Stories That Resonate" %}
+            Notes about stories, narratives, and experiences that have had a significant impact on my thinking.
+        {% endcase %}
+      </div>
+      <div class="category-link">
+        <a href="/categories/{{ category_slug }}/" class="view-category">View Category →</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .categories-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .categories-title {
+    margin-bottom: 10px;
+  }
+  
+  .categories-description {
+    margin-bottom: 30px;
+    color: var(--dark-gray);
+  }
+  
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .category-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .category-title {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+  }
+  
+  .category-title a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  
+  .category-title a:hover {
+    color: var(--primary-color);
+  }
+  
+  .category-count {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+  }
+  
+  .category-description {
+    font-size: 0.95rem;
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+  
+  .category-link {
+    margin-top: auto;
+  }
+  
+  .view-category {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-category:hover {
+    background-color: var(--primary-color-dark);
+  }
+  
+  /* Dark mode styles */
+  html[data-theme="dark"] .categories-description {
+    color: var(--dark-medium-gray);
+  }
+  
+  html[data-theme="dark"] .category-card {
+    border-color: var(--dark-border-color);
+  }
+  
+  html[data-theme="dark"] .category-title a {
+    color: var(--dark-text-color);
+  }
+  
+  html[data-theme="dark"] .category-title a:hover {
+    color: var(--dark-link-color);
+  }
+  
+  html[data-theme="dark"] .category-count {
+    color: var(--dark-medium-gray);
+  }
+  
+  html[data-theme="dark"] .category-description {
+    color: var(--dark-medium-gray);
+  }
+  
+  html[data-theme="dark"] .view-category {
+    background-color: var(--dark-link-color);
+  }
+  
+  html[data-theme="dark"] .view-category:hover {
+    background-color: var(--dark-link-color-hover);
+  }
+</style>

@@ -1,6 +1,7 @@
 ---
 title: Habit Formation
 type: budding
+category: Principles and Beliefs
 tags: [productivity, habits, psychology]
 date: 2025-05-04
 last_modified_at: 2025-05-04

@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Track active filters
   const activeFilters = {
+    category: 'all',
     type: 'all',
     tag: 'all'
   };
@@ -19,10 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add click event listeners to filter buttons
   filterButtons.forEach(button => {
     button.addEventListener('click', function() {
-      // Get filter group (type or tag)
+      // Get filter group (category, type, or tag)
       const filterGroup = this.closest('.filter-group');
-      const isTagFilter = filterGroup.querySelector('label').textContent.toLowerCase().includes('tag');
-      const filterType = isTagFilter ? 'tag' : 'type';
+      const filterLabel = filterGroup.querySelector('label').textContent.toLowerCase();
+      let filterType;
+      
+      if (filterLabel.includes('category')) {
+        filterType = 'category';
+      } else if (filterLabel.includes('type')) {
+        filterType = 'type';
+      } else if (filterLabel.includes('tag')) {
+        filterType = 'tag';
+      }
       
       // Update active button in this group
       filterGroup.querySelectorAll('.filter-btn').forEach(btn => {
@@ -31,7 +40,15 @@ document.addEventListener('DOMContentLoaded', function() {
       this.classList.add('active');
       
       // Update active filter
-      activeFilters[filterType] = this.getAttribute('data-filter');
+      if (this.hasAttribute('data-filter-category')) {
+        activeFilters.category = this.getAttribute('data-filter-category');
+      } else if (this.hasAttribute('data-filter-type')) {
+        activeFilters.type = this.getAttribute('data-filter-type');
+      } else if (this.hasAttribute('data-filter-tag')) {
+        activeFilters.tag = this.getAttribute('data-filter-tag');
+      } else if (this.hasAttribute('data-filter')) {
+        activeFilters[filterType] = this.getAttribute('data-filter');
+      }
       
       // Apply filters
       applyFilters();
@@ -42,7 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
   function applyFilters() {
     noteCards.forEach(card => {
       const cardType = card.getAttribute('data-type');
-      const cardTags = card.getAttribute('data-tags').split(',');
+      const cardCategory = card.getAttribute('data-category') || '';
+      const cardTags = card.getAttribute('data-tags') ? card.getAttribute('data-tags').split(',') : [];
+      
+      // Check if card matches category filter
+      const matchesCategory = activeFilters.category === 'all' || cardCategory === activeFilters.category;
       
       // Check if card matches type filter
       const matchesType = activeFilters.type === 'all' || cardType === activeFilters.type;
@@ -51,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const matchesTag = activeFilters.tag === 'all' || cardTags.includes(activeFilters.tag);
       
       // Show/hide card based on filters
-      if (matchesType && matchesTag) {
+      if (matchesCategory && matchesType && matchesTag) {
         card.style.display = '';
       } else {
         card.style.display = 'none';
