@@ -37,6 +37,7 @@
         <div class="trigger">
           <a class="page-link" href="/">Home</a>
           <a class="page-link" href="/notes">Notes</a>
+          <a class="page-link" href="/categories">Categories</a>
           <a class="page-link" href="/books">Books</a>
           <a class="page-link" href="/tags">Tags</a>
           <a class="page-link" href="/about">About</a>
@@ -76,6 +77,9 @@
   <header class="note-header">
     <div class="note-meta">
       <span class="note-type evergreen">evergreen</span>
+      
+      <span class="note-category stories-that-resonate">Stories That Resonate</span>
+      
       <span class="note-date">
         Last updated: May 04, 2025
       </span>
@@ -150,6 +154,36 @@
     </div>
   </div>
 </article>
+
+<style>
+  .note-category {
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 8px;
+  }
+  
+  .note-category.ideas-i-m-exploring {
+    background-color: rgba(245, 169, 127, 0.2);
+    color: rgb(245, 169, 127);
+  }
+  
+  .note-category.tools-and-techniques {
+    background-color: rgba(166, 227, 161, 0.2);
+    color: rgb(166, 227, 161);
+  }
+  
+  .note-category.principles-and-beliefs {
+    background-color: rgba(203, 166, 247, 0.2);
+    color: rgb(203, 166, 247);
+  }
+  
+  .note-category.stories-that-resonate {
+    background-color: rgba(137, 180, 250, 0.2);
+    color: rgb(137, 180, 250);
+  }
+</style>
 
 <script>
   // Process wikilinks in the note content

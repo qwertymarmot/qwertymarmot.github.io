@@ -37,6 +37,7 @@
         <div class="trigger">
           <a class="page-link" href="/">Home</a>
           <a class="page-link" href="/notes">Notes</a>
+          <a class="page-link" href="/categories">Categories</a>
           <a class="page-link" href="/books">Books</a>
           <a class="page-link" href="/tags">Tags</a>
           <a class="page-link" href="/about">About</a>
@@ -80,54 +81,72 @@
   </p>
   
   <div class="notes-filter">
-    <label for="notes-search">Filter notes:</label>
+    <label for="notes-search" style="color: var(--text-color);">Filter notes:</label>
     <input type="text" id="notes-search" placeholder="Search by title or content...">
-    
-    <div class="notes-types">
-      <span class="notes-types-label">Filter by type:</span>
-      <div class="notes-types-list">
-        <button class="notes-type-btn active" data-type="all">All</button>
+  </div>
+  
+  <div class="filter-container">
+    <div class="filter-group">
+      <label>Filter by category:</label>
+      <div class="filter-options">
+        <button class="filter-btn active" data-filter-category="all">All</button>
         
-          <button class="notes-type-btn" data-type="evergreen">Evergreen</button>
+          <button class="filter-btn" data-filter-category="Ideas I'm Exploring">Ideas I'm Exploring</button>
         
-          <button class="notes-type-btn" data-type="seedling">Seedling</button>
+          <button class="filter-btn" data-filter-category="Tools and Techniques">Tools and Techniques</button>
         
-          <button class="notes-type-btn" data-type="budding">Budding</button>
+          <button class="filter-btn" data-filter-category="Principles and Beliefs">Principles and Beliefs</button>
+        
+          <button class="filter-btn" data-filter-category="Stories That Resonate">Stories That Resonate</button>
         
       </div>
     </div>
     
-    <div class="notes-tags">
-      <span class="notes-tags-label">Filter by tag:</span>
-      <div class="notes-tags-list">
-        <button class="notes-tag-btn active" data-tag="all">All</button>
+    <div class="filter-group">
+      <label>Filter by type:</label>
+      <div class="filter-options">
+        <button class="filter-btn active" data-filter-type="all">All</button>
+        
+          <button class="filter-btn" data-filter-type="evergreen">Evergreen</button>
+        
+          <button class="filter-btn" data-filter-type="seedling">Seedling</button>
+        
+          <button class="filter-btn" data-filter-type="budding">Budding</button>
+        
+      </div>
+    </div>
+    
+    <div class="filter-group">
+      <label>Filter by tag:</label>
+      <div class="filter-options">
+        <button class="filter-btn active" data-filter-tag="all">All</button>
         
         
-          <button class="notes-tag-btn" data-tag="connections">connections</button>
+          <button class="filter-btn" data-filter-tag="connections">connections</button>
         
-          <button class="notes-tag-btn" data-tag="digital-garden">digital-garden</button>
+          <button class="filter-btn" data-filter-tag="digital-garden">digital-garden</button>
         
-          <button class="notes-tag-btn" data-tag="habits">habits</button>
+          <button class="filter-btn" data-filter-tag="habits">habits</button>
         
-          <button class="notes-tag-btn" data-tag="knowledge-management">knowledge-management</button>
+          <button class="filter-btn" data-filter-tag="knowledge-management">knowledge-management</button>
         
-          <button class="notes-tag-btn" data-tag="meta">meta</button>
+          <button class="filter-btn" data-filter-tag="meta">meta</button>
         
-          <button class="notes-tag-btn" data-tag="note-taking">note-taking</button>
+          <button class="filter-btn" data-filter-tag="note-taking">note-taking</button>
         
-          <button class="notes-tag-btn" data-tag="personal-development">personal-development</button>
+          <button class="filter-btn" data-filter-tag="personal-development">personal-development</button>
         
-          <button class="notes-tag-btn" data-tag="philosophy">philosophy</button>
+          <button class="filter-btn" data-filter-tag="philosophy">philosophy</button>
         
-          <button class="notes-tag-btn" data-tag="productivity">productivity</button>
+          <button class="filter-btn" data-filter-tag="productivity">productivity</button>
         
-          <button class="notes-tag-btn" data-tag="psychology">psychology</button>
+          <button class="filter-btn" data-filter-tag="psychology">psychology</button>
         
-          <button class="notes-tag-btn" data-tag="thinking">thinking</button>
+          <button class="filter-btn" data-filter-tag="thinking">thinking</button>
         
-          <button class="notes-tag-btn" data-tag="tutorial">tutorial</button>
+          <button class="filter-btn" data-filter-tag="tutorial">tutorial</button>
         
-          <button class="notes-tag-btn" data-tag="wikilinks">wikilinks</button>
+          <button class="filter-btn" data-filter-tag="wikilinks">wikilinks</button>
         
       </div>
     </div>
@@ -138,6 +157,7 @@
     
     <div class="note-card" 
          data-type="seedling"
+         data-category="Ideas I'm Exploring"
          data-tags="digital-garden,knowledge-management,personal-development"
          data-title="How do I cultivate a digital garden?"
          data-content="Thoughts on making a long-term digital garden
@@ -150,10 +170,11 @@ Questions?
 
   What things interest me enough to sit in my digital garden?
 
-
 ">
       <div class="note-card-header">
-        <span class="note-type seedling">seedling</span>
+        <div class="note-card-meta">
+          <span class="note-type seedling">seedling</span>
+        </div>
         <span class="note-date">May 08, 2025</span>
       </div>
       <h2 class="note-title">
@@ -176,11 +197,17 @@ Questions?
           
         </div>
         
+        
+        <div class="note-category-container">
+          <span class="note-category ideas-i-m-exploring">Ideas I'm Exploring</span>
+        </div>
+        
       </div>
     </div>
     
     <div class="note-card" 
          data-type="seedling"
+         data-category="Tools and Techniques"
          data-tags="note-taking,knowledge-management,productivity"
          data-title="Zettelkasten Method"
          data-content="Zettelkasten Method
@@ -265,7 +292,9 @@ References
 
 ">
       <div class="note-card-header">
-        <span class="note-type seedling">seedling</span>
+        <div class="note-card-meta">
+          <span class="note-type seedling">seedling</span>
+        </div>
         <span class="note-date">May 04, 2025</span>
       </div>
       <h2 class="note-title">
@@ -288,11 +317,17 @@ References
           
         </div>
         
+        
+        <div class="note-category-container">
+          <span class="note-category tools-and-techniques">Tools and Techniques</span>
+        </div>
+        
       </div>
     </div>
     
     <div class="note-card" 
          data-type="evergreen"
+         data-category="Stories That Resonate"
          data-tags="meta,digital-garden"
          data-title="Welcome to My Digital Garden"
          data-content="Welcome to My Digital Garden (Small Change)
@@ -344,7 +379,9 @@ Related Notes
 Happy exploring!
 ">
       <div class="note-card-header">
-        <span class="note-type evergreen">evergreen</span>
+        <div class="note-card-meta">
+          <span class="note-type evergreen">evergreen</span>
+        </div>
         <span class="note-date">May 04, 2025</span>
       </div>
       <h2 class="note-title">
@@ -365,11 +402,17 @@ Happy exploring!
           
         </div>
         
+        
+        <div class="note-category-container">
+          <span class="note-category stories-that-resonate">Stories That Resonate</span>
+        </div>
+        
       </div>
     </div>
     
     <div class="note-card" 
          data-type="budding"
+         data-category="Ideas I'm Exploring"
          data-tags="thinking,knowledge-management,connections"
          data-title="Networked Thought"
          data-content="Networked Thought
@@ -480,7 +523,9 @@ References
 
 ">
       <div class="note-card-header">
-        <span class="note-type budding">budding</span>
+        <div class="note-card-meta">
+          <span class="note-type budding">budding</span>
+        </div>
         <span class="note-date">May 04, 2025</span>
       </div>
       <h2 class="note-title">
@@ -503,11 +548,17 @@ References
           
         </div>
         
+        
+        <div class="note-category-container">
+          <span class="note-category ideas-i-m-exploring">Ideas I'm Exploring</span>
+        </div>
+        
       </div>
     </div>
     
     <div class="note-card" 
          data-type="evergreen"
+         data-category="Tools and Techniques"
          data-tags="digital-garden,wikilinks,tutorial"
          data-title="How to Use Wikilinks"
          data-content="How to Use Wikilinks
@@ -611,7 +662,9 @@ Related Notes
 
 ">
       <div class="note-card-header">
-        <span class="note-type evergreen">evergreen</span>
+        <div class="note-card-meta">
+          <span class="note-type evergreen">evergreen</span>
+        </div>
         <span class="note-date">May 04, 2025</span>
       </div>
       <h2 class="note-title">
@@ -634,11 +687,17 @@ Related Notes
           
         </div>
         
+        
+        <div class="note-category-container">
+          <span class="note-category tools-and-techniques">Tools and Techniques</span>
+        </div>
+        
       </div>
     </div>
     
     <div class="note-card" 
          data-type="budding"
+         data-category="Principles and Beliefs"
          data-tags="productivity,habits,psychology"
          data-title="Habit Formation"
          data-content="Habit Formation
@@ -706,7 +765,9 @@ References
 
 ">
       <div class="note-card-header">
-        <span class="note-type budding">budding</span>
+        <div class="note-card-meta">
+          <span class="note-type budding">budding</span>
+        </div>
         <span class="note-date">May 04, 2025</span>
       </div>
       <h2 class="note-title">
@@ -729,11 +790,17 @@ References
           
         </div>
         
+        
+        <div class="note-category-container">
+          <span class="note-category principles-and-beliefs">Principles and Beliefs</span>
+        </div>
+        
       </div>
     </div>
     
     <div class="note-card" 
          data-type="budding"
+         data-category="Principles and Beliefs"
          data-tags="digital-garden,philosophy,knowledge-management"
          data-title="Digital Garden Philosophy"
          data-content="Digital Garden Philosophy
@@ -819,7 +886,9 @@ References
 
 ">
       <div class="note-card-header">
-        <span class="note-type budding">budding</span>
+        <div class="note-card-meta">
+          <span class="note-type budding">budding</span>
+        </div>
         <span class="note-date">May 04, 2025</span>
       </div>
       <h2 class="note-title">
@@ -842,6 +911,11 @@ References
           
         </div>
         
+        
+        <div class="note-category-container">
+          <span class="note-category principles-and-beliefs">Principles and Beliefs</span>
+        </div>
+        
       </div>
     </div>
     
@@ -855,32 +929,36 @@ References
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('notes-search');
-    const typeButtons = document.querySelectorAll('.notes-type-btn');
-    const tagButtons = document.querySelectorAll('.notes-tag-btn');
+    const filterButtons = document.querySelectorAll('.filter-btn');
     const noteCards = document.querySelectorAll('.note-card');
     const noNotesMessage = document.querySelector('.no-notes-message');
     
-    // Filter notes based on search input, selected type, and selected tag
+    // Track active filters
+    const activeFilters = {
+      category: 'all',
+      type: 'all',
+      tag: 'all'
+    };
+    
+    // Filter notes based on search input and active filters
     function filterNotes() {
       const searchTerm = searchInput.value.toLowerCase();
-      const activeTypeButton = document.querySelector('.notes-type-btn.active');
-      const activeType = activeTypeButton.getAttribute('data-type');
-      const activeTagButton = document.querySelector('.notes-tag-btn.active');
-      const activeTag = activeTagButton.getAttribute('data-tag');
       
       let visibleCount = 0;
       
       noteCards.forEach(card => {
         const title = card.getAttribute('data-title').toLowerCase();
         const content = card.getAttribute('data-content').toLowerCase();
+        const category = card.getAttribute('data-category') || '';
         const type = card.getAttribute('data-type').toLowerCase();
         const tags = card.getAttribute('data-tags').toLowerCase();
         
         const matchesSearch = title.includes(searchTerm) || content.includes(searchTerm);
-        const matchesType = activeType === 'all' || type === activeType;
-        const matchesTag = activeTag === 'all' || tags.split(',').includes(activeTag);
+        const matchesCategory = activeFilters.category === 'all' || category === activeFilters.category;
+        const matchesType = activeFilters.type === 'all' || type === activeFilters.type;
+        const matchesTag = activeFilters.tag === 'all' || tags.split(',').includes(activeFilters.tag);
         
-        if (matchesSearch && matchesType && matchesTag) {
+        if (matchesSearch && matchesCategory && matchesType && matchesTag) {
           card.style.display = 'block';
           visibleCount++;
         } else {
@@ -899,24 +977,28 @@ References
     // Event listeners
     searchInput.addEventListener('input', filterNotes);
     
-    typeButtons.forEach(button => {
+    // Add click event listeners to filter buttons
+    filterButtons.forEach(button => {
       button.addEventListener('click', function() {
-        // Update active button
-        typeButtons.forEach(btn => btn.classList.remove('active'));
+        // Get filter group (category, type, or tag)
+        const filterGroup = this.closest('.filter-group');
+        
+        // Update active button in this group
+        filterGroup.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.classList.remove('active');
+        });
         this.classList.add('active');
         
-        // Filter notes
-        filterNotes();
-      });
-    });
-    
-    tagButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        // Update active button
-        tagButtons.forEach(btn => btn.classList.remove('active'));
-        this.classList.add('active');
+        // Update active filter
+        if (this.hasAttribute('data-filter-category')) {
+          activeFilters.category = this.getAttribute('data-filter-category');
+        } else if (this.hasAttribute('data-filter-type')) {
+          activeFilters.type = this.getAttribute('data-filter-type');
+        } else if (this.hasAttribute('data-filter-tag')) {
+          activeFilters.tag = this.getAttribute('data-filter-tag');
+        }
         
-        // Filter notes
+        // Apply filters
         filterNotes();
       });
     });
@@ -940,56 +1022,14 @@ References
   }
   
   .notes-filter {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: var(--light-gray);
-    border-radius: 8px;
+    margin-bottom: 15px;
   }
   
   #notes-search {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
     border: 1px solid var(--border-color);
     border-radius: 4px;
-  }
-  
-  .notes-types, .notes-tags {
-    margin-top: 15px;
-  }
-  
-  .notes-types-label, .notes-tags-label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 500;
-  }
-  
-  .notes-types-list, .notes-tags-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  
-  .notes-type-btn, .notes-tag-btn {
-    padding: 5px 10px;
-    background-color: white;
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-  }
-  
-  .notes-type-btn:hover, .notes-tag-btn:hover {
-    background-color: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
-  }
-  
-  .notes-type-btn.active, .notes-tag-btn.active {
-    background-color: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
   }
   
   .notes-grid {
@@ -1001,7 +1041,7 @@ References
   .note-card {
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 20px;
+    padding: 24px;
     transition: all 0.3s ease;
     height: 100%;
     display: flex;
@@ -1017,7 +1057,7 @@ References
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
   }
   
   .note-type {
@@ -1041,14 +1081,54 @@ References
     color: rgb(52, 152, 219);
   }
   
+  .note-category-container {
+    margin-top: 12px;
+    width: 100%;
+  }
+  
+  .note-category {
+    font-size: 0.8rem;
+    padding: 5px 12px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .note-category.ideas-i-m-exploring {
+    background-color: rgba(245, 169, 127, 0.2);
+    color: rgb(245, 169, 127);
+  }
+  
+  .note-category.tools-and-techniques {
+    background-color: rgba(166, 227, 161, 0.2);
+    color: rgb(166, 227, 161);
+  }
+  
+  .note-category.principles-and-beliefs {
+    background-color: rgba(203, 166, 247, 0.2);
+    color: rgb(203, 166, 247);
+  }
+  
+  .note-category.stories-that-resonate {
+    background-color: rgba(137, 180, 250, 0.2);
+    color: rgb(137, 180, 250);
+  }
+  
+  .note-card-meta {
+    display: flex;
+    align-items: center;
+  }
+  
   .note-date {
     font-size: 0.75rem;
     color: var(--dark-gray);
   }
   
   .note-title {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    line-height: 1.3;
   }
   
   .note-title a {
@@ -1061,25 +1141,27 @@ References
   }
   
   .note-excerpt {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--dark-gray);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     flex-grow: 1;
+    line-height: 1.5;
   }
   
   .note-meta {
     margin-top: auto;
+    padding-top: 10px;
   }
   
   .note-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 8px;
   }
   
   .note-tag {
     font-size: 0.8rem;
-    padding: 3px 8px;
+    padding: 4px 10px;
     background-color: var(--light-gray);
     border-radius: 10px;
     color: var(--dark-gray);
@@ -1094,32 +1176,10 @@ References
   }
   
   /* Dark mode styles */
-  html[data-theme="dark"] .notes-filter {
-    background-color: var(--dark-light-gray);
-  }
-  
   html[data-theme="dark"] #notes-search {
     background-color: var(--dark-background-color);
     color: var(--dark-text-color);
     border-color: var(--dark-border-color);
-  }
-  
-  html[data-theme="dark"] .notes-type-btn, html[data-theme="dark"] .notes-tag-btn {
-    background-color: var(--dark-background-color);
-    color: var(--dark-text-color);
-    border-color: var(--dark-border-color);
-  }
-  
-  html[data-theme="dark"] .notes-type-btn:hover, html[data-theme="dark"] .notes-tag-btn:hover {
-    background-color: var(--dark-link-color);
-    color: var(--dark-background-color);
-    border-color: var(--dark-link-color);
-  }
-  
-  html[data-theme="dark"] .notes-type-btn.active, html[data-theme="dark"] .notes-tag-btn.active {
-    background-color: var(--dark-link-color);
-    color: var(--dark-background-color);
-    border-color: var(--dark-link-color);
   }
   
   html[data-theme="dark"] .note-card {

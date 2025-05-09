@@ -288,7 +288,13 @@ html[data-theme="dark"] .site-footer .footer-bottom .copyright { color: #626880;
 .note-card .note-excerpt { font-size: 0.9rem; color: #757575; margin-bottom: 15px; flex-grow: 1; }
 .note-card .note-meta { margin-top: auto; padding-top: 15px; border-top: 1px solid #e0e0e0; }
 .note-card .note-meta .note-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 7.5px; }
-.note-card .note-meta .note-links { font-size: 0.75rem; color: #757575; }
+.note-card .note-meta .note-links { font-size: 0.75rem; color: #757575; margin-bottom: 7.5px; }
+.note-card .note-meta .note-category-container { margin-top: 12px; width: 100%; }
+.note-card .note-meta .note-category { font-size: 0.8rem; padding: 5px 12px; border-radius: 10px; display: inline-block; width: 100%; text-align: center; }
+.note-card .note-meta .note-category.ideas-i-m-exploring { background-color: rgba(245, 169, 127, 0.2); color: #f5a97f; }
+.note-card .note-meta .note-category.tools-and-techniques { background-color: rgba(166, 227, 161, 0.2); color: #a6e3a1; }
+.note-card .note-meta .note-category.principles-and-beliefs { background-color: rgba(203, 166, 247, 0.2); color: #cba6f7; }
+.note-card .note-meta .note-category.stories-that-resonate { background-color: rgba(137, 180, 250, 0.2); color: #89b4fa; }
 
 html[data-theme="dark"] .note-card { background-color: #303446; border-color: #51576d; }
 html[data-theme="dark"] .note-card .note-card-header .note-date { color: #626880; }

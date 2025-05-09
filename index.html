@@ -37,6 +37,7 @@
         <div class="trigger">
           <a class="page-link" href="/">Home</a>
           <a class="page-link" href="/notes">Notes</a>
+          <a class="page-link" href="/categories">Categories</a>
           <a class="page-link" href="/books">Books</a>
           <a class="page-link" href="/tags">Tags</a>
           <a class="page-link" href="/about">About</a>
@@ -95,15 +96,31 @@
       <div class="cards-view active">
         <div class="filter-container">
           <div class="filter-group">
+            <label>Filter by category:</label>
+            <div class="filter-options">
+              <button class="filter-btn active" data-filter-category="all">All</button>
+              
+              <button class="filter-btn" data-filter-category="Ideas I'm Exploring">Ideas I'm Exploring</button>
+              
+              <button class="filter-btn" data-filter-category="Tools and Techniques">Tools and Techniques</button>
+              
+              <button class="filter-btn" data-filter-category="Principles and Beliefs">Principles and Beliefs</button>
+              
+              <button class="filter-btn" data-filter-category="Stories That Resonate">Stories That Resonate</button>
+              
+            </div>
+          </div>
+          
+          <div class="filter-group">
             <label>Filter by type:</label>
             <div class="filter-options">
-              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn active" data-filter-type="all">All</button>
               
-              <button class="filter-btn" data-filter="evergreen">Evergreen</button>
+              <button class="filter-btn" data-filter-type="evergreen">Evergreen</button>
               
-              <button class="filter-btn" data-filter="seedling">Seedling</button>
+              <button class="filter-btn" data-filter-type="seedling">Seedling</button>
               
-              <button class="filter-btn" data-filter="budding">Budding</button>
+              <button class="filter-btn" data-filter-type="budding">Budding</button>
               
             </div>
           </div>
@@ -111,34 +128,34 @@
           <div class="filter-group">
             <label>Filter by tag:</label>
             <div class="filter-options">
-              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn active" data-filter-tag="all">All</button>
               
               
-              <button class="filter-btn" data-filter="connections">connections</button>
+              <button class="filter-btn" data-filter-tag="connections">connections</button>
               
-              <button class="filter-btn" data-filter="digital-garden">digital-garden</button>
+              <button class="filter-btn" data-filter-tag="digital-garden">digital-garden</button>
               
-              <button class="filter-btn" data-filter="habits">habits</button>
+              <button class="filter-btn" data-filter-tag="habits">habits</button>
               
-              <button class="filter-btn" data-filter="knowledge-management">knowledge-management</button>
+              <button class="filter-btn" data-filter-tag="knowledge-management">knowledge-management</button>
               
-              <button class="filter-btn" data-filter="meta">meta</button>
+              <button class="filter-btn" data-filter-tag="meta">meta</button>
               
-              <button class="filter-btn" data-filter="note-taking">note-taking</button>
+              <button class="filter-btn" data-filter-tag="note-taking">note-taking</button>
               
-              <button class="filter-btn" data-filter="personal-development">personal-development</button>
+              <button class="filter-btn" data-filter-tag="personal-development">personal-development</button>
               
-              <button class="filter-btn" data-filter="philosophy">philosophy</button>
+              <button class="filter-btn" data-filter-tag="philosophy">philosophy</button>
               
-              <button class="filter-btn" data-filter="productivity">productivity</button>
+              <button class="filter-btn" data-filter-tag="productivity">productivity</button>
               
-              <button class="filter-btn" data-filter="psychology">psychology</button>
+              <button class="filter-btn" data-filter-tag="psychology">psychology</button>
               
-              <button class="filter-btn" data-filter="thinking">thinking</button>
+              <button class="filter-btn" data-filter-tag="thinking">thinking</button>
               
-              <button class="filter-btn" data-filter="tutorial">tutorial</button>
+              <button class="filter-btn" data-filter-tag="tutorial">tutorial</button>
               
-              <button class="filter-btn" data-filter="wikilinks">wikilinks</button>
+              <button class="filter-btn" data-filter-tag="wikilinks">wikilinks</button>
               
             </div>
           </div>
@@ -149,6 +166,7 @@
           
           <div class="note-card" 
                data-type="seedling"
+               data-category="Ideas I'm Exploring"
                data-tags="digital-garden,knowledge-management,personal-development">
             <div class="note-card-header">
               <span class="note-type seedling">seedling</span>
@@ -176,11 +194,18 @@
               
               
               
+              
+              
+              <div class="note-category-container">
+                <span class="note-category ideas-i-m-exploring">Ideas I'm Exploring</span>
+              </div>
+              
             </div>
           </div>
           
           <div class="note-card" 
                data-type="seedling"
+               data-category="Tools and Techniques"
                data-tags="note-taking,knowledge-management,productivity">
             <div class="note-card-header">
               <span class="note-type seedling">seedling</span>
@@ -208,11 +233,18 @@
               
               
               
+              
+              
+              <div class="note-category-container">
+                <span class="note-category tools-and-techniques">Tools and Techniques</span>
+              </div>
+              
             </div>
           </div>
           
           <div class="note-card" 
                data-type="evergreen"
+               data-category="Stories That Resonate"
                data-tags="meta,digital-garden">
             <div class="note-card-header">
               <span class="note-type evergreen">evergreen</span>
@@ -238,11 +270,18 @@
               
               
               
+              
+              
+              <div class="note-category-container">
+                <span class="note-category stories-that-resonate">Stories That Resonate</span>
+              </div>
+              
             </div>
           </div>
           
           <div class="note-card" 
                data-type="budding"
+               data-category="Ideas I'm Exploring"
                data-tags="thinking,knowledge-management,connections">
             <div class="note-card-header">
               <span class="note-type budding">budding</span>
@@ -270,11 +309,18 @@
               
               
               
+              
+              
+              <div class="note-category-container">
+                <span class="note-category ideas-i-m-exploring">Ideas I'm Exploring</span>
+              </div>
+              
             </div>
           </div>
           
           <div class="note-card" 
                data-type="evergreen"
+               data-category="Tools and Techniques"
                data-tags="digital-garden,wikilinks,tutorial">
             <div class="note-card-header">
               <span class="note-type evergreen">evergreen</span>
@@ -302,11 +348,18 @@
               
               
               
+              
+              
+              <div class="note-category-container">
+                <span class="note-category tools-and-techniques">Tools and Techniques</span>
+              </div>
+              
             </div>
           </div>
           
           <div class="note-card" 
                data-type="budding"
+               data-category="Principles and Beliefs"
                data-tags="productivity,habits,psychology">
             <div class="note-card-header">
               <span class="note-type budding">budding</span>
@@ -334,11 +387,18 @@
               
               
               
+              
+              
+              <div class="note-category-container">
+                <span class="note-category principles-and-beliefs">Principles and Beliefs</span>
+              </div>
+              
             </div>
           </div>
           
           <div class="note-card" 
                data-type="budding"
+               data-category="Principles and Beliefs"
                data-tags="digital-garden,philosophy,knowledge-management">
             <div class="note-card-header">
               <span class="note-type budding">budding</span>
@@ -365,6 +425,12 @@
               </div>
               
               
+              
+              
+              
+              <div class="note-category-container">
+                <span class="note-category principles-and-beliefs">Principles and Beliefs</span>
+              </div>
               
             </div>
           </div>
