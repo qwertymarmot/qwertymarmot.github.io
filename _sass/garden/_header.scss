@@ -137,12 +137,19 @@
         svg {
           width: 20px;
           height: 20px;
-          stroke: $text-color;
           transition: stroke $transition-duration ease;
+        }
+        
+        &.light svg {
+          stroke: #000000; /* Black for better visibility on light theme */
         }
         
         &.dark {
           display: none;
+        }
+        
+        &.dark svg {
+          stroke: $dark-text-color;
         }
       }
     }
@@ -191,10 +198,6 @@ html[data-theme="dark"] {
     .theme-toggle {
       #theme-toggle-btn {
         .theme-toggle-icon {
-          svg {
-            stroke: $dark-text-color;
-          }
-          
           &.light {
             display: none;
           }
