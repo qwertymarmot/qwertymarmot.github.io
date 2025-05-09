@@ -5,8 +5,8 @@
 
 # Site settings
 title: Tending Thoughts
-email: your-email@example.com
-author: Your Name
+email: mail@iambrandoncole.com
+author: Brandon Cole
 description: >- # this means to ignore newlines until "baseurl:"
   A digital garden of interconnected notes, thoughts, and ideas.
 baseurl: "" # the subpath of your site, e.g. /blog
