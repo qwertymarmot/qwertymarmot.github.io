@@ -241,8 +241,10 @@ abbr[title] { border-bottom: 1px dotted; cursor: help; text-decoration: none; }
 .site-header .theme-toggle #theme-toggle-btn { background: none; border: none; padding: 0; cursor: pointer; font-size: 1.2rem; line-height: 1; display: flex; align-items: center; justify-content: center; }
 .site-header .theme-toggle #theme-toggle-btn:focus { outline: none; }
 .site-header .theme-toggle #theme-toggle-btn .theme-toggle-icon { display: block; }
-.site-header .theme-toggle #theme-toggle-btn .theme-toggle-icon svg { width: 20px; height: 20px; stroke: #333333; transition: stroke 0.3s ease; }
+.site-header .theme-toggle #theme-toggle-btn .theme-toggle-icon svg { width: 20px; height: 20px; transition: stroke 0.3s ease; }
+.site-header .theme-toggle #theme-toggle-btn .theme-toggle-icon.light svg { stroke: #000000; /* Black for better visibility on light theme */ }
 .site-header .theme-toggle #theme-toggle-btn .theme-toggle-icon.dark { display: none; }
+.site-header .theme-toggle #theme-toggle-btn .theme-toggle-icon.dark svg { stroke: #c6d0f5; }
 
 html[data-theme="dark"] .site-header { background-color: #303446; border-bottom-color: #51576d; }
 html[data-theme="dark"] .site-header .site-title { color: #c6d0f5; }
@@ -251,7 +253,6 @@ html[data-theme="dark"] .site-header .site-nav .trigger .page-link { color: #c6d
 html[data-theme="dark"] .site-header .site-nav .trigger .page-link:hover, html[data-theme="dark"] .site-header .site-nav .trigger .page-link:focus { color: #8caaee; }
 html[data-theme="dark"] .site-header .site-nav .menu-icon > svg { fill: #c6d0f5; }
 @media (max-width: 600px) { html[data-theme="dark"] .site-header .site-nav .trigger { background-color: #303446; border-color: #51576d; } }
-html[data-theme="dark"] .site-header .theme-toggle #theme-toggle-btn .theme-toggle-icon svg { stroke: #c6d0f5; }
 html[data-theme="dark"] .site-header .theme-toggle #theme-toggle-btn .theme-toggle-icon.light { display: none; }
 html[data-theme="dark"] .site-header .theme-toggle #theme-toggle-btn .theme-toggle-icon.dark { display: block; }
 
