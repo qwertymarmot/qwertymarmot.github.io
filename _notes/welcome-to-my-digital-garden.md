@@ -7,7 +7,7 @@ date: 2025-05-04
 last_modified_at: 2025-05-04
 ---
 
-# Welcome to My Digital Garden (Small Change)
+# Welcome to My Digital Garden
 
 This is my digital garden, a place where I cultivate ideas, thoughts, and knowledge. Unlike traditional blogs, a digital garden is a non-linear collection of interconnected notes that grow and evolve over time.
 
