@@ -5,12 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>Note Categories - Tending Thoughts</title>
-  <meta name="description" content="A digital garden of interconnected notes, thoughts, and ideas.">
+  <title>Struggling to feel goal momentum despite digital tracking - Tending Thoughts</title>
+  <meta name="description" content="I realized that without weekly focus and analog reflection, I just create more motion, not progress.">
   <meta name="site-root" content="">
   
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="https://qwertymarmot.github.io/categories/">
+  <link rel="canonical" href="https://qwertymarmot.github.io/notes/struggling-to-feel-goal-momentum/">
   <link rel="alternate" type="application/rss+xml" title="Tending Thoughts" href="/feed.xml">
   
   
@@ -73,202 +73,93 @@
     
     <main class="site-content" aria-label="Content">
       <div class="wrapper">
-        <div class="categories-page">
-  <h1 class="categories-title">Note Categories</h1>
-  
-  <p class="categories-description">
-    Browse notes by category. Each category represents a different area of focus in my digital garden.
-  </p>
-  
-  <div class="categories-grid">
+        <article class="note">
+  <header class="note-header">
+    <div class="note-meta">
+      <span class="note-type budding">budding</span>
+      
+      <span class="note-category stories-that-resonate">Stories That Resonate</span>
+      
+      <span class="note-date">
+        Last updated: May 27, 2025
+      </span>
+    </div>
+    <h1 class="note-title">Struggling to feel goal momentum despite digital tracking</h1>
     
-    
-    
-    <div class="category-card">
-      <h2 class="category-title">
-        <a href="/categories/ideas-im-exploring/">Ideas I'm Exploring</a>
-      </h2>
-      <p class="category-count">2 notes</p>
-      <div class="category-description">
-        
-            Notes about concepts, theories, and ideas that I'm currently exploring and developing.
-          
-      </div>
-      <div class="category-link">
-        <a href="/categories/ideas-im-exploring/" class="view-category">View Category →</a>
-      </div>
+    <div class="note-tags">
+      
+      <span class="note-tag">goals</span>
+      
+      <span class="note-tag">progress</span>
+      
     </div>
     
-    
-    
-    <div class="category-card">
-      <h2 class="category-title">
-        <a href="/categories/tools-and-techniques/">Tools and Techniques</a>
-      </h2>
-      <p class="category-count">2 notes</p>
-      <div class="category-description">
-        
-            Notes about practical methods, tools, and techniques that I find useful.
-          
-      </div>
-      <div class="category-link">
-        <a href="/categories/tools-and-techniques/" class="view-category">View Category →</a>
-      </div>
-    </div>
-    
-    
-    
-    <div class="category-card">
-      <h2 class="category-title">
-        <a href="/categories/principles-and-beliefs/">Principles and Beliefs</a>
-      </h2>
-      <p class="category-count">3 notes</p>
-      <div class="category-description">
-        
-            Notes about core principles, values, and beliefs that guide my thinking and actions.
-          
-      </div>
-      <div class="category-link">
-        <a href="/categories/principles-and-beliefs/" class="view-category">View Category →</a>
-      </div>
-    </div>
-    
-    
-    
-    <div class="category-card">
-      <h2 class="category-title">
-        <a href="/categories/stories-that-resonate/">Stories That Resonate</a>
-      </h2>
-      <p class="category-count">2 notes</p>
-      <div class="category-description">
-        
-            Notes about stories, narratives, and experiences that have had a significant impact on my thinking.
-        
-      </div>
-      <div class="category-link">
-        <a href="/categories/stories-that-resonate/" class="view-category">View Category →</a>
-      </div>
-    </div>
-    
+  </header>
+
+  <div class="note-content">
+    <ul>
+  <li>I realized that without weekly focus and analog reflection, I just create more motion, not progress.</li>
+</ul>
+
+<h2 id="related-notes">Related Notes</h2>
+<ul>
+  <li>[[habit-formation]]</li>
+</ul>
+
   </div>
-</div>
+
+  <div class="note-footer">
+    <div class="graph-container">
+      <h2 class="graph-title">Connections</h2>
+      <div id="note-graph"></div>
+    </div>
+  </div>
+</article>
 
 <style>
-  .categories-page {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px 0;
-  }
-  
-  .categories-title {
-    margin-bottom: 10px;
-  }
-  
-  .categories-description {
-    margin-bottom: 30px;
-    color: var(--dark-gray);
-  }
-  
-  .categories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-  }
-  
-  .category-card {
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 20px;
-    transition: all 0.3s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .category-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .category-title {
-    font-size: 1.4rem;
-    margin-bottom: 5px;
-  }
-  
-  .category-title a {
-    color: var(--text-color);
-    text-decoration: none;
-  }
-  
-  .category-title a:hover {
-    color: var(--primary-color);
-  }
-  
-  .category-count {
-    font-size: 0.9rem;
-    color: var(--dark-gray);
-    margin-bottom: 15px;
-  }
-  
-  .category-description {
-    font-size: 0.95rem;
-    color: var(--dark-gray);
-    margin-bottom: 20px;
-    flex-grow: 1;
-  }
-  
-  .category-link {
-    margin-top: auto;
-  }
-  
-  .view-category {
+  .note-category {
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    border-radius: 10px;
     display: inline-block;
-    padding: 8px 16px;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
+    margin-right: 8px;
   }
   
-  .view-category:hover {
-    background-color: var(--primary-color-dark);
+  .note-category.ideas-i-m-exploring {
+    background-color: rgba(245, 169, 127, 0.2);
+    color: rgb(245, 169, 127);
   }
   
-  /* Dark mode styles */
-  html[data-theme="dark"] .categories-description {
-    color: var(--dark-medium-gray);
+  .note-category.tools-and-techniques {
+    background-color: rgba(166, 227, 161, 0.2);
+    color: rgb(166, 227, 161);
   }
   
-  html[data-theme="dark"] .category-card {
-    border-color: var(--dark-border-color);
+  .note-category.principles-and-beliefs {
+    background-color: rgba(203, 166, 247, 0.2);
+    color: rgb(203, 166, 247);
   }
   
-  html[data-theme="dark"] .category-title a {
-    color: var(--dark-text-color);
-  }
-  
-  html[data-theme="dark"] .category-title a:hover {
-    color: var(--dark-link-color);
-  }
-  
-  html[data-theme="dark"] .category-count {
-    color: var(--dark-medium-gray);
-  }
-  
-  html[data-theme="dark"] .category-description {
-    color: var(--dark-medium-gray);
-  }
-  
-  html[data-theme="dark"] .view-category {
-    background-color: var(--dark-link-color);
-  }
-  
-  html[data-theme="dark"] .view-category:hover {
-    background-color: var(--dark-link-color-hover);
+  .note-category.stories-that-resonate {
+    background-color: rgba(137, 180, 250, 0.2);
+    color: rgb(137, 180, 250);
   }
 </style>
+
+<script>
+  // Process wikilinks in the note content
+  document.addEventListener('DOMContentLoaded', function() {
+    const noteContent = document.querySelector('.note-content');
+    if (noteContent) {
+      const wikilinksRegex = /\[\[(.*?)\]\]/g;
+      noteContent.innerHTML = noteContent.innerHTML.replace(wikilinksRegex, function(match, p1) {
+        const linkText = p1.trim();
+        const url = linkText.toLowerCase().replace(/\s+/g, '-');
+        return `<a href="/notes/${url}" class="wikilink">${linkText}</a>`;
+      });
+    }
+  });
+</script>
 
       </div>
     </main>
@@ -343,6 +234,8 @@
   
   <script src="/assets/js/search.js"></script>
   
+  
+  <script src="/assets/js/graph.js"></script>
   
   
 </body>
