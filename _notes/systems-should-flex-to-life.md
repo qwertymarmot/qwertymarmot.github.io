@@ -4,7 +4,7 @@ type: budding
 category: Principles and Beliefs
 tags: [digital-garden, philosophy, knowledge-management]
 date: 2025-05-27
-last_modified_at: 2025-05-04
+last_modified_at: 2025-05-27
 ---
 
 - My workflows exist to serve goals and well-being, not the other way around.

@@ -10,4 +10,5 @@ last_modified_at: 2025-05-27
 - I realized that without weekly focus and analog reflection, I just create more motion, not progress.
 
 ## Related Notes
+
 - [[habit-formation]]
