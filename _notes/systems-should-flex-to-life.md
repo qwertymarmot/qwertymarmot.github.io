@@ -10,3 +10,7 @@ last_modified_at: 2025-05-04
 - My workflows exist to serve goals and well-being, not the other way around.
 
 - I like the concept of calling my platforms surfaces. Makes then feel more alive.
+
+## Related Notes
+
+- [[digital-garden-philosophy]]
