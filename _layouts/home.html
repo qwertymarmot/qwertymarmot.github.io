@@ -57,9 +57,9 @@ layout: default
         </div>
 
         <div class="notes-grid">
-          {% assign notes = site.notes | sort: "last_modified_at" | sort: "date" | reverse | limit: 9 %}
+          {% assign notes = site.notes | sort: "last_modified_at" | sort: "date" | reverse %}
           {% for note in notes %}
-          <div class="note-card" 
+          <div class="note-card {% if forloop.index <= 9 %}initial-note{% endif %}" 
                data-type="{{ note.type | default: 'evergreen' }}"
                data-category="{{ note.category }}"
                data-tags="{{ note.tags | join: ',' }}">

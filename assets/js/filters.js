@@ -17,8 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
     tag: 'all'
   };
 
-  // Store initial state of cards
-  const initialCards = Array.from(noteCards);
+  // Initially hide all notes except the first 9
+  noteCards.forEach((card, index) => {
+    if (index >= 9) {
+      card.style.display = 'none';
+    }
+  });
   
   // Add click event listeners to filter buttons
   filterButtons.forEach(button => {
@@ -60,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Apply filters to note cards
   function applyFilters() {
-    // Reset all cards to their initial state
+    // Show all cards first
     noteCards.forEach(card => {
       card.style.display = '';
     });
