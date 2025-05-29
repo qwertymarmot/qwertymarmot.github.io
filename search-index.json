@@ -59,7 +59,7 @@
     {
       "id": "welcome-to-my-digital-garden",
       "title": "Welcome to My Digital Garden",
-      "content": "# Welcome to My Digital Garden (Small Change) This is my digital garden, a place where I cultivate ideas, thoughts, and knowledge. Unlike traditional blogs, a digital garden is a non-linear collection of interconnected notes that grow and evolve over time. ## What is a Digital Garden? A digital garden is a different approach to content creation and knowledge management. Instead of publishing polished, finished articles, a digital garden embraces the idea of \"learning in public\" and shows the evolution of thoughts and ideas. Some key characteristics of digital gardens: - **Non-linear**: Notes are connected through links rather than chronology - **Evolving**: Content is constantly updated and refined - **Interconnected**: Ideas link to each other, forming a network of knowledge - **Personal**: It reflects the gardener's interests and thinking process ## How to Navigate This Garden You can explore this garden in several ways: 1. Browse the notes on the homepage 2. Use the search function to find specific topics 3. Click on tags to see related notes 4. Follow wikilinks to discover connected ideas 5. Explore the graph visualization to see the network of notes ## Types of Notes In this garden, notes are categorized by their stage of development: - **Evergreen notes**: Well-developed, mature ideas - **Seedling notes**: Early thoughts that need development - **Budding notes**: Ideas that are starting to take shape ## Related Notes - [[digital-garden-philosophy]] - [[how-to-use-wikilinks]] - [[Book: How to Take Smart Notes]] Happy exploring!",
+      "content": "# Welcome to My Digital Garden This is my digital garden, a place where I cultivate ideas, thoughts, and knowledge. Unlike traditional blogs, a digital garden is a non-linear collection of interconnected notes that grow and evolve over time. ## What is a Digital Garden? A digital garden is a different approach to content creation and knowledge management. Instead of publishing polished, finished articles, a digital garden embraces the idea of \"learning in public\" and shows the evolution of thoughts and ideas. Some key characteristics of digital gardens: - **Non-linear**: Notes are connected through links rather than chronology - **Evolving**: Content is constantly updated and refined - **Interconnected**: Ideas link to each other, forming a network of knowledge - **Personal**: It reflects the gardener's interests and thinking process ## How to Navigate This Garden You can explore this garden in several ways: 1. Browse the notes on the homepage 2. Use the search function to find specific topics 3. Click on tags to see related notes 4. Follow wikilinks to discover connected ideas 5. Explore the graph visualization to see the network of notes ## Types of Notes In this garden, notes are categorized by their stage of development: - **Evergreen notes**: Well-developed, mature ideas - **Seedling notes**: Early thoughts that need development - **Budding notes**: Ideas that are starting to take shape ## Related Notes - [[digital-garden-philosophy]] - [[how-to-use-wikilinks]] - [[Book: How to Take Smart Notes]] Happy exploring!",
       "url": "/notes/welcome-to-my-digital-garden/",
       "tags": [
         "meta",
@@ -96,6 +96,60 @@
       "type": "seedling",
       "date": "2025-05-08",
       "last_modified_at": "2025-05-08"
+    },
+    {
+      "id": "capture-for-growth",
+      "title": "Capture for growth, not hoarding",
+      "content": "- I choose to save ideas that spark curiosity, not just information. ## Related Notes - [[digital-garden-philosophy]] - [[how-do-i-cultivate-a-digital-garden]] - [[systems-should-flex-to-life]]",
+      "url": "/notes/capture-for-growth/",
+      "tags": [
+        "digital-garden",
+        "philosophy",
+        "knowledge-management"
+      ],
+      "type": "budding",
+      "date": "2025-05-27",
+      "last_modified_at": "2025-05-27"
+    },
+    {
+      "id": "struggling-to-feel-goal-momentum",
+      "title": "Struggling to feel goal momentum despite digital tracking",
+      "content": "- I realized that without weekly focus and analog reflection, I just create more motion, not progress. ## Related Notes - [[habit-formation]]",
+      "url": "/notes/struggling-to-feel-goal-momentum/",
+      "tags": [
+        "goals",
+        "progress"
+      ],
+      "type": "budding",
+      "date": "2025-05-27",
+      "last_modified_at": "2025-05-27"
+    },
+    {
+      "id": "systems-should-flex-to-life",
+      "title": "Systems should flex to life, not force life into systems",
+      "content": "- My workflows exist to serve goals and well-being, not the other way around. - I like the concept of calling my platforms surfaces. Makes then feel more alive. ## Related Notes - [[digital-garden-philosophy]]",
+      "url": "/notes/systems-should-flex-to-life/",
+      "tags": [
+        "digital-garden",
+        "philosophy",
+        "knowledge-management"
+      ],
+      "type": "budding",
+      "date": "2025-05-27",
+      "last_modified_at": "2025-05-27"
+    },
+    {
+      "id": "forgetting-what-read",
+      "title": "I tend to forget what I read",
+      "content": "## Tips to solve this issue - Translate instead of summarize. When you translate you make the ideas unique to your perspectives, which helps them stick. - Don't force it. Sometimes ideas that seem important won't stick. That is not an issue, it is feedback that the ideas don't work for us. - Make connections between material. in isolation the ideas will fizzle out. - Take time after finishing reading. Take a few days and come back to your notes. Ask yourself what stuck and what didnt. Lean into the things that made an impact. ## References 1. Pham, A. (2022, April 30). Why I kept forgetting the books I read, and what I do differently now. Medium. https://medium.com/@ann_p/why-i-kept-forgetting-the-books-i-read-and-what-i-do-differently-now-54f76fa379f4",
+      "url": "/notes/forgetting-what-read/",
+      "tags": [
+        "reading",
+        "memory"
+      ],
+      "type": "budding",
+      "date": "2025-05-28",
+      "last_modified_at": "2025-05-28"
     },
     {
       "id": "atomic-habits",

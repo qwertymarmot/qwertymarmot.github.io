@@ -33,7 +33,7 @@
       "title": "Welcome to My Digital Garden",
       "url": "/notes/welcome-to-my-digital-garden/",
       "type": "evergreen",
-      "excerpt": "# Welcome to My Digital Garden (Small Change) This is my digital garden, a place where I cultivate ideas, thoughts, and knowledge. Unlike traditional ..."
+      "excerpt": "# Welcome to My Digital Garden This is my digital garden, a place where I cultivate ideas, thoughts, and knowledge. Unlike traditional blogs, a digita..."
     },
     {
       "id": "zettelkasten-method",
@@ -48,6 +48,34 @@
       "url": "/notes/how-do-i-cultivate-a-digital-garden/",
       "type": "seedling",
       "excerpt": "# Thoughts on making a long-term digital garden - Digital gardens need to be tended to over time. So the ideas stored here need to be interesting enou..."
+    },
+    {
+      "id": "capture-for-growth",
+      "title": "Capture for growth, not hoarding",
+      "url": "/notes/capture-for-growth/",
+      "type": "budding",
+      "excerpt": "- I choose to save ideas that spark curiosity, not just information. ## Related Notes - [[digital-garden-philosophy]] - [[how-do-i-cultivate-a-digital..."
+    },
+    {
+      "id": "struggling-to-feel-goal-momentum",
+      "title": "Struggling to feel goal momentum despite digital tracking",
+      "url": "/notes/struggling-to-feel-goal-momentum/",
+      "type": "budding",
+      "excerpt": "- I realized that without weekly focus and analog reflection, I just create more motion, not progress. ## Related Notes - [[habit-formation]]"
+    },
+    {
+      "id": "systems-should-flex-to-life",
+      "title": "Systems should flex to life, not force life into systems",
+      "url": "/notes/systems-should-flex-to-life/",
+      "type": "budding",
+      "excerpt": "- My workflows exist to serve goals and well-being, not the other way around. - I like the concept of calling my platforms surfaces. Makes then feel m..."
+    },
+    {
+      "id": "forgetting-what-read",
+      "title": "I tend to forget what I read",
+      "url": "/notes/forgetting-what-read/",
+      "type": "budding",
+      "excerpt": "## Tips to solve this issue - Translate instead of summarize. When you translate you make the ideas unique to your perspectives, which helps them stic..."
     },
     {
       "id": "atomic-habits",
@@ -184,6 +212,31 @@
       "source": "zettelkasten-method",
       "target": "how-to-take-smart-notes",
       "type": "books"
+    },
+    {
+      "source": "capture-for-growth",
+      "target": "digital-garden-philosophy",
+      "type": "notes"
+    },
+    {
+      "source": "capture-for-growth",
+      "target": "how-do-i-cultivate-a-digital-garden",
+      "type": "notes"
+    },
+    {
+      "source": "capture-for-growth",
+      "target": "systems-should-flex-to-life",
+      "type": "notes"
+    },
+    {
+      "source": "struggling-to-feel-goal-momentum",
+      "target": "habit-formation",
+      "type": "notes"
+    },
+    {
+      "source": "systems-should-flex-to-life",
+      "target": "digital-garden-philosophy",
+      "type": "notes"
     },
     {
       "source": "atomic-habits",
