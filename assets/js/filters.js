@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
     type: 'all',
     tag: 'all'
   };
+
+  // Store initial state of cards
+  const initialCards = Array.from(noteCards);
   
   // Add click event listeners to filter buttons
   filterButtons.forEach(button => {
@@ -57,6 +60,12 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Apply filters to note cards
   function applyFilters() {
+    // Reset all cards to their initial state
+    noteCards.forEach(card => {
+      card.style.display = '';
+    });
+
+    // Filter the cards
     noteCards.forEach(card => {
       const cardType = card.getAttribute('data-type');
       const cardCategory = card.getAttribute('data-category') || '';
