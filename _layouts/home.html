@@ -57,7 +57,7 @@ layout: default
         </div>
 
         <div class="notes-grid">
-          {% assign notes = site.notes | sort: "last_modified_at" | reverse %}
+          {% assign notes = site.notes | sort: "last_modified_at" | reverse | limit: 9 %}
           {% for note in notes %}
           <div class="note-card" 
                data-type="{{ note.type | default: 'evergreen' }}"
