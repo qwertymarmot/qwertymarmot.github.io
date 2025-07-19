@@ -3,7 +3,7 @@ title: Atomic Habits
 author: James Clear
 cover: /assets/images/books/atomic-habits.jpg
 tags: [productivity, habits, self-improvement]
-rank: 5
+rating: 5
 date: 2025-05-04
 ---
 
