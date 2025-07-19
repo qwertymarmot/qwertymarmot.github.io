@@ -1,10 +1,10 @@
 ---
 title: Atomic Habits
-type: book
+author: James Clear
 cover: /assets/images/books/atomic-habits.jpg
 tags: [productivity, habits, self-improvement]
+rank: 5
 date: 2025-05-04
-last_modified_at: 2025-05-04
 ---
 
 # Atomic Habits
