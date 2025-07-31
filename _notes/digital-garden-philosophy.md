@@ -53,7 +53,7 @@ The term "digital garden" has roots in the early web, but gained popularity in t
 - [[welcome-to-my-digital-garden]]
 - [[zettelkasten-method]]
 - [[networked-thought]]
-- [How to Take Smart Notes](../_books/how-to-take-smart-notes.md)
+- {% link _books/how-to-take-smart-notes.md %}
 
 ## References
 
