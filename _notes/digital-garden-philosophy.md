@@ -40,20 +40,20 @@ The term "digital garden" has roots in the early web, but gained popularity in t
 
 ## Digital Gardens vs. Traditional Blogs
 
-| Digital Gardens | Traditional Blogs |
-|-----------------|-------------------|
-| Non-linear | Chronological |
+| Digital Gardens       | Traditional Blogs     |
+| --------------------- | --------------------- |
+| Non-linear            | Chronological         |
 | Continuously evolving | Static once published |
-| Connection-based | Time-based |
-| Focus on ideas | Focus on articles |
-| Exploratory | Presentational |
+| Connection-based      | Time-based            |
+| Focus on ideas        | Focus on articles     |
+| Exploratory           | Presentational        |
 
 ## Related Notes
 
 - [[welcome-to-my-digital-garden]]
 - [[zettelkasten-method]]
 - [[networked-thought]]
-- [[Book: How to Take Smart Notes]]
+- [How to Take Smart Notes](../_books/how-to-take-smart-notes.md)
 
 ## References
 
