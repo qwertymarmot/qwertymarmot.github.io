@@ -78,6 +78,20 @@
       "excerpt": "## Tips to solve this issue - Translate instead of summarize. When you translate you make the ideas unique to your perspectives, which helps them stic..."
     },
     {
+      "id": "cold-plunge-recovery",
+      "title": "Cold Plunge for Recovery",
+      "url": "/notes/cold-plunge-recovery/",
+      "type": "budding",
+      "excerpt": "## My findings from a week long experiment - It's hard to find methods beyond subjective that allow me to determine if cold plunges help prevent or de..."
+    },
+    {
+      "id": "why_zettelkasten_is_not_for_me",
+      "title": "Why Zettelkasten is not for Me",
+      "url": "/notes/why-zettelkasten-is-not-for-me/",
+      "type": "seedling",
+      "excerpt": "# The Why - I am not intrigued by the idea of adding titles and tags to every note - The physical nature of a zettelkasten just does not inspire me - ..."
+    },
+    {
       "id": "atomic-habits",
       "title": "Atomic Habits",
       "url": "/books/atomic-habits/",
@@ -109,16 +123,6 @@
       "type": "notes"
     },
     {
-      "source": "digital-garden-philosophy",
-      "target": "how-to-take-smart-notes",
-      "type": "books"
-    },
-    {
-      "source": "habit-formation",
-      "target": "atomic-habits",
-      "type": "books"
-    },
-    {
       "source": "habit-formation",
       "target": "zettelkasten-method",
       "type": "notes"
@@ -174,11 +178,6 @@
       "type": "notes"
     },
     {
-      "source": "networked-thought",
-      "target": "how-to-take-smart-notes",
-      "type": "books"
-    },
-    {
       "source": "welcome-to-my-digital-garden",
       "target": "digital-garden-philosophy",
       "type": "notes"
@@ -187,11 +186,6 @@
       "source": "welcome-to-my-digital-garden",
       "target": "how-to-use-wikilinks",
       "type": "notes"
-    },
-    {
-      "source": "welcome-to-my-digital-garden",
-      "target": "how-to-take-smart-notes",
-      "type": "books"
     },
     {
       "source": "zettelkasten-method",
@@ -207,11 +201,6 @@
       "source": "zettelkasten-method",
       "target": "how-to-use-wikilinks",
       "type": "notes"
-    },
-    {
-      "source": "zettelkasten-method",
-      "target": "how-to-take-smart-notes",
-      "type": "books"
     },
     {
       "source": "capture-for-growth",
@@ -236,6 +225,11 @@
     {
       "source": "systems-should-flex-to-life",
       "target": "digital-garden-philosophy",
+      "type": "notes"
+    },
+    {
+      "source": "why_zettelkasten_is_not_for_me",
+      "target": "zettelkasten-method",
       "type": "notes"
     },
     {
