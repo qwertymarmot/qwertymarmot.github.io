@@ -85,7 +85,7 @@
       "excerpt": "## My findings from a week long experiment - It's hard to find methods beyond subjective that allow me to determine if cold plunges help prevent or de..."
     },
     {
-      "id": "why_zettelkasten_is_not_for_me",
+      "id": "why-zettelkasten-is-not-for-me",
       "title": "Why Zettelkasten is not for Me",
       "url": "/notes/why-zettelkasten-is-not-for-me/",
       "type": "seedling",
@@ -204,7 +204,7 @@
     },
     {
       "source": "zettelkasten-method",
-      "target": "why_zettelkasten_is_not_for_me",
+      "target": "why-zettelkasten-is-not-for-me",
       "type": "notes"
     },
     {
@@ -233,7 +233,7 @@
       "type": "notes"
     },
     {
-      "source": "why_zettelkasten_is_not_for_me",
+      "source": "why-zettelkasten-is-not-for-me",
       "target": "zettelkasten-method",
       "type": "notes"
     },
