@@ -69,7 +69,7 @@ Popular digital tools for implementing a Zettelkasten include:
 - [[digital-garden-philosophy]]
 - [[networked-thought]]
 - [[how-to-use-wikilinks]]
-- [[why_zettelkasten_is_not_for_me]]
+- [[why-zettelkasten-is-not-for-me]]
 - [Atomic Habits]({% link _books/atomic-habits.md %})
 
 ## References
