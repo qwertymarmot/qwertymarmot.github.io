@@ -35,6 +35,7 @@ You can explore this garden in several ways:
 ## Types of Notes
 
 In this garden, notes are categorized by their stage of development:
+
 - **Evergreen notes**: Well-developed, mature ideas
 - **Seedling notes**: Early thoughts that need development
 - **Budding notes**: Ideas that are starting to take shape
@@ -43,6 +44,6 @@ In this garden, notes are categorized by their stage of development:
 
 - [[digital-garden-philosophy]]
 - [[how-to-use-wikilinks]]
-- [[Book: How to Take Smart Notes]]
+- [How to Take Smart Notes]({% link _books/how-to-take-smart-notes.md %})
 
 Happy exploring!

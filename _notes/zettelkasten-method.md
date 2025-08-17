@@ -69,9 +69,9 @@ Popular digital tools for implementing a Zettelkasten include:
 - [[digital-garden-philosophy]]
 - [[networked-thought]]
 - [[how-to-use-wikilinks]]
-- [[Book: How to Take Smart Notes]]
+- [Atomic Habits]({% link _books/atomic-habits.md %})
 
 ## References
 
-1. Ahrens, S. (2017). *How to Take Smart Notes: One Simple Technique to Boost Writing, Learning and Thinking*.
+1. Ahrens, S. (2017). _How to Take Smart Notes: One Simple Technique to Boost Writing, Learning and Thinking_.
 2. Luhmann, N. "Communicating with Slip Boxes: An Empirical Account."

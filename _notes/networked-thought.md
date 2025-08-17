@@ -14,11 +14,13 @@ Networked thought is an approach to thinking and knowledge management that empha
 ## The Network Model of Knowledge
 
 Traditional knowledge organization often relies on hierarchical systems like:
+
 - File folders
 - Categories and subcategories
 - Outlines and tables of contents
 
 Networked thought, by contrast, organizes knowledge as a graph or network:
+
 - Ideas are nodes in the network
 - Connections between ideas are edges or links
 - The value comes from the relationships between ideas
@@ -86,10 +88,10 @@ While powerful, networked thought does have some challenges:
 - [[digital-garden-philosophy]]
 - [[zettelkasten-method]]
 - [[how-to-use-wikilinks]]
-- [[Book: How to Take Smart Notes]]
+- [How to Take Smart Notes]({% link _books/how-to-take-smart-notes.md %})
 
 ## References
 
-1. Bush, V. (1945). "As We May Think." *The Atlantic Monthly*.
-2. Levy, S. (2011). *In The Plex: How Google Thinks, Works, and Shapes Our Lives*.
+1. Bush, V. (1945). "As We May Think." _The Atlantic Monthly_.
+2. Levy, S. (2011). _In The Plex: How Google Thinks, Works, and Shapes Our Lives_.
 3. Nelson, T. (1965). "Complex information processing: a file structure for the complex, the changing and the indeterminate."

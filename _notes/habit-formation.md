@@ -29,7 +29,7 @@ Contrary to the popular myth that it takes 21 days to form a habit, research by 
 
 ### 1. Start Small
 
-Begin with tiny habits that require minimal motivation. As James Clear discusses in [[Book: Atomic Habits]], these small changes can lead to remarkable results over time through the power of compounding.
+Begin with tiny habits that require minimal motivation. As James Clear discusses in [Atomic Habits]({% link _books/atomic-habits.md %}), these small changes can lead to remarkable results over time through the power of compounding.
 
 ### 2. Use Implementation Intentions
 
@@ -61,6 +61,6 @@ The process of habit formation relates closely to the [[zettelkasten-method]] in
 
 ## References
 
-1. Clear, J. (2018). *Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones*.
-2. Duhigg, C. (2012). *The Power of Habit: Why We Do What We Do in Life and Business*.
-3. Lally, P., van Jaarsveld, C. H. M., Potts, H. W. W., & Wardle, J. (2010). How are habits formed: Modelling habit formation in the real world. *European Journal of Social Psychology*, 40(6), 998-1009.
+1. Clear, J. (2018). _Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones_.
+2. Duhigg, C. (2012). _The Power of Habit: Why We Do What We Do in Life and Business_.
+3. Lally, P., van Jaarsveld, C. H. M., Potts, H. W. W., & Wardle, J. (2010). How are habits formed: Modelling habit formation in the real world. _European Journal of Social Psychology_, 40(6), 998-1009.
