@@ -82,7 +82,7 @@
       "title": "Cold Plunge for Recovery",
       "url": "/notes/cold-plunge-recovery/",
       "type": "budding",
-      "excerpt": "## My findings from a week long experiment - It's hard to find methods beyond subjective that allow me to determine if cold plunges help prevent or de..."
+      "excerpt": "# My findings from a week long experiment - It's hard to find methods beyond subjective that allow me to determine if cold plunges help prevent or dec..."
     },
     {
       "id": "why-zettelkasten-is-not-for-me",
@@ -96,7 +96,7 @@
       "title": "Cold Plunge Timing",
       "url": "/notes/cold-plunge-timing/",
       "type": "budding",
-      "excerpt": "# Timing of Cold Plunges ## For Hypertrophy - It is generally recommended to avoid cold plunges immediately after strength training if your goal is hy..."
+      "excerpt": "# Timing of Cold Plunges ## After Strength Training ### For Hypertrophy - It is generally recommended to avoid cold plunges immediately after strength..."
     },
     {
       "id": "atomic-habits",
@@ -240,8 +240,18 @@
       "type": "notes"
     },
     {
+      "source": "cold-plunge-recovery",
+      "target": "cold-plunge-timing",
+      "type": "notes"
+    },
+    {
       "source": "why-zettelkasten-is-not-for-me",
       "target": "zettelkasten-method",
+      "type": "notes"
+    },
+    {
+      "source": "cold-plunge-timing",
+      "target": "cold-plunge-recovery",
       "type": "notes"
     },
     {
