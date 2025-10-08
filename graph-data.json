@@ -111,6 +111,55 @@
       "url": "/books/how-to-take-smart-notes/",
       "type": "book",
       "excerpt": "# How to Take Smart Notes *How to Take Smart Notes* by Sönke Ahrens is a comprehensive guide to the Zettelkasten method of note-taking developed by Ge..."
+    },
+    {
+      "id": "shadows-of-self",
+      "title": "Shadows of Self",
+      "url": "/books/shadows-of-self/",
+      "type": "book",
+      "excerpt": "# Shadows of Self *Shadows of Self* is the second book in Brandon Sanderson's Wax and Wayne series, deepening the mystery and political intrigue while..."
+    },
+    {
+      "id": "the-alloy-of-law",
+      "title": "The Alloy of Law",
+      "url": "/books/the-alloy-of-law/",
+      "type": "book",
+      "excerpt": "# The Alloy of Law *The Alloy of Law* is the first book in Brandon Sanderson's Wax and Wayne series, set 300 years after the events of the original Mi..."
+    },
+    {
+      "id": "the-bands-of-mourning",
+      "title": "The Bands of Mourning",
+      "url": "/books/the-bands-of-mourning/",
+      "type": "book",
+      "excerpt": "# The Bands of Mourning *The Bands of Mourning* is the third book in Brandon Sanderson's Wax and Wayne series, taking the characters on a journey beyo..."
+    },
+    {
+      "id": "the-final-empire",
+      "title": "The Final Empire",
+      "url": "/books/the-final-empire/",
+      "type": "book",
+      "excerpt": "# The Final Empire *The Final Empire* is the first book in Brandon Sanderson's Mistborn trilogy, introducing readers to a world where the Dark Lord ha..."
+    },
+    {
+      "id": "the-hero-of-ages",
+      "title": "The Hero of Ages",
+      "url": "/books/the-hero-of-ages/",
+      "type": "book",
+      "excerpt": "# The Hero of Ages *The Hero of Ages* is the final book in Brandon Sanderson's original Mistborn trilogy, bringing the story of Vin, Elend, and their ..."
+    },
+    {
+      "id": "the-lost-metal",
+      "title": "The Lost Metal",
+      "url": "/books/the-lost-metal/",
+      "type": "book",
+      "excerpt": "# The Lost Metal *The Lost Metal* is the fourth and final book in Brandon Sanderson's Wax and Wayne series, bringing the story to a climactic conclusi..."
+    },
+    {
+      "id": "the-well-of-ascension",
+      "title": "The Well of Ascension",
+      "url": "/books/the-well-of-ascension/",
+      "type": "book",
+      "excerpt": "# The Well of Ascension *The Well of Ascension* is the second book in Brandon Sanderson's Mistborn trilogy, continuing the story after the fall of the..."
     }
   ],
   "links": [
@@ -282,6 +331,146 @@
     {
       "source": "how-to-take-smart-notes",
       "target": "how-to-use-wikilinks",
+      "type": "notes"
+    },
+    {
+      "source": "shadows-of-self",
+      "target": "digital-garden-philosophy",
+      "type": "notes"
+    },
+    {
+      "source": "shadows-of-self",
+      "target": "principles-and-beliefs",
+      "type": "notes"
+    },
+    {
+      "source": "shadows-of-self",
+      "target": "networked-thought",
+      "type": "notes"
+    },
+    {
+      "source": "shadows-of-self",
+      "target": "systems-should-flex-to-life",
+      "type": "notes"
+    },
+    {
+      "source": "the-alloy-of-law",
+      "target": "systems-should-flex-to-life",
+      "type": "notes"
+    },
+    {
+      "source": "the-alloy-of-law",
+      "target": "digital-garden-philosophy",
+      "type": "notes"
+    },
+    {
+      "source": "the-alloy-of-law",
+      "target": "networked-thought",
+      "type": "notes"
+    },
+    {
+      "source": "the-alloy-of-law",
+      "target": "principles-and-beliefs",
+      "type": "notes"
+    },
+    {
+      "source": "the-bands-of-mourning",
+      "target": "digital-garden-philosophy",
+      "type": "notes"
+    },
+    {
+      "source": "the-bands-of-mourning",
+      "target": "networked-thought",
+      "type": "notes"
+    },
+    {
+      "source": "the-bands-of-mourning",
+      "target": "systems-should-flex-to-life",
+      "type": "notes"
+    },
+    {
+      "source": "the-bands-of-mourning",
+      "target": "principles-and-beliefs",
+      "type": "notes"
+    },
+    {
+      "source": "the-final-empire",
+      "target": "systems-should-flex-to-life",
+      "type": "notes"
+    },
+    {
+      "source": "the-final-empire",
+      "target": "habit-formation",
+      "type": "notes"
+    },
+    {
+      "source": "the-final-empire",
+      "target": "networked-thought",
+      "type": "notes"
+    },
+    {
+      "source": "the-final-empire",
+      "target": "principles-and-beliefs",
+      "type": "notes"
+    },
+    {
+      "source": "the-hero-of-ages",
+      "target": "habit-formation",
+      "type": "notes"
+    },
+    {
+      "source": "the-hero-of-ages",
+      "target": "principles-and-beliefs",
+      "type": "notes"
+    },
+    {
+      "source": "the-hero-of-ages",
+      "target": "networked-thought",
+      "type": "notes"
+    },
+    {
+      "source": "the-hero-of-ages",
+      "target": "digital-garden-philosophy",
+      "type": "notes"
+    },
+    {
+      "source": "the-lost-metal",
+      "target": "digital-garden-philosophy",
+      "type": "notes"
+    },
+    {
+      "source": "the-lost-metal",
+      "target": "networked-thought",
+      "type": "notes"
+    },
+    {
+      "source": "the-lost-metal",
+      "target": "systems-should-flex-to-life",
+      "type": "notes"
+    },
+    {
+      "source": "the-lost-metal",
+      "target": "principles-and-beliefs",
+      "type": "notes"
+    },
+    {
+      "source": "the-well-of-ascension",
+      "target": "systems-should-flex-to-life",
+      "type": "notes"
+    },
+    {
+      "source": "the-well-of-ascension",
+      "target": "principles-and-beliefs",
+      "type": "notes"
+    },
+    {
+      "source": "the-well-of-ascension",
+      "target": "networked-thought",
+      "type": "notes"
+    },
+    {
+      "source": "the-well-of-ascension",
+      "target": "digital-garden-philosophy",
       "type": "notes"
     }
   ]
