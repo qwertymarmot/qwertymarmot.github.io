@@ -1,6 +1,6 @@
 ---
 title: How Humans Collaborate
-type: seeding
+type: seedling
 category: Ideas I'm Exploring
 tags: [digital-garden, philosophy, knowledge-management]
 date: 2025-10-08
