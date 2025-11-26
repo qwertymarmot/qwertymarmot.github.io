@@ -19,3 +19,4 @@ last_modified_at: 2025-11-25
 - Side slept a bit of the night
 - Used zero gravity preset button on Sven and Son bed
 - Back pain feel lower today
+- 15m of stress according to Oura
