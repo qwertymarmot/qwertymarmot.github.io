@@ -134,11 +134,39 @@
       "excerpt": "# Atomic Habits *Atomic Habits* is a book by James Clear that explores how small, incremental changes can lead to remarkable results over time. The bo..."
     },
     {
+      "id": "golden-son",
+      "title": "Golden Son",
+      "url": "/books/golden-son/",
+      "type": "book",
+      "excerpt": "# Golden Son *Golden Son* is the second book in Pierce Brown's Red Rising Saga, and it's a masterclass in escalation. Where *Red Rising* was contained..."
+    },
+    {
       "id": "how-to-take-smart-notes",
       "title": "How to Take Smart Notes",
       "url": "/books/how-to-take-smart-notes/",
       "type": "book",
       "excerpt": "# How to Take Smart Notes *How to Take Smart Notes* by Sönke Ahrens is a comprehensive guide to the Zettelkasten method of note-taking developed by Ge..."
+    },
+    {
+      "id": "iron-gold",
+      "title": "Iron Gold",
+      "url": "/books/iron-gold/",
+      "type": "book",
+      "excerpt": "# Iron Gold *Iron Gold* launches the second trilogy in Pierce Brown's Red Rising universe, jumping ten years beyond *Morning Star* to explore the mess..."
+    },
+    {
+      "id": "morning-star",
+      "title": "Morning Star",
+      "url": "/books/morning-star/",
+      "type": "book",
+      "excerpt": "# Morning Star *Morning Star* concludes the original Red Rising trilogy with a sprawling epic of revolution, redemption, and the brutal cost of freedo..."
+    },
+    {
+      "id": "red-rising",
+      "title": "Red Rising",
+      "url": "/books/red-rising/",
+      "type": "book",
+      "excerpt": "# Red Rising *Red Rising* by Pierce Brown is the explosive first novel in the Red Rising Saga, blending dystopian class warfare with Roman-inspired po..."
     },
     {
       "id": "shadows-of-self",
@@ -160,6 +188,13 @@
       "url": "/books/the-bands-of-mourning/",
       "type": "book",
       "excerpt": "# The Bands of Mourning *The Bands of Mourning* is the third book in Brandon Sanderson's Wax and Wayne series, taking the characters on a journey beyo..."
+    },
+    {
+      "id": "the-bullet-journal-method",
+      "title": "The Bullet Journal Method",
+      "url": "/books/the-bullet-journal-method/",
+      "type": "book",
+      "excerpt": "# The Bullet Journal Method *The Bullet Journal Method* by Ryder Carroll is more than just a planning system—it's a mindfulness practice disguised as ..."
     },
     {
       "id": "the-final-empire",
@@ -349,6 +384,31 @@
       "type": "notes"
     },
     {
+      "source": "golden-son",
+      "target": "space-warfare-tactics",
+      "type": "notes"
+    },
+    {
+      "source": "golden-son",
+      "target": "political-manipulation",
+      "type": "notes"
+    },
+    {
+      "source": "golden-son",
+      "target": "the-burden-of-leadership",
+      "type": "notes"
+    },
+    {
+      "source": "golden-son",
+      "target": "loyalty-versus-duty",
+      "type": "notes"
+    },
+    {
+      "source": "golden-son",
+      "target": "revolutionary-compromise",
+      "type": "notes"
+    },
+    {
       "source": "how-to-take-smart-notes",
       "target": "zettelkasten-method",
       "type": "notes"
@@ -369,6 +429,81 @@
       "type": "notes"
     },
     {
+      "source": "iron-gold",
+      "target": "post-revolutionary-society",
+      "type": "notes"
+    },
+    {
+      "source": "iron-gold",
+      "target": "the-price-of-democracy",
+      "type": "notes"
+    },
+    {
+      "source": "iron-gold",
+      "target": "generational-change",
+      "type": "notes"
+    },
+    {
+      "source": "iron-gold",
+      "target": "moral-ambiguity",
+      "type": "notes"
+    },
+    {
+      "source": "iron-gold",
+      "target": "the-appeal-of-order",
+      "type": "notes"
+    },
+    {
+      "source": "morning-star",
+      "target": "revolutionary-ethics",
+      "type": "notes"
+    },
+    {
+      "source": "morning-star",
+      "target": "the-cost-of-leadership",
+      "type": "notes"
+    },
+    {
+      "source": "morning-star",
+      "target": "cycles-of-violence",
+      "type": "notes"
+    },
+    {
+      "source": "morning-star",
+      "target": "redemption-and-forgiveness",
+      "type": "notes"
+    },
+    {
+      "source": "morning-star",
+      "target": "building-versus-destroying",
+      "type": "notes"
+    },
+    {
+      "source": "red-rising",
+      "target": "dystopian-class-systems",
+      "type": "notes"
+    },
+    {
+      "source": "red-rising",
+      "target": "revolutionary-ethics",
+      "type": "notes"
+    },
+    {
+      "source": "red-rising",
+      "target": "roman-political-influence",
+      "type": "notes"
+    },
+    {
+      "source": "red-rising",
+      "target": "the-cost-of-infiltration",
+      "type": "notes"
+    },
+    {
+      "source": "red-rising",
+      "target": "meritocracy-myths",
+      "type": "notes"
+    },
+    {
       "source": "shadows-of-self",
       "target": "digital-garden-philosophy",
       "type": "notes"
@@ -426,6 +561,31 @@
     {
       "source": "the-bands-of-mourning",
       "target": "principles-and-beliefs",
+      "type": "notes"
+    },
+    {
+      "source": "the-bullet-journal-method",
+      "target": "intentional-living",
+      "type": "notes"
+    },
+    {
+      "source": "the-bullet-journal-method",
+      "target": "analog-productivity",
+      "type": "notes"
+    },
+    {
+      "source": "the-bullet-journal-method",
+      "target": "mindful-task-management",
+      "type": "notes"
+    },
+    {
+      "source": "the-bullet-journal-method",
+      "target": "reflection-practice",
+      "type": "notes"
+    },
+    {
+      "source": "the-bullet-journal-method",
+      "target": "goal-setting-frameworks",
       "type": "notes"
     },
     {
