@@ -3,7 +3,7 @@ title: Tiny Experiments
 author: Anne-Laure Le Cunff
 cover: /assets/images/books/tiny-experiments.jpg
 tags: [productivity, curiosity, experimentation, self-improvement, mindfulness]
-rating: 4
+rating: 5
 date: 2025-11-27
 ---
 
