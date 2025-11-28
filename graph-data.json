@@ -113,6 +113,13 @@
       "excerpt": "- placeholder"
     },
     {
+      "id": "zero-gravity-sleep-position-tracking",
+      "title": "Zero Gravity Sleep Position Tracking",
+      "url": "/notes/zero-gravity-sleep-position-tracking/",
+      "type": "budding",
+      "excerpt": "# Sleep Tracking ## Nov. 25, 2025 ### Sleep Metrics - Slept from 9:30pm to 4:00am (daughter woke me up) - Resting Heart Rate: 56 bpm - HRV: 34 ms - To..."
+    },
+    {
       "id": "atomic-habits",
       "title": "Atomic Habits",
       "url": "/books/atomic-habits/",
@@ -174,6 +181,13 @@
       "url": "/books/the-well-of-ascension/",
       "type": "book",
       "excerpt": "# The Well of Ascension *The Well of Ascension* is the second book in Brandon Sanderson's Mistborn trilogy, continuing the story after the fall of the..."
+    },
+    {
+      "id": "tiny-experiments",
+      "title": "Tiny Experiments",
+      "url": "/books/tiny-experiments/",
+      "type": "book",
+      "excerpt": "# Tiny Experiments *Tiny Experiments* by Anne-Laure Le Cunff advocates for embracing curiosity and experimentation over traditional goal-setting. The ..."
     }
   ],
   "links": [
