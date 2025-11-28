@@ -120,6 +120,13 @@
       "excerpt": "# Sleep Tracking ## Nov. 25, 2025 ### Sleep Metrics - Slept from 9:30pm to 4:00am (daughter woke me up) - Resting Heart Rate: 56 bpm - HRV: 34 ms - To..."
     },
     {
+      "id": "principles-and-beliefs",
+      "title": "Principles and Beliefs",
+      "url": "/notes/principles-and-beliefs/",
+      "type": "seedling",
+      "excerpt": "# Principles and Beliefs A collection of core principles and beliefs that guide decision-making and personal growth."
+    },
+    {
       "id": "atomic-habits",
       "title": "Atomic Habits",
       "url": "/books/atomic-habits/",
