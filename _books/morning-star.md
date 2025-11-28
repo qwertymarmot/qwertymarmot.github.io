@@ -2,7 +2,7 @@
 title: Morning Star
 author: Pierce Brown
 cover: /assets/images/books/morning-star.jpg
-tags: [science-fiction, revolution, war, redemption, epic-conclusion]
+tags: 
 rating: 4
 date_read: 2025-10-01
 ---
@@ -158,10 +158,3 @@ The book works on multiple levels: as a satisfying conclusion to Darrow's arc, a
 
 Fair warning: this ending will stay with you long after you finish reading.
 
-## Related Concepts
-
-- [[revolutionary-ethics]]
-- [[the-cost-of-leadership]]
-- [[cycles-of-violence]]
-- [[redemption-and-forgiveness]]
-- [[building-versus-destroying]]

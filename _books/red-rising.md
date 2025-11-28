@@ -105,10 +105,3 @@ This book works on multiple levels—as a thrilling action story, as social comm
 
 Be warned: this is the first book in a series that only gets more complex and epic in scope. The emotional investment starts here.
 
-## Related Concepts
-
-- [[dystopian-class-systems]]
-- [[revolutionary-ethics]]
-- [[roman-political-influence]]
-- [[the-cost-of-infiltration]]
-- [[meritocracy-myths]]

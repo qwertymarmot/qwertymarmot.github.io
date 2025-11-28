@@ -133,10 +133,3 @@ The Jackal is one of those villains who makes you simultaneously horrified and i
 
 Fair warning: the emotional whiplash is real, and the ending will leave you immediately reaching for *Morning Star*.
 
-## Related Concepts
-
-- [[space-warfare-tactics]]
-- [[political-manipulation]]
-- [[the-burden-of-leadership]]
-- [[loyalty-versus-duty]]
-- [[revolutionary-compromise]]

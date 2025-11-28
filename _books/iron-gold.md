@@ -161,11 +161,3 @@ The book is darker and more cynical than the original trilogy, but there's still
 The four-POV structure works once you adjust to it, though Darrow's sections still carry the most weight. The weaker sections are offset by how the perspectives collectively paint a fuller picture.
 
 This book makes you question everything you thought you knew from the original trilogy, which is uncomfortable but necessary. Revolution isn't an ending—it's a beginning, and beginnings are messy.
-
-## Related Concepts
-
-- [[post-revolutionary-society]]
-- [[the-price-of-democracy]]
-- [[generational-change]]
-- [[moral-ambiguity]]
-- [[the-appeal-of-order]]
