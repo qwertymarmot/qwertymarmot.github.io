@@ -46,3 +46,27 @@ last_modified_at: 2025-11-25
 - Side slept a little bit
 - Back pain felt pretty minimal today
 - Might be getting slightly sick
+
+## Nov. 28, 2025
+### Sleep Metrics
+- Slept from 10:45pm to 5:53am
+- Resting heart rate 63 bpm
+- HRV: 18 ms
+- Total sleep: 5hr 21m
+
+### Subjective and Observations
+- I was sick last night
+- No noticable back pain
+
+## Nov. 29, 2025
+### Sleep Metrics
+- Was in bed from 22:55pm to 5:59am
+- Really rough night of sleep
+- Resting heart rate 90 bpm
+- HRV: 8 ms
+- Total Sleep: 4hr 52m
+
+### Subjective and Observations
+- Very sick
+- No back pain
+- Had to change sleep position to flat to try and get myself to sleep. Didn't work.
