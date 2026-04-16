@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Process wikilinks in content
   const processWikilinks = () => {
+    const siteRoot = document.querySelector('meta[name="site-root"]')?.getAttribute('content') || '';
     // Find all content areas that might contain wikilinks
     const contentAreas = document.querySelectorAll('.note-content, .book-notes');
     
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
           .replace(/-+$/, '');            // Trim hyphens from end
         
         // Create the link
-        return `<a href="/${collection}/${slug}" class="wikilink">${linkText}</a>`;
+        return `<a href="${siteRoot}/${collection}/${slug}" class="wikilink">${linkText}</a>`;
       });
       
       // Update the content
