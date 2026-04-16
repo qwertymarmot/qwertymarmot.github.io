@@ -2,8 +2,6 @@
 
 A beautiful, responsive Jekyll theme for creating a digital garden inspired by Maggie Appleton's design. This theme supports bidirectional links (wikilinks), tagging, dark mode, and includes a graph visualization of your notes.
 
-![Jekyll Garden Screenshot](screenshot.png)
-
 ## Features
 
 - 🔄 **Bidirectional Links**: Connect your notes with `[[wikilinks]]`
