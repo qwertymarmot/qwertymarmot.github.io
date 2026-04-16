@@ -181,7 +181,7 @@ permalink: /search/
     const loadLunrScript = () => {
       return new Promise((resolve, reject) => {
         const script = document.createElement('script');
-        script.src = 'https://unpkg.com/lunr/lunr.js';
+        script.src = 'https://unpkg.com/lunr@2.3.9/lunr.js';
         script.onload = resolve;
         script.onerror = reject;
         document.head.appendChild(script);
@@ -228,9 +228,9 @@ permalink: /search/
   #search-input:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.1);
+    box-shadow: 0 0 0 3px var(--primary-color-alpha-10);
   }
-  
+
   .search-button {
     padding: 12px 20px;
     background-color: var(--primary-color);
@@ -243,7 +243,7 @@ permalink: /search/
   }
   
   .search-button:hover {
-    background-color: darken(var(--primary-color), 10%);
+    background-color: var(--primary-color-dark);
   }
   
   .search-results-count {
@@ -375,7 +375,7 @@ permalink: /search/
   
   html[data-theme="dark"] #search-input:focus {
     border-color: var(--dark-link-color);
-    box-shadow: 0 0 0 3px rgba(var(--dark-link-color), 0.1);
+    box-shadow: 0 0 0 3px var(--dark-link-color-alpha-10);
   }
   
   html[data-theme="dark"] .search-button {
@@ -383,7 +383,7 @@ permalink: /search/
   }
   
   html[data-theme="dark"] .search-button:hover {
-    background-color: lighten(var(--dark-link-color), 10%);
+    background-color: var(--dark-link-color-hover);
   }
   
   html[data-theme="dark"] .search-results-count {

@@ -57,10 +57,14 @@ html[data-theme="dark"] {
     background-color: $dark-background-color;
     color: $dark-text-color;
     border-color: $dark-border-color;
-    
+
     &:focus {
       border-color: $dark-link-color;
       box-shadow: 0 0 0 3px rgba($dark-link-color, 0.1);
+    }
+
+    &::placeholder {
+      color: $dark-medium-gray;
     }
   }
   

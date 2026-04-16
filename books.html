@@ -33,7 +33,7 @@ permalink: /books/
     <div class="book-card" data-tags="{{ book.tags | join: ',' }}" data-title="{{ book.title }}" data-author="{{ book.author }}">
       <div class="book-card-cover">
         {% if book.cover %}
-        <img src="{{ book.cover | relative_url }}" alt="{{ book.title }}" class="book-card-img">
+        <img src="{{ book.cover | relative_url }}" alt="{{ book.title }}" class="book-card-img" loading="lazy">
         {% else %}
         <div class="book-card-placeholder">
           <span>{{ book.title | truncate: 20 }}</span>

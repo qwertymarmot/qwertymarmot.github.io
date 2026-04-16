@@ -6,7 +6,7 @@ layout: default
   <div class="book-container">
     <div class="book-cover-container">
       {% if page.cover %}
-      <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}" class="book-cover">
+      <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}" class="book-cover" loading="lazy">
       {% else %}
       <div class="book-cover-placeholder">
         <span>{{ page.title }}</span>
@@ -91,13 +91,26 @@ layout: default
 <script>
   // Process wikilinks in the book content
   document.addEventListener('DOMContentLoaded', function() {
+    const siteRoot = document.querySelector('meta[name="site-root"]')?.getAttribute('content') || '';
     const bookContent = document.querySelector('.book-notes');
     if (bookContent) {
       const wikilinksRegex = /\[\[(.*?)\]\]/g;
       bookContent.innerHTML = bookContent.innerHTML.replace(wikilinksRegex, function(match, p1) {
-        const linkText = p1.trim();
-        const url = linkText.toLowerCase().replace(/\s+/g, '-');
-        return `<a href="/notes/${url}" class="wikilink">${linkText}</a>`;
+        let linkText = p1.trim();
+        let collection = 'notes';
+        let slugText = linkText;
+        if (linkText.startsWith('Book:')) {
+          collection = 'books';
+          slugText = linkText.substring(5).trim();
+          linkText = slugText;
+        }
+        const slug = slugText.toLowerCase()
+          .replace(/\s+/g, '-')
+          .replace(/[^\w\-]+/g, '')
+          .replace(/\-\-+/g, '-')
+          .replace(/^-+/, '')
+          .replace(/-+$/, '');
+        return `<a href="${siteRoot}/${collection}/${slug}" class="wikilink">${linkText}</a>`;
       });
     }
   });

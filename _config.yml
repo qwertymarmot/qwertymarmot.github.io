@@ -16,7 +16,6 @@ ghost_blog_url: https://theiterativelife.com
 
 # Build settings
 markdown: kramdown
-theme: minima # We'll override this with our custom theme
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -82,6 +81,13 @@ exclude:
 
 # Search settings
 search_enabled: true
+
+# Theme (uncomment remote_theme once jekyll-theme-catmint is published to GitHub)
+# remote_theme: qwertymarmot/jekyll-theme-catmint
+
+# Sass output style
+sass:
+  style: compressed
 
 # Theme settings
 color_scheme: light # light or dark

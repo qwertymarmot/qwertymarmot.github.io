@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       const script = document.createElement('script');
-      script.src = 'https://unpkg.com/lunr/lunr.js';
+      script.src = 'https://unpkg.com/lunr@2.3.9/lunr.js';
       script.onload = () => resolve(window.lunr);
       script.onerror = reject;
       document.head.appendChild(script);

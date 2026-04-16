@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       const script = document.createElement('script');
-      script.src = 'https://d3js.org/d3.v7.min.js';
+      script.src = 'https://unpkg.com/d3@7.9.0/dist/d3.min.js';
       script.onload = () => resolve(window.d3);
       script.onerror = reject;
       document.head.appendChild(script);

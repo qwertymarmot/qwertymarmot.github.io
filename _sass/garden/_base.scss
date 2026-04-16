@@ -1,5 +1,30 @@
 // Reset and base styles
 
+// CSS Custom Properties (for use in inline <style> blocks across pages)
+:root {
+  --primary-color: #{$primary-color};
+  --primary-color-dark: #{darken($primary-color, 10%)};
+  --secondary-color: #{$secondary-color};
+  --text-color: #{$text-color};
+  --background-color: #{$background-color};
+  --light-gray: #{$light-gray};
+  --medium-gray: #{$medium-gray};
+  --dark-gray: #{$dark-gray};
+  --border-color: #{$border-color};
+  --link-color: #{$link-color};
+  --primary-color-alpha-10: #{rgba($primary-color, 0.1)};
+
+  // Dark mode values (referenced by html[data-theme="dark"] selectors in inline styles)
+  --dark-background-color: #{$dark-background-color};
+  --dark-text-color: #{$dark-text-color};
+  --dark-border-color: #{$dark-border-color};
+  --dark-light-gray: #{$dark-light-gray};
+  --dark-medium-gray: #{$dark-medium-gray};
+  --dark-link-color: #{$dark-link-color};
+  --dark-link-color-hover: #{$dark-link-hover-color};
+  --dark-link-color-alpha-10: #{rgba($dark-link-color, 0.1)};
+}
+
 // Box sizing
 *, *::before, *::after {
   box-sizing: border-box;

@@ -244,7 +244,7 @@ html[data-theme="dark"] {
       }
       
       &.active circle {
-        stroke: #c6d0f5; // Frappe Text
+        stroke: $dark-text-color;
       }
     }
     
@@ -269,7 +269,7 @@ html[data-theme="dark"] {
       border-color: $dark-border-color;
       
       .tooltip-title {
-        color: #c6d0f5; // Frappe Text
+        color: $dark-text-color;
       }
       
       .tooltip-type {
