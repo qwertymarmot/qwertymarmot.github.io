@@ -1,8 +1,5 @@
 source "https://rubygems.org"
 
-# Use GitHub Pages with a specific version
-gem "github-pages", "~> 228", group: :jekyll_plugins
-
 # Specify Jekyll version explicitly
 gem "jekyll", "~> 3.9.3"
 
