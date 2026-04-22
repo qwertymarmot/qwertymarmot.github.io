@@ -4,7 +4,7 @@ author: Pierce Brown
 cover: /assets/images/books/light-bringer.jpg
 tags: [science-fiction, adventure, red-rising]
 rating: 5
-date_read: 
+date_read: 2026-04-21
 ---
 
 # Light Bringer
