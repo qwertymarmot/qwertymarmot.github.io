@@ -4,5 +4,5 @@ author: Paul Kalanithi
 cover: /assets/images/books/when-air.jpg
 tags: [memoir, medicine, death, health]
 rating: 
-date: 
+date: 2026-05-01
 ---
