@@ -549,6 +549,21 @@
       "type": "book",
       "date": "2025-11-27",
       "last_modified_at": null
+    },
+    {
+      "id": "when-air-becomes-breath",
+      "title": "When Air Becomes Breath",
+      "content": "",
+      "url": "/books/when-air-becomes-breath/",
+      "tags": [
+        "memoir",
+        "medicine",
+        "death",
+        "health"
+      ],
+      "type": "book",
+      "date": "2026-05-01",
+      "last_modified_at": null
     }
   ]
 }
