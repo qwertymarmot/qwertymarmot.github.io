@@ -224,7 +224,7 @@
     {
       "id": "zero-gravity-sleep-position-tracking",
       "title": "Zero Gravity Sleep Position Tracking",
-      "content": "# Sleep Tracking ## Nov. 25, 2025 ### Sleep Metrics - Slept from 9:30pm to 4:00am (daughter woke me up) - Resting Heart Rate: 56 bpm - HRV: 34 ms - Total sleep including time after 4 am wake up: 9hr 5m ### Subjective and Observations - Side slept a bit of the night - Used zero gravity preset button on Sven and Son bed - Back pain feel lower today - 15m of stress according to Oura ## Nov. 26, 2025 ### Sleep Metrics - Slept from 9:42pm to 7:01am - Resting Heart Rate: 54 bpm - HRV: 28 ms - Total Sleep: 8 hr 15m ### Subjective and Observations - Side slept a bit - Started out at custom zero gravity - Went flat for a few minutes and switched to zero g preset ## Nov. 27, 2025 ### Sleep Metrics - Slept from 10:15pm to 4:00am (daughter woke me up) - Got her back to sleep and slept from about 5:00am to 8:45am - Resting heart rate 54 bpm - HRV: 34 ms - Total sleep: 8hr 39m ### Subjective and Observations - Used zero g preset and lowered head just a little bit - Side slept a little bit - Back pain felt pretty minimal today - Might be getting slightly sick",
+      "content": "# Sleep Tracking ## Nov. 25, 2025 ### Sleep Metrics - Slept from 9:30pm to 4:00am (daughter woke me up) - Resting Heart Rate: 56 bpm - HRV: 34 ms - Total sleep including time after 4 am wake up: 9hr 5m ### Subjective and Observations - Side slept a bit of the night - Used zero gravity preset button on Sven and Son bed - Back pain feel lower today - 15m of stress according to Oura ## Nov. 26, 2025 ### Sleep Metrics - Slept from 9:42pm to 7:01am - Resting Heart Rate: 54 bpm - HRV: 28 ms - Total Sleep: 8 hr 15m ### Subjective and Observations - Side slept a bit - Started out at custom zero gravity - Went flat for a few minutes and switched to zero g preset ## Nov. 27, 2025 ### Sleep Metrics - Slept from 10:15pm to 4:00am (daughter woke me up) - Got her back to sleep and slept from about 5:00am to 8:45am - Resting heart rate 54 bpm - HRV: 34 ms - Total sleep: 8hr 39m ### Subjective and Observations - Used zero g preset and lowered head just a little bit - Side slept a little bit - Back pain felt pretty minimal today - Might be getting slightly sick ## Nov. 28, 2025 ### Sleep Metrics - Slept from 10:45pm to 5:53am - Resting heart rate 63 bpm - HRV: 18 ms - Total sleep: 5hr 21m ### Subjective and Observations - I was sick last night - No noticable back pain ## Nov. 29, 2025 ### Sleep Metrics - Was in bed from 22:55pm to 5:59am - Really rough night of sleep - Resting heart rate 90 bpm - HRV: 8 ms - Total Sleep: 4hr 52m ### Subjective and Observations - Very sick - No back pain - Had to change sleep position to flat to try and get myself to sleep. Didn't work.",
       "url": "/notes/zero-gravity-sleep-position-tracking/",
       "tags": [
         "health",
@@ -250,6 +250,36 @@
       "last_modified_at": "2025-11-27"
     },
     {
+      "id": "challenge-perspective",
+      "title": "Challenges and perspective",
+      "content": "# Larger challenges provide perspective - When we have greater challenges in our lives the smaller challenges seem silly. Often we can ignore or work through the smaller challenges without any issue. # Related Notes - [[struggle-benefits]]",
+      "url": "/notes/challenge-perspective/",
+      "tags": [
+        "growth",
+        "challenge",
+        "recovery",
+        "psychology"
+      ],
+      "type": "budding",
+      "date": "2026-04-18",
+      "last_modified_at": "2026-04-18"
+    },
+    {
+      "id": "struggle-benefits",
+      "title": "Growth through struggle",
+      "content": "# Struggle as a pathway to growth - Similar to the stress we need from exercise to increase our health we need a balance of psychological stress to grow mentally. - We need to have a balanced amount of stress to achived a better psychological wellbeing. # Related Notes - [[challenge-perspective]]",
+      "url": "/notes/struggle-benefits/",
+      "tags": [
+        "growth",
+        "challenge",
+        "recovery",
+        "psychology"
+      ],
+      "type": "budding",
+      "date": "2026-04-18",
+      "last_modified_at": "2026-04-18"
+    },
+    {
       "id": "atomic-habits",
       "title": "Atomic Habits",
       "content": "# Atomic Habits *Atomic Habits* is a book by James Clear that explores how small, incremental changes can lead to remarkable results over time. The book provides a practical framework for building good habits and breaking bad ones. ## Key Concepts ### 1. The Power of Tiny Changes Clear argues that improvements of just 1% each day can yield exponential results over time. The effects of our habits multiply as we repeat them. ### 2. The Four Laws of Behavior Change The book presents a framework for creating good habits and breaking bad ones: - **Make it obvious** (cue) - **Make it attractive** (craving) - **Make it easy** (response) - **Make it satisfying** (reward) ### 3. Identity-Based Habits One of the most powerful insights in the book is that lasting change comes from focusing on who you wish to become, not just what you want to achieve. When habits become part of your identity, they're much more likely to stick. ### 4. Habit Stacking Clear introduces the concept of \"habit stacking,\" which involves pairing a new habit with an existing one to make it easier to implement. ## Connections to Other Ideas The concept of small, incremental improvements in Atomic Habits connects well with the [[zettelkasten-method]], which emphasizes building knowledge gradually through small, interconnected notes. The focus on systems rather than goals aligns with the philosophy of [[digital-garden-philosophy]], where the emphasis is on the process of growing ideas rather than producing finished products. ## References 1. Clear, J. (2018). *Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones*. Avery.",
@@ -261,6 +291,20 @@
       ],
       "type": "book",
       "date": "2025-05-04",
+      "last_modified_at": null
+    },
+    {
+      "id": "dark-age",
+      "title": "Dark Age",
+      "content": "# Dark Age ## The Fall ## Into the Abyss ## The Death of Heroes ## Tyrants Rising ## Atomics and Atrocity ## Mercy Lost ## The Many Faces of Power ## A World Without Light ## Sprawl and Scope ## Hope Deferred",
+      "url": "/books/dark-age/",
+      "tags": [
+        "science-fiction",
+        "adventure",
+        "red-rising"
+      ],
+      "type": "book",
+      "date": null,
       "last_modified_at": null
     },
     {
@@ -305,6 +349,20 @@
         "multiple-pov",
         "political-complexity",
         "war"
+      ],
+      "type": "book",
+      "date": null,
+      "last_modified_at": null
+    },
+    {
+      "id": "light-bringer",
+      "title": "Light Bringer",
+      "content": "# Light Bringer ## Sacrifice Sacrifice is a recurring theme throughout this book. Virginia must make sacrifices to protect Mars. Darrow and Sevro must make sacrifices to find a way to defeat the Core. Lysander is forced to make sacrifices to become a piece in a game Atlas has had in motion for a long time. ## Rebuild Finding a way to rebuild what has been broken. Armies, friendships, even entire civilizations. ## Redemption After years playing the role of the sword, Darrow finds himself finally realizing that it's time to figure out a new path. After actions taken in the Rim in previous books, Darrow must rebuild trust with the people of the Rim and especially the Daughters of Athena to build a new following. Volga and the Obsidians are confronted with the consequences of their actions at the hands of a false leader. ## Out of the Shadows Through much of Dark Age and the beginning of Light Bringer, Darrow finds himself in an unfamiliar position in the cat-and-mouse game. He has to hide in order to survive, and many of his previous followers even believe he might be dead. In Light Bringer, Darrow finds his way back into the forefront and proves to those loyal to him that he is still alive and strong. ## Carrying the Flame Although Light Bringer introduces some new elements to Darrow as a character, others are simply rekindled. Darrow/The Reaper has always been a symbol of hope for the low Colors of the Rising. However, after events leading up to Light Bringer, the faith and hope are wavering. Darrow rekindles that hope in this book. ## Lighting the Way for Others Darrow has always thought of himself as the sword for the Rising. However, in order to survive, Darrow must start playing roles that he left to others like Dancer and Virginia. He must become a builder and a role model for others. ## The Cost of the Light This book explores how being the light or pursuing good comes at a cost. Lysander, in pursuit of what he believes is the ultimate good, is forced into making deals that seem to go against his previously held ethics. Darrow and the Rising see the weight of every decision they have made up to this point. ## Friendship Rekindled After about two full books where Darrow and Sevro have had a rocky friendship, we finally get to see them recover their bond. Cassius even notes how Darrow's friendships are what made him realize which side he wanted to be on. ## Hope as a Weapon Throughout much of the book (and the series as a whole), Darrow has to sacrifice his own desires to be the symbol of hope that the Rising needs. Hope is also weaponized as a strategy by Atlas and the Core. One great example is the lies that have been told to the Obsidians about the necessity of their violence to build a home of their own. ## Becoming the Myth Darrow realizes that he has to strategically embrace his mythical status to win the hearts and respect of the Obsidians in particular. There are several scenes where he has to put on theatrics to command their attention and secure an audience. ## Dawn After the Long Night After the events of [[Book: Dark Age]], Light Bringer gives a sense of movement toward victory. Red God will have a lot of loose threads to tie up in order for the series to reach a satisfying conclusion.",
+      "url": "/books/light-bringer/",
+      "tags": [
+        "science-fiction",
+        "adventure",
+        "red-rising"
       ],
       "type": "book",
       "date": null,

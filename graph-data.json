@@ -127,11 +127,32 @@
       "excerpt": "# Principles and Beliefs A collection of core principles and beliefs that guide decision-making and personal growth."
     },
     {
+      "id": "challenge-perspective",
+      "title": "Challenges and perspective",
+      "url": "/notes/challenge-perspective/",
+      "type": "budding",
+      "excerpt": "# Larger challenges provide perspective - When we have greater challenges in our lives the smaller challenges seem silly. Often we can ignore or work ..."
+    },
+    {
+      "id": "struggle-benefits",
+      "title": "Growth through struggle",
+      "url": "/notes/struggle-benefits/",
+      "type": "budding",
+      "excerpt": "# Struggle as a pathway to growth - Similar to the stress we need from exercise to increase our health we need a balance of psychological stress to gr..."
+    },
+    {
       "id": "atomic-habits",
       "title": "Atomic Habits",
       "url": "/books/atomic-habits/",
       "type": "book",
       "excerpt": "# Atomic Habits *Atomic Habits* is a book by James Clear that explores how small, incremental changes can lead to remarkable results over time. The bo..."
+    },
+    {
+      "id": "dark-age",
+      "title": "Dark Age",
+      "url": "/books/dark-age/",
+      "type": "book",
+      "excerpt": "# Dark Age ## The Fall ## Into the Abyss ## The Death of Heroes ## Tyrants Rising ## Atomics and Atrocity ## Mercy Lost ## The Many Faces of Power ## ..."
     },
     {
       "id": "golden-son",
@@ -153,6 +174,13 @@
       "url": "/books/iron-gold/",
       "type": "book",
       "excerpt": "# Iron Gold *Iron Gold* launches the second trilogy in Pierce Brown's Red Rising universe, jumping ten years beyond *Morning Star* to explore the mess..."
+    },
+    {
+      "id": "light-bringer",
+      "title": "Light Bringer",
+      "url": "/books/light-bringer/",
+      "type": "book",
+      "excerpt": "# Light Bringer ## Sacrifice Sacrifice is a recurring theme throughout this book. Virginia must make sacrifices to protect Mars. Darrow and Sevro must..."
     },
     {
       "id": "morning-star",
@@ -374,6 +402,16 @@
       "type": "notes"
     },
     {
+      "source": "challenge-perspective",
+      "target": "struggle-benefits",
+      "type": "notes"
+    },
+    {
+      "source": "struggle-benefits",
+      "target": "challenge-perspective",
+      "type": "notes"
+    },
+    {
       "source": "atomic-habits",
       "target": "zettelkasten-method",
       "type": "notes"
@@ -402,6 +440,11 @@
       "source": "how-to-take-smart-notes",
       "target": "how-to-use-wikilinks",
       "type": "notes"
+    },
+    {
+      "source": "light-bringer",
+      "target": "dark-age",
+      "type": "books"
     },
     {
       "source": "shadows-of-self",
