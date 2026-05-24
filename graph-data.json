@@ -141,6 +141,20 @@
       "excerpt": "# Struggle as a pathway to growth - Similar to the stress we need from exercise to increase our health we need a balance of psychological stress to gr..."
     },
     {
+      "id": "less-for-growth",
+      "title": "Take on less to grow",
+      "url": "/notes/less-for-growth/",
+      "type": "seedling",
+      "excerpt": "# Less is more - When we take on less, it allows us more time and energy to reflect on the areas in which we can grow to master a particular skill. Th..."
+    },
+    {
+      "id": "small-improvements-big-results",
+      "title": "Small Improvements Lead to Big Results",
+      "url": "/notes/small-improvements-big-results/",
+      "type": "seedling",
+      "excerpt": "# Progress Our small progress toward expertise or improvement compounds over time. This compounding works like interest. It is hard to see the improve..."
+    },
+    {
       "id": "atomic-habits",
       "title": "Atomic Habits",
       "url": "/books/atomic-habits/",
@@ -258,6 +272,13 @@
       "url": "/books/tiny-experiments/",
       "type": "book",
       "excerpt": "# Tiny Experiments *Tiny Experiments* by Anne-Laure Le Cunff advocates for embracing curiosity and experimentation over traditional goal-setting. The ..."
+    },
+    {
+      "id": "when-air-becomes-breath",
+      "title": "When Air Becomes Breath",
+      "url": "/books/when-air-becomes-breath/",
+      "type": "book",
+      "excerpt": ""
     }
   ],
   "links": [
@@ -409,6 +430,36 @@
     {
       "source": "struggle-benefits",
       "target": "challenge-perspective",
+      "type": "notes"
+    },
+    {
+      "source": "struggle-benefits",
+      "target": "small-improvements-bit-results",
+      "type": "notes"
+    },
+    {
+      "source": "less-for-growth",
+      "target": "small-improvements-big-results",
+      "type": "notes"
+    },
+    {
+      "source": "small-improvements-big-results",
+      "target": "willpower-is-finite",
+      "type": "notes"
+    },
+    {
+      "source": "small-improvements-big-results",
+      "target": "the-2-day-rule",
+      "type": "notes"
+    },
+    {
+      "source": "small-improvements-big-results",
+      "target": "taking-on-less-for-growth",
+      "type": "notes"
+    },
+    {
+      "source": "small-improvements-big-results",
+      "target": "struggle-benefits",
       "type": "notes"
     },
     {
