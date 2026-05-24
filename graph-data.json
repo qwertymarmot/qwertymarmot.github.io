@@ -145,7 +145,7 @@
       "title": "Small Improvements Lead to Big Results",
       "url": "/notes/small-improvements-big-results/",
       "type": "seedling",
-      "excerpt": "## Progress Our small progress toward expertise or improvement compounds over time. This compounding works like interest. It is hard to see the improv..."
+      "excerpt": "# Progress Our small progress toward expertise or improvement compounds over time. This compounding works like interest. It is hard to see the improve..."
     },
     {
       "id": "atomic-habits",
@@ -426,6 +426,11 @@
       "type": "notes"
     },
     {
+      "source": "struggle-benefits",
+      "target": "small-improvements-bit-results",
+      "type": "notes"
+    },
+    {
       "source": "small-improvements-big-results",
       "target": "willpower-is-finite",
       "type": "notes"
@@ -438,6 +443,11 @@
     {
       "source": "small-improvements-big-results",
       "target": "taking-on-less-for-growth",
+      "type": "notes"
+    },
+    {
+      "source": "small-improvements-big-results",
+      "target": "stuggle-benefits",
       "type": "notes"
     },
     {
