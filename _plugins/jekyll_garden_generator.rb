@@ -226,6 +226,11 @@ module JekyllGarden
         puts "  #{index}: #{link.inspect}"
       end
       
+      # Filter out links whose source or target don't exist in the node set
+      # (D3 forceLink throws a "missing: <id>" error for dangling links, crashing the graph)
+      valid_ids = nodes.map { |n| n['id'] }.to_set
+      links.reject! { |l| !valid_ids.include?(l['source']) || !valid_ids.include?(l['target']) }
+
       # Create graph data file
       # Make deep copies of the nodes and links arrays to avoid any modifications
       nodes_copy = nodes.map { |node| node.dup }
