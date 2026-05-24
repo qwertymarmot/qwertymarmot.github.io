@@ -15,5 +15,4 @@ last_modified_at: 2026-04-18
 # Related Notes
 
 - [[challenge-perspective]]
-- [[small-improvements-bit-results]]
-
+- [[small-improvements-big-results]]
