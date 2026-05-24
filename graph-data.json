@@ -141,6 +141,13 @@
       "excerpt": "# Struggle as a pathway to growth - Similar to the stress we need from exercise to increase our health we need a balance of psychological stress to gr..."
     },
     {
+      "id": "less-for-growth",
+      "title": "Take on less to grow",
+      "url": "/notes/less-for-growth/",
+      "type": "seedling",
+      "excerpt": "# Less is more - When we take on less, it allows us more time and energy to reflect on the areas in which we can grow to master a particular skill. Th..."
+    },
+    {
       "id": "small-improvements-big-results",
       "title": "Small Improvements Lead to Big Results",
       "url": "/notes/small-improvements-big-results/",
@@ -428,6 +435,11 @@
     {
       "source": "struggle-benefits",
       "target": "small-improvements-bit-results",
+      "type": "notes"
+    },
+    {
+      "source": "less-for-growth",
+      "target": "small-improvements-big-results",
       "type": "notes"
     },
     {
