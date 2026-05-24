@@ -141,6 +141,13 @@
       "excerpt": "# Struggle as a pathway to growth - Similar to the stress we need from exercise to increase our health we need a balance of psychological stress to gr..."
     },
     {
+      "id": "small-improvements-big-results",
+      "title": "Small Improvements Lead to Big Results",
+      "url": "/notes/small-improvements-big-results/",
+      "type": "seedling",
+      "excerpt": "## Progress Our small progress toward expertise or improvement compounds over time. This compounding works like interest. It is hard to see the improv..."
+    },
+    {
       "id": "atomic-habits",
       "title": "Atomic Habits",
       "url": "/books/atomic-habits/",
@@ -416,6 +423,21 @@
     {
       "source": "struggle-benefits",
       "target": "challenge-perspective",
+      "type": "notes"
+    },
+    {
+      "source": "small-improvements-big-results",
+      "target": "willpower-is-finite",
+      "type": "notes"
+    },
+    {
+      "source": "small-improvements-big-results",
+      "target": "the-2-day-rule",
+      "type": "notes"
+    },
+    {
+      "source": "small-improvements-big-results",
+      "target": "taking-on-less-for-growth",
       "type": "notes"
     },
     {
