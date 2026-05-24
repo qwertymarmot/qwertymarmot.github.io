@@ -1,7 +1,7 @@
 ---
 title: Small Improvements Lead to Big Results
 type: seedling
-category: Principled and Beliefs
+category: Principles and Beliefs
 tags: [improvment, progress]
 date: 2026-05-23
 last_modified_at: 2026-05-23
