@@ -15,7 +15,7 @@ Our small progress toward expertise or improvement compounds over time. This com
 - [[willpower-is-finite]]
 - [[the-2-day-rule]]
 - [[taking-on-less-for-growth]]
-- [[stuggle-benefits]]
+- [[struggle-benefits]]
 
 # References
 1. Ray, A. "Things Happen When You Chase Progress Everyday" _Medium_
